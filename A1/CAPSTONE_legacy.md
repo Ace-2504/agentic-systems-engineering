@@ -1,6 +1,6 @@
 # CAPSTONE (legacy version): Ask Northbridge on an old system with only an XML interface
 
-This is a companion to `CAPSTONE.md`. The story, the money and the people are the same. What changes is the system underneath: here Northbridge does **not** run an ERP like Ledgerline, but an old in-house system with no modern API and no approval records. The full picture is `version_legacy_v4.excalidraw`, a board of six frames: (0) the overview, with a map of who and what is involved, including the gateway, the adapter, NBAS and its read-only copy, (1) today on NBAS, phase by phase, (2) with the assistant and the gateway, under the same six phases, (3) the approval layer, (4) the morning bank check, and (5) where the details live, with the open questions. The tables (how it connects, the controls it rebuilds, jobs, tests, guardrails, what changes without new code) live in this file.
+This is a companion to `CAPSTONE.md` and `CAPSTONE_design.md`. The story, the money and the people are the same. What changes is the system underneath: here Northbridge does **not** run an ERP like Ledgerline, but an old in-house system with no modern API and no approval records. The full picture is `version_legacy_v5.excalidraw`, a board of six frames: (0) the overview, with a map of who and what is involved, including the gateway, the adapter, NBAS and its read-only copy, (1) today on NBAS, phase by phase, (2) with the assistant and the gateway, under the same six phases, (3) the approval layer, (4) the morning bank check, and (5) where the details live, with the open questions. The tables (how it connects, the controls it rebuilds, jobs, tests, guardrails, what changes without new code) live in this file.
 
 ## Why this version
 
@@ -15,7 +15,7 @@ Most companies that would use an assistant like this do not have a clean ERP wit
 
 The rules live in the finance manual and in people's heads.
 
-**The companies** are the same as in `CAPSTONE.md`: **Northbridge Cycles** (Pune, Maharashtra, the buyer), **Voltway Cells** (Gujarat, the battery supplier that sends invoice 4471), Voltway Paints & Coatings (also sent a 4471) and Castlefield Chargers (Maharashtra).
+**The companies** are the same as in `CAPSTONE_design.md`: **Northbridge Cycles** (Pune, Maharashtra, the buyer), **Voltway Cells** (Gujarat, the battery supplier that sends invoice 4471), Voltway Paints & Coatings (also sent a 4471) and Castlefield Chargers (Maharashtra).
 
 **The people at Northbridge**
 
@@ -41,7 +41,7 @@ The rules live in the finance manual and in people's heads.
 
 ## The story
 
-The same as `CAPSTONE.md`: 18,000 battery packs from Voltway Cells at Rs.1,276.80 (PO/2026/01120); the price became Rs.1,332.80 on 1st October, which the contract allows because the delivery-date price applies; 300 packs broken in transit (Northbridge's risk); invoice 4471 for Rs.2,83,08,672, due 16th November; Voltway's 7th October offer of 0.5% within 15 days of delivery or 0.25% within 30; TDS starts because 4471 takes Voltway's purchases this year past Rs.50 lakh. The money table in `CAPSTONE.md` holds here too, except that today's Rs.22,821 of TDS is deducted only if Priya remembers.
+The same as `CAPSTONE_design.md`: 18,000 battery packs from Voltway Cells at Rs.1,276.80 (PO/2026/01120); the price became Rs.1,332.80 on 1st October, which the contract allows because the delivery-date price applies; 300 packs broken in transit (Northbridge's risk); invoice 4471 for Rs.2,83,08,672, due 16th November; Voltway's 7th October offer of 0.5% within 15 days of delivery or 0.25% within 30 (only the contract's original tiers reduce GST; the extra comes as a commercial credit note); TDS starts because 4471 takes Voltway's purchases this year past Rs.50 lakh. The money table in `CAPSTONE_design.md` holds here too, except that today's Rs.22,821 of TDS is deducted only if Priya remembers.
 
 **Today, on NBAS (the Before tree):**
 - NBAS checks nothing: it would accept 4471-R, or Voltway Paints' 4471 under Voltway Cells, and the entry shows only "ACCOUNTS".
@@ -99,7 +99,7 @@ NBAS records no approvals, so every entry goes through this:
 
 ## 1. The process, the people and the systems
 
-**Process:** paying a supplier's invoice, the same as in `CAPSTONE.md`, on NBAS instead of Ledgerline.
+**Process:** paying a supplier's invoice, the same as in `CAPSTONE_design.md`, on NBAS instead of Ledgerline.
 
 **Who speaks to the assistant:** Priya (approves its drafts) and Emma (takes the suppliers' calls). Daniel, Ganesh and Vikram act in their own gateway logins.
 
@@ -122,7 +122,7 @@ The same kit, set up to behave like NBAS:
 - a small XML endpoint on the sandbox stands in for NBAS's XML interface, and our adapter sits in front of it;
 - the agent gets a read-only SQLite connection to six prepared views (invoices, orders, goods receipts, suppliers without bank columns, payments, this year's purchases per supplier) for bulk reading;
 - the gateway is a small service of our own with its own database (draft queue, holds register, approvals, supplier offers, approved bank accounts, the log, and the rate, policy, role and stand-in tables), and it writes into NBAS only through the adapter;
-- the additions from `CAPSTONE.md` stay: Indian setting, contract document, broken goods, TDS, earlier Friday dates, the bank statement and return file, the bank-alerts mailbox with a spoofed email, and the PDF with hidden instructions.
+- the additions from `CAPSTONE_design.md` stay: Indian setting, contract document, broken goods, TDS, earlier Friday dates, the bank statement and return file, the bank-alerts mailbox with a spoofed email, and the PDF with hidden instructions.
 
 **New traps:** an invoice typed straight into NBAS with the shared login; a supplier's bank account changed in NBAS with no record; an upload file with one amount changed; a database copy that is an hour behind; a TDS rate change dated in the middle of the story.
 
@@ -159,11 +159,11 @@ The daily offer check, the morning bank check and the nightly compare are schedu
 
 ## 5. The bank check
 
-The same as in `CAPSTONE.md` (section 5), with one more question at the end. Every morning a reader with no tools takes each email in the read-only bank-alerts mailbox and fills fixed fields only. An email from an unverified address is quarantined; one asking for a change is flagged as possible fraud; nothing counts until the bank statement or return file confirms it; a return is drafted as "Returned" and Priya, Emma and Vikram are told the same day. **New here:** every bank debit must match a payment the gateway approved; if not, Vikram is alerted at once, because money left that nobody approved (an edited file, or a payment made around the gateway). Only after this does the gateway write the payment voucher into NBAS.
+The same as in `CAPSTONE_design.md` (section 5), with one more question at the end. Every morning a reader with no tools takes each email in the read-only bank-alerts mailbox and fills fixed fields only. An email from an unverified address is quarantined; one asking for a change is flagged as possible fraud; nothing counts until the bank statement or return file confirms it; a return is drafted as "Returned" and Priya, Emma and Vikram are told the same day. **New here:** every bank debit must match a payment the gateway approved; if not, Vikram is alerted at once, because money left that nobody approved (an edited file, or a payment made around the gateway). Only after this does the gateway write the payment voucher into NBAS.
 
 ## 6. Guardrails
 
-Rules are enforced by code and approved tables, never by the prompt. The five design decisions from `CAPSTONE.md` hold: a separate reader with no tools for every email and PDF; the bank-account-change checks; internal-only messaging; Vikram for payments above Rs.50 lakh; and a second layer (NeMo Guardrails or Llama Guard).
+Rules are enforced by code and approved tables, never by the prompt. The five design decisions from `CAPSTONE_design.md` hold: a separate reader with no tools for every email and PDF; the bank-account-change checks; internal-only messaging; Vikram for payments above Rs.50 lakh; and a second layer (NeMo Guardrails or Llama Guard).
 
 | Attack | Example | Guardrail |
 |---|---|---|

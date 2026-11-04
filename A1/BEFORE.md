@@ -1,6 +1,6 @@
 # BEFORE: Hostel deposit refund
 
-A fictional but realistic process at a fictional college (Kestrel Institute of Technology), set in May–July 2025. All names, codes, amounts and dates are invented. No real student or staff data is used.
+A realistic process, based on my own experience and what friends told me about theirs, set at a fictional college (Kestrel Institute of Technology), May–July 2025. The names, codes, amounts and exact dates are invented. No real student or staff data is used.
 
 ## The setting and the people
 
@@ -83,60 +83,85 @@ What actually happened to Aarav's refund, step by step. Aarav applied on 2nd May
 
 ## 3. Failure points
 
-### Failure 1: the silent outcome, "Refund paid" when the money came back
+One of each type the brief asks for: Failure 1 is the **silent outcome**, Failure 5 the **error that does not help**, and Failure 2 the **rule that lives in someone's head**.
+
+**The main ones (1–6)**
+
+### Failure 1 (silent outcome): "Refund paid" when the money came back
 
 - **What happened:** On 22nd May EduDesk showed "Refund paid" with a UTR, and Aarav was emailed that Rs.14,460 had been sent. Within hours the bank returned it because the account was closed. He only learned the truth from the helpdesk reply on 2nd June. Even then, EduDesk still said "Refund paid" after Ms. Iyer marked the refund Returned on 2nd June: the refund status in EduDesk is set only by the ERP link, which sends "paid" but never "returned", and staff cannot edit it. It stayed wrong until the re-issued payment went through on 17th June.
+- **What Aarav sees:** EduDesk says "Refund paid" with the UTR, and an email says Rs.14,460 was sent to his bank. Nothing ever says it came back.
 - **Who noticed, and when:** The ERP put the return in the exceptions queue on 23rd May, but nobody looks at that queue until month-end, and nothing told Aarav or updated EduDesk. Only Aarav acted, raising a ticket on 28th May.
 - **What it cost:** Aarav did not know the payment had come back for 11 days (22nd May → 2nd June). The status page was wrong for 26 days (22nd May → 17th June): anyone who checked it, Aarav or staff, saw "Refund paid" with a UTR for money that had come back. In all, 46 days instead of about 20.
 - **Why:** The ERP sends EduDesk the "paid" event but not the "returned" event, and the return was not matched to the refund until month-end (Failures 5 and 6).
+- **What you would need to know to avoid it:** "Refund paid" only means the college sent the money. Check your bank account within a day, and raise a ticket at once if nothing has arrived.
 
-### Failure 2: two copies of the bank details, and the payment used the stale one
+### Failure 2 (rule in someone's head): two copies of the bank details, and the payment used the stale one
 
 - **What happened:** Aarav entered his current account on the refund form on 2nd May, and it was verified. But the ERP created the refund from his student master record, which still held the account he added at admission in 2022 and closed in 2024.
+- **What Aarav sees:** nothing. The form shows his verified account; no screen shows which account the ERP will actually pay.
 - **What it cost:** The bounce, and everything after it.
 - **Why:** The link from EduDesk to the ERP sends student master data, not the bank fields on the request. The bank fields were added to the refund form in a later EduDesk update; the EduDesk-to-ERP link was never changed to carry them. Each system was right about its own copy.
+- **What you would need to know to avoid it:** what only the accounts staff know: the refund is paid to the bank account on the ERP student record, not the one typed on the refund form. A student who knew would ask accounts to update the record first.
 
 ### Failure 3: the payment calendar is not visible to the student
 
 - **What happened:** Refunds go out only in the payment runs on the 1st and 15th. The calendar lives in the finance system; EduDesk just said "Forwarded to Accounts", with no date.
+- **What Aarav sees:** "Forwarded to Accounts", with no date.
 - **What it cost:** 3 days the first time (12th → 15th May) and 14 days after the return (2nd → 16th June), with Aarav not knowing either time. The ERP allows off-cycle payments with the approval of the finance head (Ms. Rao), but nobody asked for one, so the re-issue waited for the next run.
+- **What you would need to know to avoid it:** refunds go out only on the 1st and 15th, and the finance head can approve an off-cycle run. Both are known only to accounts staff.
 
 ### Failure 4: only one authorised signatory registered for the student-deposit account
 
 - **What happened:** Refunds are paid from a separate student-deposit bank account. Every payment file from it must be authorised by a signatory registered with the bank for that account, and the bank never lets the person who prepared a file authorise it. Ms. Iyer prepared and uploaded the run on 15th May, but Mr. Batra, the only signatory registered for this account, was on leave until 20th May. Salaries and supplier payments go from the college's other accounts, which have other signatories, so only refunds were held up. Adding a second signatory needs bank paperwork (a board resolution and signature forms), so nobody could step in. He authorised the file on the morning of 22nd May.
+- **What people see:** Ms. Iyer sees the file as "pending authorisation" in internet banking; Aarav sees nothing at all.
 - **What it cost:** 7 days (15th → 22nd May), and every refund in that run waited with Aarav's.
 - **Why:** The control itself is sound (one person prepares, another authorises), but with only one authorised person it becomes a single point of failure.
+- **What you would need to know to avoid it:** who the only signatory is and when he is on leave, so the run can be done before he leaves.
 
-### Failure 5: the matching rules can't read the returned payment
+### Failure 5 (error that does not help): the matching rules can't read the returned payment
 
 - **What happened:** The bank's return line carried a short reason code and the bank's own reference, not `RV-25-1184`. The return line carries the original UTR only in its free-text description. The ERP can be set up to search that text, but Kestrel's matching rules only look at the amount and reference fields, so it could not be matched automatically and sat in the exceptions queue unexplained.
+- **What Ms. Iyer sees:** one line in the exceptions queue, `UNMATCHED CR 14,460.00 · RTN-03 · KTB/N22052025/0419`, with no refund number and no explanation of the code.
 - **What it cost:** It needed a person to find and match it by hand.
+- **What you would need to know to avoid it:** RTN-03 is the bank's code for "account closed", and the original UTR sits in the line's free-text description, so searching for the UTR finds the refund.
 
 ### Failure 6: exceptions wait for the month-end reconciliation
 
 - **What happened:** The unmatched return sat in the queue from 23rd May until Ms. Iyer's month-end reconciliation on 2nd June. Aarav's ticket waited with it, past the helpdesk's 2-working-day response target (due 30th May, answered 2nd June).
+- **What people see:** nothing until month-end; nobody opens the queue in between.
 - **What it cost:** 10 days in the queue (23rd May → 2nd June).
+- **What you would need to know to avoid it:** the exceptions queue is only looked at during month-end reconciliation, so a missing refund needs a ticket to get attention sooner.
+
+**Smaller ones (7–10): they cost little or nothing this time**
 
 ### Failure 7: the Hostel line is cleared before the key is returned
 
 - **What happened:** The room was inspected on 7th May and the Hostel line went "Clear" on 9th May, but Aarav lived there until 12th May and returned his key that day. Nothing ties the clearance to the key return.
+- **What people see:** the Hostel line shows "Clear" on 9th May, three days before the key comes back.
 - **What it cost:** Nothing this time. But any damage between 7th and 12th May would never have been charged, and a student who left without returning the key would already have been cleared.
 - **Why:** The hostel module treats the approved inspection as the end of the hostel's part. The key return is recorded separately and nothing links the two.
+- **What you would need to know to avoid it:** hostel staff would have to remember to keep the line open until the key is back; nothing on the screen reminds them.
 
 ### Failure 8: approvals wait for the warden's Friday session
 
 - **What happened:** Dr. Menon got an email the moment the inspection was submitted on 7th May, but she does her approvals on Fridays, so she approved it on 9th May.
+- **What people see:** Dr. Menon gets an email; Aarav sees "Hostel: waiting for approval".
 - **What it cost:** 2 days. It did not change the outcome this time, because the request was waiting for the Mess line until 12th May anyway.
 - **Why:** The system notifies, but the person batches. An approver who receives many of these emails works through them in one weekly session.
+- **What you would need to know to avoid it:** Dr. Menon approves on Fridays, so an inspection done early in the week waits until Friday.
 
 ### Failure 9: the inspection is arranged by phone, outside the system
 
 - **What happened:** The system gave Mr. Joseph the inspection task, but he and Aarav agreed the time by phone.
+- **What people see:** a phone call; nothing in EduDesk.
 - **What it cost:** Nothing this time. But nothing records the agreed time, so a missed call or a forgotten slot would delay the inspection with no trace in the system.
+- **What you would need to know to avoid it:** write the agreed time down somewhere, because the system has no place for it.
 
 ### Failure 10: no move-in record to compare against
 
 - **What happened:** The Rs.500 charge for the broken chair rests only on the 7th May inspection. There is no record of the room's condition when Aarav moved in.
+- **What Aarav sees:** the Rs.500 charge with a photo of the broken chair.
 - **What it cost:** Nothing this time, because Aarav accepted the charge. Had he said the chair was already broken when he moved in, neither side could have proved it.
 
 ## 4. Cost
@@ -197,8 +222,9 @@ Why still 14–21 days: some waits cannot be avoided by knowing the rules. The w
 
 ### How these were estimated
 
-- **Dates:** Aarav's own steps from the EduDesk timestamps, the system's emails, his helpdesk ticket and the bank SMS (exact to the day). Staff-side and system dates (the inspection, the payment runs, the authorisations, the return, the reconciliation) are as recorded in the hostel module, the Accounts ERP, the bank's internet banking and the helpdesk reply.
-- **Aarav's hands-on time:** his own estimate per activity, ±30 minutes in total.
+- **Timeline:** how long each stage took (the offices clearing, waiting for a payment run, waiting for the signatory, a returned payment sitting until month-end) comes from my own experience and my friends' accounts. The exact dates are set to fit those stages, so they are illustrative, not recorded.
+- **Aarav's hands-on time:** a rough guess per activity from those accounts, ±30 minutes in total.
 - **Staff hands-on time:** a rough guess per step (for example 5 minutes for an office to mark its line Clear, 15 minutes for a room inspection, about 20 minutes to find and match a returned payment), ±50%.
 - **Careful path:** reasoned from the fixed rules in the route (Friday approvals, the last-day card return, the 1st/15th payment runs, about a day for a transfer), assuming everything else goes right. It is a best case, not a measurement.
 - **Where the 46 days went:** each gap between one step and the next in the route, in days.
+- **What you would need to know to avoid it:** photograph the room on the day you move in.

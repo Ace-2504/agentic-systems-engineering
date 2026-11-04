@@ -1,8 +1,8 @@
 # AFTER: Hostel deposit refund
 
-The same fictional process as BEFORE.md (Kestrel Institute of Technology, May 2025), as it should work with an AI agent. The college keeps its systems: EduDesk, the library, hostel, mess and lab modules, the Accounts ERP and the bank's corporate internet banking. What changes is that an agent, **Ask Kestrel**, sits across them. Students and staff ask it in plain words. It does the coordinating, checking, data entry and reconciliation, and every decision that needs judgement or carries money stays with a named person.
+The same process as BEFORE.md (Kestrel Institute of Technology, May 2025), as it should work with an AI agent. The college keeps its systems: EduDesk, the library, hostel, mess and lab modules, the Accounts ERP and the bank's corporate internet banking. What changes is that an agent, **Ask Kestrel**, sits across them. Students and staff ask it in plain words. It does the coordinating, checking, data entry and reconciliation, and every decision that needs judgement or carries money stays with a named person.
 
-The diagram for this file is `AFTER_SYSTEM_DESIGN_v6.excalidraw`, laid out as frames: an overview (the key, what stays human, the result), 2nd–12th May (the request, the bank check and the clearances), 12th–15th May (refund, payment and the bank's answer), and how it would work on an old accounts system. The tables that used to sit beside the flow are now in sections 6 and 7 of this file. The people are the same as in BEFORE.md, plus one: Aarav (student), the lab assistant, Mr. Joseph (caretaker), Dr. Menon (warden), Mr. Gill (mess), Ms. Iyer (accounts clerk), the signatory (Mr. Batra, accounts officer and the only person registered with the bank to authorise payments from the student-deposit account) and the finance head (Ms. Rao, Mr. Batra's manager). After the table below they are named without their roles.
+The diagram for this file is `AFTER_SYSTEM_DESIGN_v7.excalidraw`, laid out as frames: an overview (the key, what stays human, the result), 2nd–12th May (the request, the bank check and the clearances), 12th–15th May (refund, payment and the bank's answer), and how it would work on an old accounts system. The technical side (how the agent connects to each system, and the configuration fixes) is in `AFTER_integration.md`, so this file stays about the experience. After the table below, people are named without their roles.
 
 ### The people
 
@@ -29,17 +29,14 @@ Instead of filling a form and checking four status lines, people would say:
    One sentence, plus his current bank account, replaces the form.
 2. *"What do I still owe before I get my deposit back?"*
    Today he pieces it together from four separate lines on EduDesk.
-3. *"Why is Rs.540 being taken off my refund?"*
-   Today the Rs.40 library fine and the Rs.500 chair sit in two different modules.
-4. **"Has my refund actually reached my bank? If not, why not, and when will it?"**
+3. **"Has my refund actually reached my bank? If not, why not, and when will it?"**
    **No current screen answers this.** In the BEFORE, EduDesk said "Refund paid" for 26 days while the money was back with the college, because EduDesk only ever hears that a payment was sent.
 
 **Staff**
 
-5. Ms. Iyer: *"Which refunds are due in the next run, are all their bank accounts approved, and did anything come back from the bank this morning?"*
+4. Ms. Iyer: *"Which refunds are due in the next run, are all their bank accounts approved, and did anything come back from the bank this morning?"*
    Today she finds a returned payment at month-end reconciliation.
-6. Mr. Batra and Ms. Rao: *"What is waiting for my approval, and why?"*
-7. Dr. Menon: *"Which inspections need my approval before the next payment run?"*
+5. Mr. Batra and Ms. Rao: *"What is waiting for my approval, and why?"*
 
 ## 2. Feel and trust
 
@@ -67,7 +64,7 @@ Where he is waiting, it says on whom and until when. On 12th May it tells him: *
 | Hands-on time | about 1 hour 35 minutes | **about 40 minutes** |
 | Elapsed time | 46 days (2nd May → 17th June) | **12 days** (2nd May → 14th May) |
 
-Aarav's 40 minutes: 5 minutes telling Ask Kestrel and giving his account, 20 minutes for the inspection and accepting the charge, 10 minutes returning his key and mess card, 5 minutes reading updates. These are estimates, like the BEFORE figures.
+These are estimates, like the BEFORE figures; most of Aarav's 40 minutes is the inspection and handing back his key and card.
 
 ### What is previewed before anything is saved
 
@@ -158,22 +155,20 @@ Every time Ask Kestrel says something has happened, it gives a reference from th
 
 ### Proof for staff too
 
-- **Ms. Iyer** sees, for every refund in a run, the approved account and the Rs.1 proof, and each morning a list of bank lines matched, returned or left for her.
-- **Mr. Batra** sees exactly what he authorised; his authorisation is recorded by the bank against the file.
-- **Ms. Rao** sees why an off-cycle run was asked for (the leave dates) and what it contains; her approval is recorded in the ERP.
-- **Every action by the agent is logged**: what it did, when, on whose request, with the values before and after.
+- **Staff get the same kind of proof:** Ms. Iyer gets each morning's list of bank lines matched, returned or left for her; Mr. Batra's authorisations are recorded by the bank, and Ms. Rao's approvals by the ERP.
+- **Every action by the agent is logged:** what it did, when, on whose request, with the values before and after.
 
 ## 5. Failure
 
 Two ways it can go wrong: one where it misunderstands the person, one where a system fails.
 
-### Failure A: it misunderstands, a room change read as a move-out
+### Failure A: it misunderstands, one "yes" read as two
 
-- **What happens:** Suppose Aarav were only moving rooms next semester (H3 to H5) but typed *"I'm moving out of the hostel this week."* Ask Kestrel reads this as leaving the hostel and prepares a deposit refund, which would **end his hostel place**.
-- **Who notices, and how fast:** Aarav, **immediately, at the preview**. Before anything is submitted it says in bold: *"This ends your hostel place for next semester and refunds your Rs.15,000 deposit. Submit?"*
-- **How it is undone:** He taps *Change something* and says he is only changing rooms. **Nothing was submitted**, so there is nothing to undo.
-- **Harm in between:** None. This is why every preview states the consequence in plain words, not just the form fields.
-- **If he had tapped Yes anyway:** The agent also sees he has a room booked in H5 for next semester and flags the clash to Dr. Menon. Four offices and a payment run still stand between the request and any money, and he can cancel with one sentence at any point before the run.
+- **What happens:** On 7th May, after the inspection, Ask Kestrel asks two things in one message: *"Mr. Joseph has recorded a broken chair, Rs.500, photo attached. Do you accept it? And can you hand in your key and mess card on 12th May at 10 AM?"* Aarav replies *"yes, fine"*, meaning only the 12th May time: he wanted to look at the photo first, because he thinks the chair was already broken when he moved in. Ask Kestrel records that he **accepted the Rs.500**.
+- **Who notices, and how fast:** Aarav, **five days later**, on 12th May, when the refund preview lists *"Rs.500, chair: accepted by you on 7th May"*. If he only skims the preview, nobody notices before the money is paid.
+- **How it is undone:** He says *"I never accepted the chair."* The agent marks the deduction disputed and sends it to Dr. Menon with the photo and the message thread. If she rules for him before the run, the refund is recalculated to Rs.14,960; if the run has already gone, the Rs.500 is paid back in the next run, 15 days later.
+- **Harm in between:** for five days a charge he never agreed to stands on his record as accepted. If it is caught late, he is Rs.500 short for at least 15 days, and his dispute looks like a change of mind rather than a mistake.
+- **What it changes in the design:** **one question per yes**, and every preview restates exactly what the yes covers: *"You are accepting: Rs.500 for the chair."*
 
 ### Failure B: a system fails, the bank's acknowledgement is lost
 
@@ -204,42 +199,6 @@ Ask Kestrel removes the running around: finding out what is owed, chasing office
 
 - **Failure 10 (no move-in record):** nothing can be done for Aarav, who moved in in 2022 with no record. From now on the agent collects a move-in checklist with photos and compares it at move-out.
 - **Failures 4 and 8 are only eased:** the agent warns three days early about the single signatory, and shows Dr. Menon the approval deadline, but adding a signatory and changing her Friday habit are human decisions.
-- **Better fixed by configuration:** Failures 1, 2, 3, 5 and 7 can also be fixed by changing settings or links between systems (the table below; marked (*) in the diagram). The agent covers them until IT does. Its lasting value is the work no single system owns: talking to the student, coordinating four offices, accounts and the bank, reading the leave calendar, chasing approvals and handing exceptions to Ms. Iyer with evidence.
-
-| Failure | Configuration fix |
-|---|---|
-| 2: two copies of the bank details | Send the form's verified bank details to the ERP as a bank-change request for Mr. Batra's approval; pay only to an approved account |
-| 3: payment date not shown | Show the next payment-run date on the request in EduDesk |
-| 5: the return can't be matched | Use the bank's return file (confirm the bank offers one), or add a matching rule that searches the free text for the UTR |
-| 7: Hostel clears before the key | A hostel module rule (or vendor change): Clear only after the inspection is approved and the key is returned |
-| 1: "Refund paid" after a return | Show "Payment sent" at sending and "Refund paid" only once the bank confirms; send the ERP's "returned" event to EduDesk (needs the fix for Failure 5 first) |
+- **Better fixed by configuration:** Failures 1, 2, 3, 5 and 7 could also be fixed by changing settings or links between systems (marked (*) in the diagram; the fixes are listed in `AFTER_integration.md`). The agent covers them until IT does. Its lasting value is the work no single system owns: talking to the student, coordinating four offices, accounts and the bank, chasing approvals and handing exceptions to Ms. Iyer with evidence.
 
 **The line between the two:** Ask Kestrel does the work that is the same every time and can be checked. People keep the work that needs judgement, accountability or a hand to receive something.
-
-## 7. How Ask Kestrel connects to the college's systems
-
-The college keeps its systems, so the agent uses the best way in that each one offers, from the top of this list down:
-
-1. **API**, if the system has one.
-2. **Events**: the system announces changes ("line cleared", "request forwarded"), so the agent does not keep checking.
-3. **File exchange**: the system's own import and export files, such as the ERP's bulk-import template (the ERP checks every row) and the bank's statement and return files.
-4. **Read-only SQL views**: if there is no API but the database is on the college's servers, the agent reads through fixed queries on prepared views, never live tables.
-5. **Screen driver**: the last resort; the agent uses the screens like a person and reads back every entry.
-6. **Never**: direct SQL writes into the ERP's tables, which would skip its checks, ledger posting, approvals and audit trail.
-
-**Each system's best way in, if it has no API:**
-
-| System | Reading | Writing |
-|---|---|---|
-| EduDesk (request, chat, status) | Events or read-only views | Screen driver, every write read back |
-| Library, hostel, mess and lab modules | Read-only views (dues, worklists, inventory) or nightly exports | None: staff act in their own modules |
-| Accounts ERP | Read-only views (refunds, exceptions queue) | The ERP's import file or its interface (staging) tables; screen driver only if neither exists |
-| Bank: payments | Payment status from the bank's return file | The agent prepares the file; Ms. Iyer uploads it; Mr. Batra authorises it |
-| Bank: statements and returns | Daily statement file plus the return file, which gives each return with its reason code and original reference | None |
-| Rs.1 test transfer | Reuses the Rs.1 check EduDesk already runs on the form | None |
-| HR leave module | Read-only view of approved leave dates only | None |
-| Email and SMS | None | EduDesk's notification service, or its messaging screen |
-
-If the accounts system were an old one with no API, no roles and one shared login, a small **gateway** would sit in front of it: the agent proposes an entry, the right person approves it in the gateway, and only the gateway writes it (with the login kept in a vault), reads it back and logs it. Every night it compares the old system's entries with its own record, and flags any made directly with the shared login. The real fix, giving each person their own login, is the college's decision.
-
-**How the agent itself is controlled (panel 4):** its own account with only the access above; every action logged with the values before and after; it never authorises a payment or approves a bank change; one key per request, so a retry never creates a second refund; and one switch stops all its writes.
