@@ -10,6 +10,6 @@ Built on the course's **Finance · payables** module kit (`fin_payables`), with 
 4. **Two never-events.** Nothing is written, released or approved without the right person's recorded authority. The assistant never says paid, scheduled, released or posted while anything is held, parked, waiting, still a draft or not confirmed by the bank.
 5. **Open questions.** How do we stop Priya rubber-stamping drafts she approves 98% of the time? And when the bank's email and statement disagree, how long does the agent wait, and which wins?
 
-**The worked example:** today Voltway's 0.5% discount on invoice 4471 lapses while the invoice sits on hold; with the assistant it is secured in the 16th October run (Rs.1,19,952), and "paid" is said only after the bank confirms.
+**The worked example:** today Voltway's 0.5% discount on invoice 4471 lapses while the invoice sits on hold; with the assistant it can be taken in the 16th October run (Rs.1,19,952, about 4.4% a year on the money paid early, which Vikram weighs against what that money costs Northbridge), and "paid" is said only after the bank confirms.
 
 The full design behind this summary (the people, the money, the approval loop, the bank check, guardrails, tests and what changes without new code) is in `CAPSTONE_design.md`, and the picture is `CAPSTONE_SYSTEM_DESIGN_v13.excalidraw`.
