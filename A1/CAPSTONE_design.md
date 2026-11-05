@@ -4,7 +4,7 @@ The full design behind the half-page summary in `CAPSTONE.md`. The picture is `C
 
 ## Why this module
 
-I chose the payables kit because it has the same failure pattern as my own Before, the hostel deposit refund in `BEFORE.md`: money leaves after checks, and "paid" isn't really paid. The failures I found in my Before appear here too:
+I chose the payables kit because it has the same failure pattern as my own Before, the hostel deposit refund in `BEFORE.md`: money leaves after checks, and "paid" isn't really paid. My own hostel refund is hard to sandbox on its own: it spans EduDesk, four office modules, the Accounts ERP and the bank, and faking all of them is far beyond the course's budget for one module (3 screens, about 8 services), so I use the course's kit option. The failures I found in my Before appear here too:
 
 | In my Before (hostel refund) | In payables |
 |---|---|
@@ -48,7 +48,7 @@ Northbridge (Pune, Maharashtra) ordered 18,000 battery packs from Voltway Cells 
 - **cash-discount tiers** (0.25% if paid within 15 days of delivery, 0.125% within 30) count from the delivery date and reduce the GST too, through a GST credit note. A discount agreed only after the supply cannot reduce GST (CGST Act, s.15(3)(b)), so it comes as a commercial credit note with no GST change;
 - **defective** goods must be claimed from Voltway within 2 days of delivery; goods **broken in transit** are Northbridge's risk, claimed from its insurer.
 
-Voltway's price became Rs.1,332.80 on 1st October. The packs arrived on 2nd October; 300 were broken in transit, so 17,700 were accepted. Invoice 4471 bills 18,000 × Rs.1,332.80 = Rs.2,39,90,400 + IGST 18% Rs.43,18,272 = Rs.2,83,08,672, so Ledgerline holds it twice: **price** (4.39% over the order) and **quantity** (18,000 billed, 17,700 accepted). It is due on 16th November; Northbridge would normally pay it in the 20th November run. On 7th October, after the supply, Voltway emailed better discount terms (**0.5%** if paid within 15 days of delivery, **0.25%** within 30) and called Emma the next day. The contract's tiers still reduce the GST; the extra Voltway now offers does not. Voltway never learns about Northbridge's holds or internal steps. The invoice takes Voltway's purchases this year past Rs.50 lakh, so **TDS** starts (Income-tax Act 2025, section 393(1), Table Sl. No. 8(ii), formerly section 194Q).
+Voltway's price became Rs.1,332.80 on 1st October. The packs arrived on 2nd October; 300 were broken in transit, so 17,700 were accepted. Invoice 4471 bills 18,000 × Rs.1,332.80 = Rs.2,39,90,400 + IGST 18% Rs.43,18,272 = Rs.2,83,08,672, so Ledgerline holds it twice: **price** (4.39% over the order) and **quantity** (18,000 billed, 17,700 accepted). It is due on 16th November; Northbridge would normally pay it in the 20th November run. On 7th October, after the supply, Voltway emailed better discount terms (**0.5%** if paid within 15 days of delivery, **0.25%** within 30) and called Emma the next day. The contract's tiers still reduce the GST; the extra Voltway now offers does not. Voltway never learns about Northbridge's holds or internal steps. The invoice takes Voltway's purchases this year past Rs.50 lakh, and Northbridge's turnover last year was well above Rs.10 crore, so **TDS** starts (Income-tax Act 2025, section 393(1), Table Sl. No. 8(ii), formerly section 194Q).
 
 **Today:** the holds wait in due-date order, nobody connects the offer to the held invoice, and the 0.5% lapses on 17th October. When Voltway calls again on 26th October, only the 0.25% (pay by 1st November, so the 30th October run) is left, and it depends on everyone acting before Thursday's cut-off.
 
@@ -102,7 +102,7 @@ In the After, **the agent creates every entry** (invoices, credit notes, the sup
 The kit's Ledgerline module, with my changes.
 
 **From the kit:**
-- **Records (44):** 7 invoices, 5 goods receipts, 4 hold codes, 3 hold-log rows, 7 supplier bank rows, 5 ledger rows, 4 tax rows, 1 payment and 6 Friday run dates, on top of purchasing's orders, contracts, suppliers and cost centres.
+- **Records (44):** 2 people, 7 invoices, 5 goods receipts, 4 hold codes, 3 hold-log rows, 7 supplier bank rows, 5 ledger rows, 4 tax rows, 1 payment and 6 Friday run dates, on top of purchasing's orders, contracts, suppliers and cost centres.
 - **Rules:**
   - an invoice more than 2% above the order price, or more than the accepted quantity, is held;
   - each hold has its own list of who may release it, and the service account is on none of them;

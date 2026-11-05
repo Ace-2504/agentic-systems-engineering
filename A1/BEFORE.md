@@ -74,9 +74,9 @@ What actually happened to Aarav's refund, step by step. Aarav applied on 2nd May
 | What | Count | How it was counted |
 |---|---|---|
 | Steps | 27 | every row above |
-| Systems | 6 | EduDesk (with its hostel, mess and lab inventory modules, the caretaker's app and the helpdesk), library module, Accounts ERP, the bank's corporate internet banking, email, phone (plus the bank's own processing) |
+| Systems | 6 | EduDesk (with its hostel, mess and lab inventory modules, the caretaker's app and the helpdesk), library module, Accounts ERP, the bank's corporate internet banking, the bank itself (it processes and returns the payment), phone. Email only carries notifications, so it is not counted |
 | People | 7 | Aarav, lab assistant, Mr. Joseph, Dr. Menon, Mr. Gill, Ms. Iyer, Mr. Batra |
-| Codes | 8 | enrollment no., `H3-214`, bank account no., IFSC, `REQ-25-0917`, `MC-3381`, `RV-25-1184`, the UTR: each typed, read or quoted by someone |
+| Codes | 9 | enrollment no., `H3-214`, bank account no., IFSC, `REQ-25-0917`, `MC-3381`, `RV-25-1184`, the UTR, the return code `RTN-03`: each typed, read or quoted by someone |
 | Hand-offs | 14 | each time the next step is done by a different person from the step before (automatic steps by the system and the bank are not counted) |
 | In-person visits | 1 | mess counter, to return the card (the room inspection and the key return happen in the hostel, as part of moving out) |
 | Times bank details were typed | 2 | Aarav on the refund form (step 1); Ms. Iyer copying them into the ERP student record by hand (step 23) |
@@ -163,6 +163,7 @@ One of each type the brief asks for: Failure 1 is the **silent outcome**, Failur
 - **What happened:** The Rs.500 charge for the broken chair rests only on the 7th May inspection. There is no record of the room's condition when Aarav moved in.
 - **What Aarav sees:** the Rs.500 charge with a photo of the broken chair.
 - **What it cost:** Nothing this time, because Aarav accepted the charge. Had he said the chair was already broken when he moved in, neither side could have proved it.
+- **What you would need to know to avoid it:** photograph the room on the day you move in.
 
 ## 4. Cost
 
@@ -227,4 +228,3 @@ Why still 14–21 days: some waits cannot be avoided by knowing the rules. The w
 - **Staff hands-on time:** a rough guess per step (for example 5 minutes for an office to mark its line Clear, 15 minutes for a room inspection, about 20 minutes to find and match a returned payment), ±50%.
 - **Careful path:** reasoned from the fixed rules in the route (Friday approvals, the last-day card return, the 1st/15th payment runs, about a day for a transfer), assuming everything else goes right. It is a best case, not a measurement.
 - **Where the 46 days went:** each gap between one step and the next in the route, in days.
-- **What you would need to know to avoid it:** photograph the room on the day you move in.

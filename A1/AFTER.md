@@ -58,7 +58,7 @@ Where he is waiting, it says on whom and until when. On 12th May it tells him: *
 | | Before | After |
 |---|---|---|
 | Typing | the full form (enrollment no., `H3-214`, account no., IFSC) and a helpdesk ticket | **one sentence and his bank account, once**, then taps (Confirm, Accept) |
-| Codes he types, reads or quotes | 7 (enrollment no., `H3-214`, account no., IFSC, `MC-3381`, `REQ-25-0917`, the UTR) | **2** (account no. and IFSC, once) |
+| Codes he types, reads or quotes | 7 (enrollment no., `H3-214`, account no., IFSC, `MC-3381`, `REQ-25-0917`, the UTR) | **5**, of which he types only **2** (account no. and IFSC, once); he only reads `MC-3381`, `REQ-25-0917` and the UTR |
 | Visits in person | 1 (mess counter) | **1** (handing in the mess card and key is physical) |
 | Helpdesk tickets | 1 | **0** |
 | Hands-on time | about 1 hour 35 minutes | **about 40 minutes** |
