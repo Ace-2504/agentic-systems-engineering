@@ -18,7 +18,8 @@ This is my coursework for a cohort course on agentic systems engineering (see Cr
 | Folder | Assignment | Status |
 |---|---|---|
 | [`A1/`](A1) | A1 · Your Before, and the After you want | Submitted |
-| `A2/` … `A7/` | The brain, the knowledge, the tools over MCP, the harness, a workflow, the trust layer | To come |
+| [`A2/`](A2) | A2 · How a brain would read your work | Submitted |
+| `A3/` … `A7/` | The knowledge, the tools over MCP, the harness, a workflow, the trust layer | To come |
 
 ## A1 · Before and After
 
@@ -42,6 +43,17 @@ Two stories, two levels of detail.
 
 The three small images (`Before_Scorecard.png`, `After_Scorecard.png`, `How_It_Felt.png`) are my results from the course's Lecture 1 exercise, where I placed the same order by hand and then with the reference assistant.
 
+## A2 · How a brain would read your work
+
+The same Kestrel hostel refund, seen through a language model with no tools. The source text is a one-and-a-half-page refund policy I wrote for the fictional college, consistent with A1's Before: [`KESTREL_REFUND_POLICY.md`](A2/KESTREL_REFUND_POLICY.md).
+
+| Part | What it covers | File |
+|---|---|---|
+| Part 1 · Tokens | the policy through Qwen's tokenizer (4,073 characters, 1,100 tokens), the ten words and codes cut into the most pieces and why that matters, words versus tokens, and a cost estimate with its working and assumptions | [`TOKENS.md`](A2/TOKENS.md) |
+| Part 2 · Where it invents | three real refund questions; one asked four times to Gemini 3.8 Flash with search and tools off, exact replies pasted; one invented detail traced through the input, the next-token game, training and the cut-off; the most dangerous question | [`INVENT.md`](A2/INVENT.md) |
+| Part 3 · Facts it needs | every fact the three questions need and where it lives, sorted into documents (Lecture 3) and live lookups (Lecture 4), and a real test with one fact added to the prompt | [`FACTS.md`](A2/FACTS.md) |
+| Part 4 · NB2 | the course notebook, run top to bottom in Colab: six exercises solved, my policy in the last cell with a ranking cell after it, and the two answers in the last cell | [`NB2_the_brain.ipynb`](A2/NB2_the_brain.ipynb) |
+
 ## How to read the diagrams
 
 Each diagram is a board of frames that reads left to right: an overview first, then the steps phase by phase, with **red** notes for what goes wrong today and **green** notes for what the design fixes.
@@ -49,14 +61,14 @@ Each diagram is a board of frames that reads left to right: an overview first, t
 - **Quick look:** open the `.png` next to each diagram.
 - **Full detail:** open the `.excalidraw` file at [excalidraw.com](https://excalidraw.com) (menu → Open) or with the Excalidraw extension for VS Code. The frames list lets you jump between frames or present them one at a time.
 
-## Running the notebook
+## Running the notebooks
 
-`NB1_before_and_after.ipynb` installs the course's sandbox ERP in its first cell and runs in **replay mode**: it plays back recorded model replies, so it needs no API key. It is meant for Google Colab (Runtime → Run all); locally it needs Python 3.10 or newer and git.
+`NB1_before_and_after.ipynb` and `NB2_the_brain.ipynb` install the course's sandbox ERP in their first cell and run in **replay mode**: they play back recorded model replies, so they need no API key. They are meant for Google Colab (Runtime → Run all); locally they need Python 3.10 or newer and git. NB2 also downloads a small open model (Qwen2.5-0.5B-Instruct, about 1 GB) and trains a tiny GPT on CPU, which takes about 25 minutes.
 
 ## Credits
 
-The course, the Ledgerline sandbox ERP, the payables module kit and the NB1 notebook are by Dr. Rajat Dandekar and Vizuara: [RajatDandekar/agents-for-enterprises](https://github.com/RajatDandekar/agents-for-enterprises). The notebook here is the course's NB1 with my own solutions and exercise 6. The process write-ups, the capstone design and the diagrams are my own work.
+The course, the Ledgerline sandbox ERP, the payables module kit and the NB1 and NB2 notebooks are by Dr. Rajat Dandekar and Vizuara: [RajatDandekar/agents-for-enterprises](https://github.com/RajatDandekar/agents-for-enterprises). The notebooks here are the course's NB1 and NB2 with my own solutions and additions. The process write-ups, the refund policy, the capstone design and the diagrams are my own work.
 
 ## Licence
 
-My own write-ups and diagrams in this repository are licensed under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE): you may reuse them with credit. The course materials (the NB1 notebook, the Ledgerline sandbox, the payables module kit and the names and data that come from them) belong to Dr. Rajat Dandekar and Vizuara and are **not** covered by this licence.
+My own write-ups and diagrams in this repository are licensed under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE): you may reuse them with credit. The course materials (the NB1 and NB2 notebooks, the Ledgerline sandbox, the payables module kit and the names and data that come from them) belong to Dr. Rajat Dandekar and Vizuara and are **not** covered by this licence.
