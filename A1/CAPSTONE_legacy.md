@@ -181,6 +181,7 @@ The same as in `CAPSTONE_design.md` (section 5), with one more question at the e
 ## 6. Tax after the invoice
 
 The same as `CAPSTONE_design.md` section 6: the GST credit check (the invoice, the supplier, the 180-day rule, IMS and the 2B match both ways, eligibility and the monthly report), the contract's GST payment term (T1 or T2; Voltway is T1), the reverse-charge table and workflow, the TDS steps, and the accounting entries. What differs here:
+- The TDS decision (what is bought, the approved TDS table with its old → new section map, a lower or nil certificate checked on TRACES, an operative PAN, the threshold) runs in the gateway; earlier invoices are read from NBAS's read-only copy and only suggest a section.
 - NBAS has no statuses for tax, so the gateway keeps them: each invoice's GST credit status, the reverse-charge ledger, the TDS challans and return data.
 - The GST data (2B, IMS list, filing status, e-invoice checks) comes read-only from the GST data provider into the gateway, never raw into NBAS.
 - After Meera approves, the gateway writes the final tax journals into NBAS through the adapter's post_journal, reads them back, and the nightly compare checks NBAS's GST register against the gateway.

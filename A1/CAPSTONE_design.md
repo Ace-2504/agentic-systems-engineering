@@ -192,6 +192,9 @@ The daily offer check (supplier offers against held and payable invoices, with t
 | Any | Agent | A spoofed "payment failed, use our new account" email | Quarantined and flagged; no bank detail changes |
 | 1st Nov | Vikram | A new TDS rate is approved, starting 1st Nov | Invoices dated before 1st Nov keep the old rate; later ones use the new one; nothing in the code or prompt changed |
 | Any | Agent | An invoice with no IRN, or a cancelled one | Held for Meera; no GST credit booked |
+| Any | Agent | Indus Ergonomics LLP (an invented design consultancy) bills professional fees and has a valid 1% lower-deduction certificate | Verified on TRACES (PAN, section, validity, limit left); 1% instead of the table's 10%; the certificate number kept for Form 140 |
+| Any | Agent | A supplier's PAN is inoperative (not linked to Aadhaar) | Treated as no PAN: the higher rate, and Meera is told |
+| Any | Agent | A new kind of service with no earlier invoices and no row in the TDS table | Held for Meera; her answer joins the table only after Vikram approves it |
 | 7th Nov | Agent | October's TDS (4471: Rs.22,821) | Challan drafted; Meera approves, Vikram authorises; "deposited" only after the bank statement shows the challan |
 | 12th–14th Nov | Agent | October's IMS list and GSTR-2B | 4471 and the defective credit note recommended "accept"; after 2B: Rs.42,46,300.80 Eligible, Rs.62,375.04 Ineligible (s.17(5)(h)); every issue escalated to Meera; report approved by her by the 18th |
 | 18th Dec | Agent | The insurer's payment arrives | Matched on the bank statement; the claim is closed; any shortfall goes to Vikram |
@@ -303,12 +306,26 @@ For some services the law makes the **buyer** pay the GST (CGST Act s.9(3); IGST
 
 ### 6c. TDS after the deduction
 
+**Deciding the TDS (Meera, the tax manager in finance, takes every escalation).** Before anything is deducted, the agent works out the section and rate in this order:
+
+| Step | The agent | If not clear |
+|---|---|---|
+| 1. What is it? | Reads the invoice: supplier, PAN, GSTIN, type of entity, what is bought, HSN or SAC code, taxable value, GST. Classifies it by what is actually bought (goods, professional or technical services, a contract, rent, commission, transport, other), not by the description or code alone | Ambiguous: Meera |
+| 2. The section | Looks for earlier invoices of the same kind (same supplier type, same kind of purchase, the section used before). These only **suggest** a section; **the approved TDS table decides**: what is bought, section, rate, threshold, start date. The table maps old section numbers (194Q, 194C, 194J…) to the Income-tax Act 2025's, so last year's invoices still match | Not in the table: held for Meera. Her answer is added to the table only when Vikram approves it, with a start date |
+| 3. A lower or nil certificate | Checks the supplier's records for a lower or nil deduction certificate and verifies it on TRACES: name, PAN, certificate number, section, rate, validity, financial year, kind of payment, and the amount limit not used up. A valid one wins over the table's rate; its number is kept for Form 140 | Expired, not covering this payment, or not verifiable: the normal rate, and Meera is told |
+| 4. PAN | Is the PAN there, valid and **operative** (linked to Aadhaar)? An inoperative PAN counts as no PAN, so the higher rate applies (5% for a purchase of goods); any other special rate or exemption in the table is applied too | Unclear: held for Meera |
+| 5. Threshold and amount | Adds up this year's purchases from the supplier, checks the section's threshold, works out the base (GST excluded where it is shown separately) and the TDS, and checks it against the invoice | Any difference: Meera |
+| 6. Deduct and record | Deducts at the earlier of credit and payment, records it against the invoice, works out the net payable, drafts the entry (supplier, TDS payable, GST credit where eligible, purchase or expense), and keeps a supplier-wise TDS ledger | Meera approves the entry |
+
+For invoice 4471: a purchase of goods; earlier Voltway invoices suggest s.393(1) (formerly 194Q) and the table confirms it; no certificate on file; Voltway's PAN valid and operative; this year's purchases cross Rs.50 lakh, so 0.1% of the excess, Rs.22,821, deducted at credit on 6th October. For Saurashtra's freight: a transport contract, but the small-transporter declaration is on file, so nil.
+
 Deducting the Rs.22,821 when 4471 is posted on 6th October is only the first step. From 1st April 2026 the Income-tax Rules 2026 renumbered the forms: the quarterly return Form 26Q is now **Form 140**, and the certificate Form 16A is now **Form 131**.
 
 | Step | By when | The agent | A person |
 |---|---|---|---|
 | 1. Pay it to the government | 7th November (deducted in October) | Drafts the challan for all of October's TDS | Meera approves and pays; Vikram authorises at the bank |
 | 2. Check the bank really paid it | The next morning | Matches the challan number on the bank statement (the bank check) | Told the result |
+| 2b. Reconcile | Monthly | Matches the supplier-wise TDS ledger against the challans: missing, short, excess or unpaid deductions go to Meera, with the TDS report (supplier, PAN, invoice, section, normal and certificate rate, amount, net payable, date, deposit status, challan, open exceptions) | Meera reviews it |
 | 3. File the quarterly return (October to December) | 31st January | Prepares Form 140: Voltway's PAN, the amounts, the challan numbers | Meera files it with the company's digital signature |
 | 4. Give Voltway its certificate | After the return is processed, within the time the 2026 Rules set (under the old rules, 15 days after the return's due date) | Checks the Form 131 that Meera downloads from TRACES against the books, and drafts the email | Priya sends it to Voltway |
 
@@ -377,6 +394,7 @@ The logic is code; the numbers and names are approved tables. So a rate change o
 | A new approval step (e.g. above Rs.5 crore, the finance director too) | Policy table: amount band → approver role | A new row, approved by the finance director | Same day |
 | Someone joins, leaves or changes job | Ledgerline roles plus the company sign-in directory; rules name roles, never people | HR updates the directory; finance roles also need Vikram; access ends the day HR removes the person | Same day |
 | Someone goes on leave | Stand-in table, with dates | A stand-in is named and ends on its own date | Minutes |
+| TDS sections, rates and thresholds by what is bought, and the old → new section map | The TDS table, dated | Meera proposes (including answers to escalations), Vikram approves; past invoices only suggest | Same day |
 | How GST treats a discount agreed after the supply (changed on 1st Nov 2026) | The policy table, dated | Meera proposes, Vikram approves; credit notes before the date follow the old row | Same day |
 | A reverse-charge category or rate (e.g. cab hire, changed on 1st Nov 2026) | The RCM table: each row with its source notification and a start date | Meera proposes, Vikram approves; bills dated before the change follow the old row | Same day |
 | A supplier's GST payment term (T1 or T2) | The contract table | A contract change, approved by Daniel and Vikram | Same day |
