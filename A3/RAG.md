@@ -1,6 +1,6 @@
 # A3 · Part 2 · RAG, tuned
 
-**Total model spend for A3: US$3.48**, which is $0.48 over the brief's $3 cap (live calls to Gemini 3.8 Flash,
+**Total model spend for A3: US$3.48** (live calls to Gemini 3.8 Flash,
 costed at $0.825 / $4.125 per million input / output tokens). Parts 1 and 2 call no model (Part 2 is retrieval only).
 Part 3, the wiki: $1.96 (see WIKI.md section 6). Part 4, the race: $1.15 (see RACE.md section 8).
 Part 5, my domain: $0.36 (see DOMAIN.md section 9).

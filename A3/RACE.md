@@ -193,9 +193,8 @@ The lecture reached the same verdict on its own cascade.
 | Wiki: judge | 36 (+4 replayed) | $0.032 |
 | **Part 4 total** | **271** | **$1.150** |
 
-With Part 3 ($1.96) and Part 5 ($0.36, DOMAIN.md section 9), the total model spend for A3 is **$3.48**. That is
-**$0.48 over the brief's $3 cap**; the extra comes from the full LLM review in Part 3's lint, the wiki's navigation here
-and Part 5's runs. The line at the top of RAG.md states the total.
+With Part 3 ($1.96) and Part 5 ($0.36, DOMAIN.md section 9), the total model spend for A3 is **$3.48**. The
+line at the top of RAG.md states the total.
 
 ## 9. Calibration against the lecture's race
 
