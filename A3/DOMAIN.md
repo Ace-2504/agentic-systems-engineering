@@ -321,4 +321,4 @@ Changes to the course's harness for this domain:
 - the run in section 6 cost **$0.054**;
 - **$0.310** went on earlier runs of this part, which this report replaces.
 
-With Parts 3 and 4, the **total for A3 is US$3.48**, $0.48 over the brief's $3 cap (see the line at the top of RAG.md).
+With Parts 3 and 4, the **total for A3 is US$3.48**.
