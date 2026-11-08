@@ -1,0 +1,4480 @@
+{
+ "name": "rag",
+ "records": [
+  {
+   "id": "Q-0412",
+   "type": "exact_code",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1501019000006636,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 2,
+    "levels": {
+     "page": 2
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.25,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.5,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.5,
+    "fact@10": 1,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "11_training/New starter - Purchasing (2024) deck export.pdf#c0",
+     "cite": "New starter - Purchasing (2024) deck export.pdf, pp.1-8, § New starter induction: Purchasing at"
+    },
+    {
+     "id": "11_training/QRC-03 ERR-PO-0412 quick fix.pdf#c0",
+     "cite": "QRC-03 v2026.1, p.1, § Quick reference: ERR-PO-0412 quick fix"
+    },
+    {
+     "id": "11_training/QRC-03 ERR-PO-0412 quick fix.pdf#c1",
+     "cite": "QRC-03 v2026.1, p.1, § Recommitting the record"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c13",
+     "cite": "MAN-PUR-72 v7.2.3, pp.9-10, § 14.5 Cancelling"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.3-P1 Ledgerline Patch Notes.pdf#c1",
+     "cite": "RN-7.2.3-P1, pp.1-2, § Testing Recommendations"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c14",
+     "cite": "MAN-PUR-72 v7.2.3, p.10, § 17.2 ERR-PO-0412 Tax code does not match supplier country"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.3 (FINAL).pdf#c3",
+     "cite": "SOP-PUR-002 v1.3, p.3, § 5. Procedure"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.4.pdf#c4",
+     "cite": "SOP-PUR-002 v1.4, p.3, § 5. Procedure"
+    },
+    {
+     "id": "11_training/intranet_export_2016/error_messages.html#c0",
+     "cite": "error_messages.html, § Error messages"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c2",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    }
+   ],
+   "withheld": false,
+   "answer": "**Meaning of ERR-PO-0412**  \nThe message reads `ERR-PO-0412 TAX CODE DOES NOT MATCH SUPPLIER COUNTRY (<country>)` [2][5]. It means the entered tax code does not match the supplier's registered country (indicated by the country code shown in brackets) [2][6]. This occurs because the Fetch function automatically populates `VAT20-UK` by default, even for overseas suppliers [2][6][8]. \n\n*(Note: Release note RN-7.2.3-P1 updated the message text to this wording from the previous \"TAX REGION DOES NOT MATCH SUPPLIER STATE\" [5]).*\n\n**How to Fix It**  \n1. Look at the supplier country code shown in brackets at the end of the error message (e.g., `NL`) [2].  \n2. Update the tax code on the order line [2]:  \n   - **Supplier outside the UK:** Change the code to `VAT20-RC` (or `VAT5-RC` for reduced-rate items) [2][6].  \n   - **Supplier in the UK:** Ensure the code is set to `VAT20-UK` [2].  \n   - Check each line item individually on multi-line orders [2].  \n3. Keep your cursor in the line details area and press **F8** to save and recommit the record [2][3]. The status line will clear once accepted [3].  \n\n*Tip:* If the error persists on new orders for a regular overseas vendor, notify the purchase ledger team to review and correct the master supplier profile [3].",
+   "cited": [
+    2,
+    5,
+    6,
+    8,
+    3
+   ],
+   "tokens_in": 3803,
+   "tokens_out": 1403,
+   "llm_seconds": 11.219,
+   "cost_usd": 0.008925,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer accurately includes all key facts and provides correct instructions on how to resolve the error.",
+    "tokens_in": 738,
+    "tokens_out": 140,
+    "cost_usd": 0.001186
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.6
+   },
+   "total_s": 11.3691,
+   "cost_total_usd": 0.008925
+  },
+  {
+   "id": "Q-705",
+   "type": "exact_code",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14679769999929704,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c16",
+     "cite": "MAN-PUR-72 v7.2.3, pp.11-12, § 17.17 ERR-SUP-0031 Supplier not active"
+    },
+    {
+     "id": "04_service_definitions/purchase/sup_create.yaml#c0",
+     "cite": "svc:sup_create, § request.fields, service sup_create"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c35",
+     "cite": "MAN-ERR-72 v7.2.3, p.25, § ERR-STK-0102 INSUFFICIENT STOCK (<available>)"
+    },
+    {
+     "id": "01_policies/old/Supplier_Policy_v2.2.docx#c3",
+     "cite": "POL-SUP-003 v2.2, § 5. Blocking and unblocking"
+    },
+    {
+     "id": "04_service_definitions/purchase/sup_create.yaml#c1",
+     "cite": "svc:sup_create, § request.fields, service sup_create"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c3",
+     "cite": "POL-SUP-003 v2.3, p.2, § 5. Blocking and unblocking"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c3",
+     "cite": "POL-SUP-003 v2.3, p.2, § 5. Blocking and unblocking"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c50",
+     "cite": "MAN-SCR-72 v7.2.3, p.30, § PUR-SUP-01 SUPPLIER MASTER CREATE"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c9",
+     "cite": "MAN-AP-72 v7.2.3, pp.5-6, § Messages"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c12",
+     "cite": "MAN-AP-72 v7.2.3, p.7, § Questions users ask"
+    }
+   ],
+   "withheld": false,
+   "answer": "**ERR-SUP-0118** means **VAT NO ALREADY REGISTERED** (or \"VAT number already registered\") [1][2][3][8]. \n\n- **Cause:** A supplier with this VAT number already exists in Ledgerline; the system refuses to create a second supplier record with the same VAT number [1][3][6].\n- **Remedy:** Search for the supplier and use the existing code; do not create a second record [1][3].",
+   "cited": [
+    1,
+    2,
+    3,
+    8,
+    6
+   ],
+   "tokens_in": 4259,
+   "tokens_out": 531,
+   "llm_seconds": 6.517,
+   "cost_usd": 0.005704,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly explains the error and includes the key fact to search for the supplier and use the existing code.",
+    "tokens_in": 371,
+    "tokens_out": 110,
+    "cost_usd": 0.00076
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.4
+   },
+   "total_s": 6.6638,
+   "cost_total_usd": 0.005704
+  },
+  {
+   "id": "Q-703",
+   "type": "exact_code",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14479759999994712,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 4,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.25
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c10",
+     "cite": "MAN-PUR-72 v7.2.3, pp.7-8, § 11.4 The tax code"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c24",
+     "cite": "MAN-ERR-72 v7.2.3, pp.17-18, § ERR-PO-0201 QTY MUST BE > 0"
+    },
+    {
+     "id": "11_training/intranet_export_2016/error_messages.html#c0",
+     "cite": "error_messages.html, § Error messages"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c14",
+     "cite": "MAN-PUR-72 v7.2.3, p.10, § 17.2 ERR-PO-0412 Tax code does not match supplier country"
+    },
+    {
+     "id": "01_policies/AMD-PUR-2026-03_Amendment3_PurchasePolicy_DIRlimit.pdf#c0",
+     "cite": "AMD-PUR-2026-03 v1.0, p.1, § Amendment 3 to the Purchase Policy"
+    },
+    {
+     "id": "07_data_dictionary/Ledgerline_7.2_tables_and_fields.xlsx#c76",
+     "cite": "Ledgerline_7.2_tables_and_fields.xlsx, Error codes rows 158-174"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c2",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c6",
+     "cite": "MAN-SVC-72 v7.2.3, p.6, § po_save PO SAVE"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c0",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c25",
+     "cite": "MAN-ERR-72 v7.2.3, pp.18-19, § ERR-PO-0611 DIR PO CANNOT REFER PR"
+    }
+   ],
+   "withheld": false,
+   "answer": "**ERR-PO-0610** (*DIRECT PO LIMIT 50000 EXCEEDED, RAISE PR*) means that a direct (DIR) purchase order cannot be saved because its gross value exceeds the direct-order limit, which is currently £50,000 [1][2][5]. \n\n**Remedy:** Raise a purchase request on PUR-PR-01, obtain approval, and then raise a standard (STD) order against the approved request [2][4].\n\n**Upcoming Change:** Under Amendment AMD-PUR-2026-03 (effective 1 December 2026), the direct-order limit will be reduced from £50,000 to £25,000 gross [5]. Until 30 November 2026, the limit remains £50,000 [5].",
+   "cited": [
+    1,
+    2,
+    5,
+    4
+   ],
+   "tokens_in": 4486,
+   "tokens_out": 1412,
+   "llm_seconds": 9.071,
+   "cost_usd": 0.009525,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly explains the error and includes the key fact to raise a purchase request.",
+    "tokens_in": 474,
+    "tokens_out": 192,
+    "cost_usd": 0.001183
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 0.5
+   },
+   "total_s": 9.2158,
+   "cost_total_usd": 0.009525
+  },
+  {
+   "id": "Q-711",
+   "type": "exact_code",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14784639999925275,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c32",
+     "cite": "MAN-ERR-72 v7.2.3, p.23, § ERR-SEC-0001 ACCESS DENIED"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c139",
+     "cite": "MAN-AP-72 v7.2.3, p.64, § ERR-TAX-0001"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c129",
+     "cite": "MAN-SAL-72 v7.2.3, p.62, § Questions users ask"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c78",
+     "cite": "MAN-SAL-72 v7.2.3, pp.36-37, § Questions users ask"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PRD-72 Ledgerline 7.2 User Manual - Production and Quality v7.2.3.pdf#c41",
+     "cite": "MAN-PRD-72 v7.2.3, pp.20-21, § Messages"
+    },
+    {
+     "id": "07_data_dictionary/Ledgerline_7.2_tables_and_fields.xlsx#c79",
+     "cite": "Ledgerline_7.2_tables_and_fields.xlsx, Error codes rows 209-227"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c33",
+     "cite": "MAN-ERR-72 v7.2.3, pp.23-24, § ERR-SES-0001 SESSION NOT FOUND"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c11",
+     "cite": "MAN-SAL-72 v7.2.3, p.7, § Questions users ask"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c103",
+     "cite": "MAN-SAL-72 v7.2.3, p.48, § Questions users ask"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PRD-72 Ledgerline 7.2 User Manual - Production and Quality v7.2.3.pdf#c61",
+     "cite": "MAN-PRD-72 v7.2.3, p.29, § Questions users ask"
+    }
+   ],
+   "withheld": false,
+   "answer": "**ERR-SEC-0001** is **ACCESS DENIED** [1][6]. \n\n- **Module:** SEC [6]\n- **Cause:** Your role does not allow this screen or action [1].\n- **Remedy:** Ask your manager; IT changes roles only on a written request [1].\n- **Raised by:** `itm_search`, `itm_get`, `sup_search`, `sup_get`, `sup_create`, `sup_cert_get`, `sup_cert_upload`, `sup_rate_get`, `cc_list`, `cc_get`, `whs_list`, `tax_list`, and others [1].",
+   "cited": [
+    1,
+    6
+   ],
+   "tokens_in": 4055,
+   "tokens_out": 345,
+   "llm_seconds": 4.825,
+   "cost_usd": 0.004769,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states the key fact that ERR-SEC-0001 means ACCESS DENIED.",
+    "tokens_in": 421,
+    "tokens_out": 120,
+    "cost_usd": 0.000842
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 4.9728,
+   "cost_total_usd": 0.004769
+  },
+  {
+   "id": "Q-EMMA",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13681499999984226,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 11,
+    "rank": 1,
+    "levels": {
+     "file": 2
+    },
+    "hit@1": 1,
+    "cov@1": 0.1818,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.1818,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.1818,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.1818,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "09_email_archive/2026/2026-10-22_Quotation Q-BE-26-0917 - Brightcell Energy.eml#c0",
+     "cite": "2026-10-22_Quotation Q-BE-26-0917 - Brightcell Energy.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-23_RE_ Brightcell quote - can we switch from Voltway_.eml#c0",
+     "cite": "2026-10-23_RE_ Brightcell quote - can we switch from Voltway_.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-23_Brightcell quote - can we switch from Voltway_.eml#c0",
+     "cite": "2026-10-23_Brightcell quote - can we switch from Voltway_.eml, § body"
+    },
+    {
+     "id": "10_meeting_notes/2026-10-19 Weekly purchasing meeting.md#c0",
+     "cite": "2026-10-19 Weekly purchasing meeting.md, § Weekly purchasing meeting"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c1",
+     "cite": "POL-BAT-004 v1.2, pp.1-2, § Common errors and misunderstandings"
+    },
+    {
+     "id": "02_procedures/SOP-QUA-002 Damaged Battery Pack Quarantine v1.1.pdf#c6",
+     "cite": "SOP-QUA-002 v1.1, p.4, § What to do when something does not look right"
+    },
+    {
+     "id": "11_training/New starter - Purchasing (2024) deck export.pdf#c0",
+     "cite": "New starter - Purchasing (2024) deck export.pdf, pp.1-8, § New starter induction: Purchasing at"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c6",
+     "cite": "SOP-INV-004 v1.0, p.5, § Common Errors"
+    },
+    {
+     "id": "02_procedures/SOP-SAL-002 Warranty Claims (RMA) v1.1.pdf#c3",
+     "cite": "SOP-SAL-002 v1.1, p.3, § Common mistakes by bike shops and internal staff"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c0",
+     "cite": "POL-BAT-004 v1.2, p.1, § Battery Safety and Handling Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, you cannot order battery packs from Brightcell Energy yet [2].\n\nAs Luis Moreno confirmed, several requirements prevent this purchase today:\n\n1. **Supplier Onboarding:** Brightcell is not in the supplier master [2][4]. They must first be onboarded under SOP-PUR-001, requiring an onboarding file, Daniel Okafor's signature on NBC-F-112, supplier creation in Ledgerline, and upload of their UN 38.3 certificate [2].\n2. **UN 38.3 Certification:** Battery packs are lithium-cell parts subject to Purchase Policy 6.2, which requires a valid UN 38.3 certificate on file and verified prior to placing the first order [2][7]. Under amendment AMD-SUP-2026-02, the report must be less than 12 months old and valid for at least 60 days post-order [2]. Brightcell’s test report is currently being renewed and is not expected until December 2026, meaning they cannot pass this requirement today [1][2].\n3. **Policy on Cheaper Quotes:** Under Policy 6.4, a lower quote on its own is not an acceptable reason to switch suppliers for a lithium-cell component [2].\n4. **System Warning:** Ledgerline’s automated certificate check is currently disabled, so a clean \"Save\" on an order does not indicate approval [2][7].\n\nFor the spring launch run, you must continue ordering battery packs from Voltway (contract rate £119.00) on PRD-07, and send Brightcell the onboarding pack [2][3][4].",
+   "cited": [
+    2,
+    4,
+    7,
+    1,
+    3
+   ],
+   "tokens_in": 3557,
+   "tokens_out": 1082,
+   "llm_seconds": 10.394,
+   "cost_usd": 0.007398,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "£104.00",
+     "PUR.CERT_CHK"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate answer fails to mention the key facts 'PUR.CERT_CHK' and '£104.00'.",
+    "tokens_in": 1005,
+    "tokens_out": 456,
+    "cost_usd": 0.00271
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.2
+   },
+   "total_s": 10.5308,
+   "cost_total_usd": 0.007398
+  },
+  {
+   "id": "Q-502",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13756009999997332,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 5,
+    "rank": 2,
+    "levels": {
+     "file": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.2,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.2,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.2,
+    "fact@10": 1,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "10_meeting_notes/2026-10-19 Weekly purchasing meeting.md#c1",
+     "cite": "2026-10-19 Weekly purchasing meeting.md, § Discussion"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-01_CERT EXPIRED - DO NOT ORDER_ Nordic Cell Co. (NC-GDA-0063).eml#c0",
+     "cite": "2026-10-01_CERT EXPIRED - DO NOT ORDER_ Nordic Cell Co. (NC-GDA-0063).eml, § body"
+    },
+    {
+     "id": "10_meeting_notes/2026-10-19 Weekly purchasing meeting.md#c0",
+     "cite": "2026-10-19 Weekly purchasing meeting.md, § Weekly purchasing meeting"
+    },
+    {
+     "id": "05_master_data/old/item_master_export_2025-03.csv#c0",
+     "cite": "item_master_export_2025-03.csv, rows 2-8"
+    },
+    {
+     "id": "05_master_data/ITEM_MASTER_2026-10-26.xlsx#c0",
+     "cite": "ITEM_MASTER_2026-10-26.xlsx, Items rows 5-7"
+    },
+    {
+     "id": "06_transactions/reports/PO register 2026-06 (printed).pdf#c19",
+     "cite": "PO register 2026-06 (printed).pdf, p.3, § OU NBC-MAN-01 / NBC-LDS-01 PERIOD 2026-06 RUN BY JOB-PUR-051"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c90",
+     "cite": "stock_ledger_2026-Q3.csv, rows 632-638"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-22_Quotation Q-BE-26-0917 - Brightcell Energy.eml#c0",
+     "cite": "2026-10-22_Quotation Q-BE-26-0917 - Brightcell Energy.eml, § body"
+    },
+    {
+     "id": "06_transactions/reports/PO register 2026-05 (printed).pdf#c4",
+     "cite": "PO register 2026-05 (printed).pdf, p.1, § OU NBC-MAN-01 / NBC-LDS-01 PERIOD 2026-05 RUN BY JOB-PUR-051"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c89",
+     "cite": "stock_ledger_2026-Q3.csv, rows 625-631"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, you cannot order BAT-500 from Nordic Cell [1][2][3].\n\nAlthough Nordic Cell Co. remains ACTIVE in Ledgerline with their £111.00 rate contract for BAT-500, their UN 38.3 certificate (UN38.3-TR/NC/2025/090) expired on 30 September 2026 [2]. Under current procedures, an expired certificate mandates an immediate freeze on purchasing regulated items [1]. \n\nBAT-500 is a regulated lithium-cell item (cell safety flag 1, UN3480) [5]. The purchasing meeting confirmed that no purchase orders for lithium cells may be placed with Nordic Cell until a renewed test report is received, approved, and recorded in the system [1][2][3]. Note that Ledgerline will not automatically prevent you from raising the order, but doing so is prohibited [2].",
+   "cited": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "tokens_in": 4630,
+   "tokens_out": 800,
+   "llm_seconds": 9.082,
+   "cost_usd": 0.00712,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer correctly states that BAT-500 cannot be ordered from Nordic Cell and includes both required key facts (£111.00 and 30 September 2026).",
+    "tokens_in": 549,
+    "tokens_out": 184,
+    "cost_usd": 0.001212
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 0.25
+   },
+   "total_s": 9.2196,
+   "cost_total_usd": 0.00712
+  },
+  {
+   "id": "Q-510",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13759980000031646,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 1,
+    "levels": {
+     "page": 3
+    },
+    "hit@1": 1,
+    "cov@1": 0.25,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.25,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.25,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.75,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c1",
+     "cite": "POL-PUR-001 v4.1, pp.1-2, § 3. Requests before orders"
+    },
+    {
+     "id": "01_policies/old/Purchase Policy v4.0.docx#c0",
+     "cite": "POL-PUR-001 v4.0, § Purchase Policy"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c10",
+     "cite": "MAN-PUR-72 v7.2.3, pp.7-8, § 11.4 The tax code"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c3",
+     "cite": "POL-PUR-001 v4.1, pp.2-3, § Appendix A. Definitions"
+    },
+    {
+     "id": "01_policies/POL-APR-002 Approval Matrix v3.0.pdf#c2",
+     "cite": "POL-APR-002 v3.0, p.2, § 5. Examples"
+    },
+    {
+     "id": "11_training/intranet_export_2016/error_messages.html#c0",
+     "cite": "error_messages.html, § Error messages"
+    },
+    {
+     "id": "01_policies/old/purchase_policy_v3_2019.docx#c1",
+     "cite": "POL-PUR-001 v3.0, § 3. Requests before orders"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-12_Amendment 3 - direct orders limited to _25,000 from 1 December.eml#c0",
+     "cite": "2026-10-12_Amendment 3 - direct orders limited to _25,000 from 1 December.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-07-23_Partial delivery of brake pads.eml#c0",
+     "cite": "2026-07-23_Partial delivery of brake pads.eml, § body"
+    },
+    {
+     "id": "01_policies/AMD-PUR-2026-03_Amendment3_PurchasePolicy_DIRlimit.pdf#c0",
+     "cite": "AMD-PUR-2026-03 v1.0, p.1, § Amendment 3 to the Purchase Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "Yes, you can raise a direct purchase order for £40,000 of brake pads next month (November 2026) [1][8][10]. \n\nUnder POL-PUR-001 §3.3, a direct purchase order without a prior purchase request is permitted provided its gross value, including VAT, is £50,000 or less [1][4]. Until 30 November 2026, the direct order limit remains £50,000 [8][10]. Even if £40,000 is the basic value, adding 20% UK VAT (£8,000) results in a gross value of £48,000, which remains within the £50,000 threshold [3][5]. \n\nKey requirements to keep in mind:\n- **Upcoming change:** Under Amendment 3 (AMD-PUR-2026-03), the direct-order limit reduces to £25,000 gross starting 1 December 2026 [8][10]. Therefore, a £40,000 direct order must be placed and saved in Ledgerline before 1 December 2026 [8][10].\n- **Cost centre:** The order must be charged to an open cost centre (checked via screen FIN-CC-01); otherwise, Ledgerline saves it as a Draft that cannot be sent to the supplier [1].\n- **Approval:** As a purchase executive with a £250,000 limit, an order of this gross value is within your approval authority [5].",
+   "cited": [
+    1,
+    8,
+    10,
+    4,
+    3,
+    5
+   ],
+   "tokens_in": 3850,
+   "tokens_out": 1463,
+   "llm_seconds": 13.985,
+   "cost_usd": 0.009211,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "ERR-PO-0610"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate answer fails to mention the required error code ERR-PO-0610.",
+    "tokens_in": 710,
+    "tokens_out": 168,
+    "cost_usd": 0.001279
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 6,
+    "precision": 0.333
+   },
+   "total_s": 14.1226,
+   "cost_total_usd": 0.009211
+  },
+  {
+   "id": "Q-505",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13792409999950905,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 5,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 0.2,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.2,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.2,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.2,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c6",
+     "cite": "MAN-PUR-72 v7.2.3, p.5, § 6.2 Fields"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-001 Supplier Onboarding v3.1.pdf#c8",
+     "cite": "SOP-PUR-001 v3.1, pp.5-6, § Common errors and working guidance"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c6",
+     "cite": "POL-SUP-003 v2.3, p.4, § Creating the account in Ledgerline"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c6",
+     "cite": "POL-SUP-003 v2.3, p.4, § Creating the account in Ledgerline"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-23_RE_ Brightcell quote - can we switch from Voltway_.eml#c0",
+     "cite": "2026-10-23_RE_ Brightcell quote - can we switch from Voltway_.eml, § body"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.1 Ledgerline Release Notes.pdf#c1",
+     "cite": "RN-7.2.1 v7.2.1, pp.1-2, § Verification and User Acceptance Testing"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c94",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 10-13"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c96",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 18-21"
+    }
+   ],
+   "withheld": false,
+   "answer": "No. Ledgerline does not stop or prevent you from raising or placing an order with a supplier that lacks a certificate or has missing compliance records [1][4][5][7]. \n\nKey system details include:\n- A new supplier is created in ACTIVE status, and Ledgerline does not hold the supplier back for missing documents [3][5].\n- Ledgerline does not automatically block purchase orders where certificates are missing or expired [3][5][8].\n- The certificate check in Ledgerline is switched off [7].\n- The requirement to check and manually verify that required certificates and documents are on file before issuing or approving an order is a manual procedure performed by the person raising the order (the proposer) and the approver [1][3][4][5][8].",
+   "cited": [
+    1,
+    4,
+    5,
+    7,
+    3,
+    8
+   ],
+   "tokens_in": 3939,
+   "tokens_out": 588,
+   "llm_seconds": 6.866,
+   "cost_usd": 0.005675,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "PUR.CERT_CHK",
+     "W-SUP-0207"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate answer fails to mention the required key facts PUR.CERT_CHK and W-SUP-0207.",
+    "tokens_in": 526,
+    "tokens_out": 116,
+    "cost_usd": 0.000912
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 6,
+    "precision": 0.167
+   },
+   "total_s": 7.0039,
+   "cost_total_usd": 0.005675
+  },
+  {
+   "id": "Q-811",
+   "type": "not_in_docs",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14262910000070406,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "09_email_archive/2026/2026-10-23_Brightcell quote - can we switch from Voltway_.eml#c0",
+     "cite": "2026-10-23_Brightcell quote - can we switch from Voltway_.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-26_Battery packs for the spring launch run.eml#c0",
+     "cite": "2026-10-26_Battery packs for the spring launch run.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-09-25_FW_ Voltway Cells - BAT-500 price from 1 October 2026.eml#c0",
+     "cite": "2026-09-25_FW_ Voltway Cells - BAT-500 price from 1 October 2026.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-09-25_RE_ FW_ Voltway Cells - BAT-500 price from 1 October 2026.eml#c0",
+     "cite": "2026-09-25_RE_ FW_ Voltway Cells - BAT-500 price from 1 October 2026.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-09-24_Voltway Cells - BAT-500 price from 1 October 2026.eml#c0",
+     "cite": "2026-09-24_Voltway Cells - BAT-500 price from 1 October 2026.eml, § body"
+    },
+    {
+     "id": "09_email_archive/2026/2026-09-25_RE_ RE_ FW_ Voltway Cells - BAT-500 price from 1 October 2026.eml#c0",
+     "cite": "2026-09-25_RE_ RE_ FW_ Voltway Cells - BAT-500 price from 1 October 2026.eml, § body"
+    },
+    {
+     "id": "10_meeting_notes/2026-09-17 Supplier review - Voltway Cells.docx#c1",
+     "cite": "2026-09-17 Supplier review - Voltway Cells.docx, § Meeting Notes"
+    },
+    {
+     "id": "10_meeting_notes/2026-09-17 Supplier review - Voltway Cells.docx#c0",
+     "cite": "2026-09-17 Supplier review - Voltway Cells.docx, § Supplier review: Voltway Cells"
+    },
+    {
+     "id": "01_policies/POL-APR-002 Approval Matrix v3.0.pdf#c2",
+     "cite": "POL-APR-002 v3.0, p.2, § 5. Examples"
+    },
+    {
+     "id": "09_email_archive/2026/2026-10-23_RE_ Brightcell quote - can we switch from Voltway_.eml#c0",
+     "cite": "2026-10-23_RE_ Brightcell quote - can we switch from Voltway_.eml, § body"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided records do not contain any information regarding volume discounts or pricing terms from Voltway for orders above 5,000 packs.",
+   "cited": [],
+   "tokens_in": 2912,
+   "tokens_out": 342,
+   "llm_seconds": 4.311,
+   "cost_usd": 0.003813,
+   "fact": {
+    "ok": true,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that the requested information is not in the documents.",
+    "tokens_in": 292,
+    "tokens_out": 150,
+    "cost_usd": 0.00086
+   },
+   "citation": null,
+   "total_s": 4.4536,
+   "cost_total_usd": 0.003813
+  },
+  {
+   "id": "Q-809",
+   "type": "not_in_docs",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1401636000009603,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "01_policies/old/Purchase Policy v4.0.docx#c2",
+     "cite": "POL-PUR-001 v4.0, § 8. Tax"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.3 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.2.3 v7.2.3, p.1, § Ledgerline ERP 7.2.3 Release Notes"
+    },
+    {
+     "id": "08_release_notes/RN-7.1.2 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.1.2 v7.1.2, p.1, § Ledgerline ERP 7.1.2 Release Notes"
+    },
+    {
+     "id": "08_release_notes/RN-7.1.1 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.1.1 v7.1.1, p.1, § Ledgerline ERP 7.1.1 Release Notes"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.0 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.2.0 v7.2.0, p.1, § Ledgerline ERP 7.2.0 Release Notes"
+    },
+    {
+     "id": "08_release_notes/RN-7.1 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.1 v7.1, p.1, § Ledgerline ERP 7.1 Release Notes"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.1 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.2.1 v7.2.1, p.1, § Ledgerline ERP 7.2.1 Release Notes"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.2 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.2.2 v7.2.2, p.1, § Ledgerline ERP 7.2.2 Release Notes"
+    },
+    {
+     "id": "09_email_archive/2022/2022-07-04_Ledgerline support contract renewal.eml#c0",
+     "cite": "2022-07-04_Ledgerline support contract renewal.eml, § body"
+    },
+    {
+     "id": "08_release_notes/RN-7.0 Ledgerline Release Notes.pdf#c0",
+     "cite": "RN-7.0 v7.0, p.1, § Ledgerline ERP 7.0 Release Notes"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information regarding the release date of Ledgerline 8.",
+   "cited": [],
+   "tokens_in": 3336,
+   "tokens_out": 409,
+   "llm_seconds": 4.297,
+   "cost_usd": 0.004439,
+   "fact": {
+    "ok": false,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": [
+     "Ledgerline 8"
+    ]
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly abstains by stating the information is not in the documents.",
+    "tokens_in": 290,
+    "tokens_out": 127,
+    "cost_usd": 0.000763
+   },
+   "citation": null,
+   "total_s": 4.4372,
+   "cost_total_usd": 0.004439
+  },
+  {
+   "id": "Q-808",
+   "type": "not_in_docs",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14178110000102606,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#c4",
+     "cite": "POL-ITS-008 v3.2, p.4, § Common errors and current restrictions"
+    },
+    {
+     "id": "01_policies/POL-DRP-009 Data Retention Policy v1.4.pdf#c1",
+     "cite": "POL-DRP-009 v1.4, pp.1-2, § 2. Retention periods"
+    },
+    {
+     "id": "08_release_notes/RN-7.0 Ledgerline Release Notes.pdf#c6",
+     "cite": "RN-7.0 v7.0, p.3, § Security: Approval limits move from roles to users"
+    },
+    {
+     "id": "08_release_notes/RN-7.0 Ledgerline Release Notes.pdf#c2",
+     "cite": "RN-7.0 v7.0, p.2, § Testing Requirements"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c20",
+     "cite": "MAN-PUR-72 v7.2.3, p.14, § 22.7 Budget utilisation"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c1",
+     "cite": "MAN-PUR-72 v7.2.3, p.2, § 1.1 Who this manual is for"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PRD-72 Ledgerline 7.2 User Manual - Production and Quality v7.2.3.pdf#c1",
+     "cite": "MAN-PRD-72 v7.2.3, p.2, § 1. About this manual"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c5",
+     "cite": "POL-SUP-003 v2.3, pp.3-4, § Gathering the mandatory corporate documents"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c5",
+     "cite": "POL-SUP-003 v2.3, pp.3-4, § Gathering the mandatory corporate documents"
+    },
+    {
+     "id": "11_training/intranet_export_2016/page_month_end_checklist__2016.html#c1",
+     "cite": "page_month_end_checklist__2016.html, § Supplier query resolution and ledger reconciliation"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources do not name or identify the company's data protection officer.",
+   "cited": [],
+   "tokens_in": 3908,
+   "tokens_out": 369,
+   "llm_seconds": 6.129,
+   "cost_usd": 0.004746,
+   "fact": {
+    "ok": true,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that the information is not in the documents.",
+    "tokens_in": 273,
+    "tokens_out": 79,
+    "cost_usd": 0.000551
+   },
+   "citation": null,
+   "total_s": 6.2708,
+   "cost_total_usd": 0.004746
+  },
+  {
+   "id": "Q-802",
+   "type": "not_in_docs",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1420239999988553,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#c1",
+     "cite": "POL-ITS-008 v3.2, pp.1-2, § 2. Passwords"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#c2",
+     "cite": "POL-ITS-008 v3.2, pp.2-3, § Practical Guidance"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#c0",
+     "cite": "POL-ITS-008 v3.2, p.1, § IT Security Policy"
+    },
+    {
+     "id": "02_procedures/SOP-IT-002 Service Account Management v1.0.pdf#c3",
+     "cite": "SOP-IT-002 v1.0, p.3, § Practical Tips"
+    },
+    {
+     "id": "11_training/intranet_export_2016/contacts.html#c1",
+     "cite": "contacts.html, § Contacts"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.0 Ledgerline Release Notes.pdf#c10",
+     "cite": "RN-7.2.0 v7.2.0, p.4, § Administration: Service account keys (SYS-API-14)"
+    },
+    {
+     "id": "02_procedures/SOP-IT-002 Service Account Management v1.0.pdf#c6",
+     "cite": "SOP-IT-002 v1.0, p.5, § Common Errors"
+    },
+    {
+     "id": "11_training/New starter - Purchasing (2024) deck export.pdf#c0",
+     "cite": "New starter - Purchasing (2024) deck export.pdf, pp.1-8, § New starter induction: Purchasing at"
+    },
+    {
+     "id": "10_meeting_notes/2024-03-10 Sales meeting.md#c2",
+     "cite": "2024-03-10 Sales meeting.md, § Discussion"
+    },
+    {
+     "id": "10_meeting_notes/2025-03-18 Leeds unit update.docx#c1",
+     "cite": "2025-03-18 Leeds unit update.docx, § Discussion"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain the Wi-Fi password for the Leeds unit.",
+   "cited": [],
+   "tokens_in": 3679,
+   "tokens_out": 348,
+   "llm_seconds": 4.168,
+   "cost_usd": 0.004471,
+   "fact": {
+    "ok": true,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly abstains by stating the information is not in the documents.",
+    "tokens_in": 275,
+    "tokens_out": 92,
+    "cost_usd": 0.000606
+   },
+   "citation": null,
+   "total_s": 4.31,
+   "cost_total_usd": 0.004471
+  },
+  {
+   "id": "Q-907",
+   "type": "permission",
+   "difficulty": "medium",
+   "role": "HR-MGR",
+   "retrieval_s": 0.17843289999836998,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/HR/CONFIDENTIAL/HR-CONF-007 Salary Bands 2026-27.pdf#c0",
+     "cite": "HR-CONF-007 v1.0, p.1, § Salary Bands 2026-27 (Confidential)"
+    },
+    {
+     "id": "05_master_data/Users_and_approval_limits.xlsx#c19",
+     "cite": "Users_and_approval_limits.xlsx, Users rows 99-103"
+    },
+    {
+     "id": "11_training/intranet_export_2016/approval_limits.html#c0",
+     "cite": "approval_limits.html, § Approval limits (2016)"
+    },
+    {
+     "id": "01_policies/POL-APR-002 Approval Matrix v3.0.pdf#c2",
+     "cite": "POL-APR-002 v3.0, p.2, § 5. Examples"
+    },
+    {
+     "id": "11_training/New starter - Purchasing (2024) deck export.pdf#c0",
+     "cite": "New starter - Purchasing (2024) deck export.pdf, pp.1-8, § New starter induction: Purchasing at"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-001 Supplier Onboarding v3.1.pdf#c0",
+     "cite": "SOP-PUR-001 v3.1, p.1, § Supplier Onboarding"
+    },
+    {
+     "id": "README.md#c0",
+     "cite": "README.md, § northbridge-docs"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-001 Supplier Onboarding v3.1.pdf#c4",
+     "cite": "SOP-PUR-001 v3.1, p.3, § 5. Procedure"
+    },
+    {
+     "id": "05_master_data/Users_and_approval_limits.xlsx#c3",
+     "cite": "Users_and_approval_limits.xlsx, Users rows 19-23"
+    },
+    {
+     "id": "02_procedures/forms/Final_FINAL_onboarding checklist NBC-F-113.docx#c0",
+     "cite": "NBC-F-113 v2.1, § Supplier Onboarding Checklist (NBC-F-113)"
+    }
+   ],
+   "withheld": false,
+   "answer": "For the 2026–27 financial year, the salary details for the senior buyer role (PUR-SR) are [1]:\n\n- **Band:** M3 [1]\n- **Fixed pay (annual):** Minimum £43,000 to maximum £55,000 [1]\n- **Variable pay:** Up to 12% of fixed pay, paid in May based on the year's savings against rate contracts [1]",
+   "cited": [
+    1
+   ],
+   "tokens_in": 3498,
+   "tokens_out": 722,
+   "llm_seconds": 7.303,
+   "cost_usd": 0.005864,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate provides the correct salary band and states both key salary figures accurately.",
+    "tokens_in": 394,
+    "tokens_out": 129,
+    "cost_usd": 0.000857
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 7.4814,
+   "cost_total_usd": 0.005864
+  },
+  {
+   "id": "Q-904",
+   "type": "permission",
+   "difficulty": "medium",
+   "role": "STORES",
+   "retrieval_s": 0.13885490000029677,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "02_procedures/SOP-QUA-002 Damaged Battery Pack Quarantine v1.1.pdf#c1",
+     "cite": "SOP-QUA-002 v1.1, pp.1-2, § Practical Tips"
+    },
+    {
+     "id": "02_procedures/SOP-QUA-002 Damaged Battery Pack Quarantine v1.1.pdf#c2",
+     "cite": "SOP-QUA-002 v1.1, pp.2-3, § Operational Allocation in Practice"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c7",
+     "cite": "POL-BAT-004 v1.2, p.5, § Practical Tips"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c4",
+     "cite": "SOP-INV-004 v1.0, p.4, § Common mistakes in the stores"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c2",
+     "cite": "SOP-INV-004 v1.0, pp.2-3, § Practical Tips"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c4",
+     "cite": "POL-BAT-004 v1.2, p.3, § Working practice at Manchester and Leeds"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c3",
+     "cite": "SOP-INV-004 v1.0, p.3, § Practical Tips"
+    },
+    {
+     "id": "02_procedures/SOP-QUA-002 Damaged Battery Pack Quarantine v1.1.pdf#c0",
+     "cite": "SOP-QUA-002 v1.1, p.1, § Damaged Battery Pack Quarantine"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c3",
+     "cite": "POL-BAT-004 v1.2, pp.2-3, § Common Errors"
+    },
+    {
+     "id": "11_training/BHT-01 Battery handling course slides.pdf#c0",
+     "cite": "BHT-01 v3, pp.1-6, § BHT-01 Battery handling"
+    }
+   ],
+   "withheld": true,
+   "answer": "I cannot provide this information because it is contained in a confidential HR document that you do not have permission to view [11]. \n\nThis information is restricted to members of the HR group NBC-HR-CONF [11]. Please contact HR (NBC-HR-CONF) if you require this information [11].",
+   "cited": [
+    11
+   ],
+   "tokens_in": 4072,
+   "tokens_out": 331,
+   "llm_seconds": 4.548,
+   "cost_usd": 0.004725,
+   "fact": {
+    "ok": true,
+    "expected": "refuse",
+    "refused": true,
+    "leaks": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate properly refuses to disclose the confidential HR information.",
+    "tokens_in": 336,
+    "tokens_out": 114,
+    "cost_usd": 0.000747
+   },
+   "citation": null,
+   "total_s": 4.6869,
+   "cost_total_usd": 0.004725
+  },
+  {
+   "id": "Q-903",
+   "type": "permission",
+   "difficulty": "hard",
+   "role": "STORES",
+   "retrieval_s": 0.1372534000001906,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "05_master_data/Cost Centres and Budgets FY2026-27.xlsx#c2",
+     "cite": "Cost Centres and Budgets FY2026-27.xlsx, Cost centres rows 25-29"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.3-P3 Ledgerline Patch Notes.pdf#c2",
+     "cite": "RN-7.2.3-P3, p.2, § Inventory: A goods receipt that completes an order closes th"
+    },
+    {
+     "id": "10_meeting_notes/2026-09-30 S&OP meeting.docx#c1",
+     "cite": "2026-09-30 S&OP meeting.docx, § Line transition and legacy cost centre closure"
+    },
+    {
+     "id": "10_meeting_notes/2024-03-10 Sales meeting.md#c1",
+     "cite": "2024-03-10 Sales meeting.md, § Discussion"
+    },
+    {
+     "id": "09_email_archive/2024/2024-10-21_Leeds stores space.eml#c0",
+     "cite": "2024-10-21_Leeds stores space.eml, § body"
+    },
+    {
+     "id": "02_procedures/SOP-AP-002 Period Close v3.0.pdf#c0",
+     "cite": "SOP-AP-002 v3.0, p.1, § Accounts Payable Period Close"
+    },
+    {
+     "id": "10_meeting_notes/2024-05-08 Leeds unit update.docx#c1",
+     "cite": "2024-05-08 Leeds unit update.docx, § Discussion"
+    },
+    {
+     "id": "11_training/intranet_export_2016/page_purchasing_team_news__spring_2016.html#c0",
+     "cite": "page_purchasing_team_news__spring_2016.html, § Purchasing team news, spring 2016"
+    },
+    {
+     "id": "03_ledgerline_manuals/old/MAN-INV-72 Inventory v7.2.2 (old).pdf#c1",
+     "cite": "MAN-INV-72 v7.2.2, p.2, § 1. About this manual"
+    },
+    {
+     "id": "02_procedures/SOP-FIN-001 Cost Centre Open and Close v1.1.pdf#c3",
+     "cite": "SOP-FIN-001 v1.1, p.3, § 5. Procedure"
+    }
+   ],
+   "withheld": true,
+   "answer": "I am sorry, but I cannot answer this question as it involves confidential HR information that you do not have permission to view [11]. \n\nA matching document is held in the HR confidential folder and is readable only by members of the HR group NBC-HR-CONF [11]. Please contact HR (NBC-HR-CONF) for this information [11]. \n\n(Note that in",
+   "cited": [
+    11
+   ],
+   "tokens_in": 4088,
+   "tokens_out": 2044,
+   "llm_seconds": 15.2,
+   "cost_usd": 0.011804,
+   "fact": {
+    "ok": true,
+    "expected": "refuse",
+    "refused": true,
+    "leaks": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate properly refuses to provide the confidential information without leaking any details.",
+    "tokens_in": 353,
+    "tokens_out": 135,
+    "cost_usd": 0.000848
+   },
+   "citation": null,
+   "total_s": 15.3373,
+   "cost_total_usd": 0.011804
+  },
+  {
+   "id": "Q-906",
+   "type": "permission",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13925659999949858,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c14",
+     "cite": "MAN-AP-72 v7.2.3, p.8, § Step by step"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c81",
+     "cite": "MAN-SAL-72 v7.2.3, p.38, § Screen layout and fields"
+    },
+    {
+     "id": "01_policies/POL-APR-002 Approval Matrix v3.0.pdf#c2",
+     "cite": "POL-APR-002 v3.0, p.2, § 5. Examples"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c83",
+     "cite": "MAN-SAL-72 v7.2.3, p.39, § Step by step: Amending an existing discount schedule"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c79",
+     "cite": "MAN-SAL-72 v7.2.3, p.37, § Purpose"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.2 Ledgerline Release Notes.pdf#c1",
+     "cite": "RN-7.2.2 v7.2.2, pp.1-2, § Testing Requirements"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PRD-72 Ledgerline 7.2 User Manual - Production and Quality v7.2.3.pdf#c15",
+     "cite": "MAN-PRD-72 v7.2.3, p.9, § Step by step"
+    },
+    {
+     "id": "10_meeting_notes/2025-12-12 Finance and purchasing catch-up.md#c2",
+     "cite": "2025-12-12 Finance and purchasing catch-up.md, § Discussion"
+    },
+    {
+     "id": "02_procedures/old/SOP-PUR-001 Supplier onboarding v2.0 (2021).docx#c0",
+     "cite": "SOP-PUR-001 v2.0, § Supplier Onboarding"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c19",
+     "cite": "MAN-PUR-72 v7.2.3, pp.13-14, § 21.1 Terms"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information regarding employee bonuses or purchasing incentive schemes.",
+   "cited": [],
+   "tokens_in": 3846,
+   "tokens_out": 613,
+   "llm_seconds": 6.74,
+   "cost_usd": 0.005702,
+   "fact": {
+    "ok": true,
+    "expected": "refuse",
+    "refused": true,
+    "leaks": []
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate abstained by claiming the information was not in the documents rather than refusing to provide confidential information to a non-HR user.",
+    "tokens_in": 301,
+    "tokens_out": 404,
+    "cost_usd": 0.001915
+   },
+   "citation": null,
+   "total_s": 6.8793,
+   "cost_total_usd": 0.005702
+  },
+  {
+   "id": "Q-110",
+   "type": "procedure",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14542529999926046,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 9,
+    "levels": {
+     "page": 2
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.1111
+   },
+   "items": [
+    {
+     "id": "11_training/QRC-01 Raising a purchase request.pdf#c0",
+     "cite": "QRC-01 v2026.1, p.1, § Quick reference: Raising a purchase request"
+    },
+    {
+     "id": "11_training/QRC-01 Raising a purchase request.pdf#c1",
+     "cite": "QRC-01 v2026.1, p.1, § Saving and submission"
+    },
+    {
+     "id": "11_training/intranet_export_2016/how_to_raise_an_order.html#c0",
+     "cite": "how_to_raise_an_order.html, § How to raise an order"
+    },
+    {
+     "id": "11_training/intranet_export_2016/page_frequently_asked_questions.html#c0",
+     "cite": "page_frequently_asked_questions.html, § Frequently asked questions"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c3",
+     "cite": "POL-PUR-001 v4.1, pp.2-3, § Appendix A. Definitions"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c9",
+     "cite": "MAN-PUR-72 v7.2.3, p.7, § 10.2 Approving"
+    },
+    {
+     "id": "11_training/QRC-02 Raising a purchase order - Fetch first.pdf#c0",
+     "cite": "QRC-02 v2026.1, p.1, § Quick reference: Raising a purchase order - Fetch first"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.3 (FINAL).pdf#c3",
+     "cite": "SOP-PUR-002 v1.3, p.3, § 5. Procedure"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.4.pdf#c4",
+     "cite": "SOP-PUR-002 v1.4, p.3, § 5. Procedure"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c1",
+     "cite": "POL-PUR-001 v4.1, pp.1-2, § 3. Requests before orders"
+    }
+   ],
+   "withheld": false,
+   "answer": "To raise a purchase request in Ledgerline ERP 7.2:\n\n1. **Open Screen**: Go to **PUR-PR-01** [1][9].\n2. **Enter Item and Fetch**: Type the item code and press **F3 (Fetch)** [1][9]. This populates the unit, warehouse, default cost centre, and estimated rate (based on the last released order) [9]. Do not manually overwrite the description if lookup fails; check that the code was typed correctly [1].\n3. **Verify Cost Centre**: Ensure the cost centre is marked **OPEN** before moving to line details, checking it on screen **FIN-CC-01** or with Finance [1][9][10]. Closed cost centres prevent submission later [1].\n4. **Enter Quantities and Dates**: Enter the quantity in standard pack units and set a realistic need-by date that allows for supplier lead periods (avoiding the current day) [1]. \n5. **Save**: Press **F8** to save the record in Draft status (**DR**) [1][2][9].\n6. **Submit**: Press **F9** to submit the request [1][2][9]. Check the status prompt at the foot of the screen to confirm submission [2]. \n\n**Approvals**:\n- Requests within your personal spending limit are approved at once (**AP**) [1][2][9].\n- Requests exceeding your limit automatically route to your manager for approval [1][2][9]. If urgent, inform your manager by internal e-mail [2].",
+   "cited": [
+    1,
+    9,
+    10,
+    2
+   ],
+   "tokens_in": 3707,
+   "tokens_out": 888,
+   "llm_seconds": 7.724,
+   "cost_usd": 0.006721,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The answer provides all the key facts, correctly identifying PUR-PR-01 and F3 along with the complete procedure.",
+    "tokens_in": 628,
+    "tokens_out": 159,
+    "cost_usd": 0.001174
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 0.25
+   },
+   "total_s": 7.8694,
+   "cost_total_usd": 0.006721
+  },
+  {
+   "id": "Q-104",
+   "type": "procedure",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13846279999961553,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c18",
+     "cite": "MAN-PUR-72 v7.2.3, pp.12-13, § 19.2 The rate on my order is different from last time"
+    },
+    {
+     "id": "03_ledgerline_manuals/old/LL6_purchasing_quickguide.docx#c0",
+     "cite": "LL6_purchasing_quickguide.docx, § Ledgerline 6 Purchasing Quick Guide"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c9",
+     "cite": "MAN-PUR-72 v7.2.3, p.7, § 10.2 Approving"
+    },
+    {
+     "id": "11_training/QRC-02 Raising a purchase order - Fetch first.pdf#c0",
+     "cite": "QRC-02 v2026.1, p.1, § Quick reference: Raising a purchase order - Fetch first"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.3 (FINAL).pdf#c6",
+     "cite": "SOP-PUR-002 v1.3, p.4, § What to do when something does not look right"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c10",
+     "cite": "MAN-PUR-72 v7.2.3, pp.7-8, § 11.4 The tax code"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PRD-72 Ledgerline 7.2 User Manual - Production and Quality v7.2.3.pdf#c53",
+     "cite": "MAN-PRD-72 v7.2.3, pp.25-26, § Questions users ask"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.4.pdf#c7",
+     "cite": "SOP-PUR-002 v1.4, pp.4-5, § What to do when something does not look right"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c138",
+     "cite": "MAN-AP-72 v7.2.3, pp.63-64, § Creating or modifying an entry"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c3",
+     "cite": "MAN-PUR-72 v7.2.3, p.3, § 2.4 Session timeout"
+    }
+   ],
+   "withheld": false,
+   "answer": "If the screen hangs after pressing Save:\n\n- Do not press Save again, because doing so creates a second order [1].\n- Wait one minute [1].\n- Search for the order (Purchase, Order list) by supplier, item, and today's date, or by client reference [1].\n- If the order exists, the Save worked and you can continue from it [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 4222,
+   "tokens_out": 387,
+   "llm_seconds": 4.531,
+   "cost_usd": 0.00508,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer accurately includes all key facts and instructions from the reference answer.",
+    "tokens_in": 375,
+    "tokens_out": 151,
+    "cost_usd": 0.000932
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 4.6695,
+   "cost_total_usd": 0.00508
+  },
+  {
+   "id": "Q-112",
+   "type": "procedure",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1359174000008352,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 4,
+    "levels": {
+     "page": 4
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.25
+   },
+   "items": [
+    {
+     "id": "11_training/intranet_export_2016/how_to_raise_an_order.html#c1",
+     "cite": "how_to_raise_an_order.html, § How to raise an order"
+    },
+    {
+     "id": "11_training/intranet_export_2016/how_to_raise_an_order.html#c0",
+     "cite": "how_to_raise_an_order.html, § How to raise an order"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c9",
+     "cite": "MAN-PUR-72 v7.2.3, p.7, § 10.2 Approving"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.4.pdf#c4",
+     "cite": "SOP-PUR-002 v1.4, p.3, § 5. Procedure"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.3 (FINAL).pdf#c3",
+     "cite": "SOP-PUR-002 v1.3, p.3, § 5. Procedure"
+    },
+    {
+     "id": "11_training/intranet_export_2016/page_frequently_asked_questions.html#c0",
+     "cite": "page_frequently_asked_questions.html, § Frequently asked questions"
+    },
+    {
+     "id": "11_training/QRC-02 Raising a purchase order - Fetch first.pdf#c1",
+     "cite": "QRC-02 v2026.1, p.1, § Checking order status"
+    },
+    {
+     "id": "11_training/QRC-01 Raising a purchase request.pdf#c0",
+     "cite": "QRC-01 v2026.1, p.1, § Quick reference: Raising a purchase request"
+    },
+    {
+     "id": "11_training/QRC-01 Raising a purchase request.pdf#c1",
+     "cite": "QRC-01 v2026.1, p.1, § Saving and submission"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c1",
+     "cite": "POL-PUR-001 v4.1, pp.1-2, § 3. Requests before orders"
+    }
+   ],
+   "withheld": false,
+   "answer": "To raise a standard order after a purchase request is approved:\n\n1. **Open Order Entry**: Go to screen `PUR-PO-01` [3][4].\n2. **Enter Header Details**: Set the order type to `STD` and enter the approved request number into **Source PR** [3][4].\n3. **Fetch Line Details**: Enter the supplier and the item, then press **F3 (Fetch)** [3][4]. Fetch automatically populates the rate, tax code, payment terms, warehouse, cost centre, need-by date, and quantity from the request [3]. \n   *(Note: While Fetch was previously optional [2][5], it is now mandatory; saving without running Fetch results in error `ERR-SCR-0221` [3][4].)*\n4. **Verify Tax Code**: Fetch defaults to `VAT20-UK` [4]. If the supplier is outside the UK, change this to `VAT20-RC` or saving will fail with `ERR-PO-0412` [4].\n5. **Save and Check Status**: Press **F8** to save [4]. Check the **Status** field on the document header (not just the bottom status bar) [4][7]:\n   - `DR`: Order is stuck (e.g., closed cost centre) [4].\n   - `PA`: Awaiting approval [4].\n   - `AP`: Approved and ready for release [4][7].\n6. **Release the Order**: Once in status `AP`, open `PUR-POR-05` and press **F9** to release it [4][7]. The order is only transmitted to the supplier once its status changes to `RL` [4][7]. Notify the requester only after it reaches `RL` [4].",
+   "cited": [
+    3,
+    4,
+    2,
+    5,
+    7
+   ],
+   "tokens_in": 3484,
+   "tokens_out": 1341,
+   "llm_seconds": 10.758,
+   "cost_usd": 0.008406,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer accurately describes the process and includes the required screens PUR-PO-01 and PUR-POR-05.",
+    "tokens_in": 708,
+    "tokens_out": 203,
+    "cost_usd": 0.001421
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.4
+   },
+   "total_s": 10.8939,
+   "cost_total_usd": 0.008406
+  },
+  {
+   "id": "Q-118",
+   "type": "procedure",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13887700000123004,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "02_procedures/SOP-PRD-001 Work Order Release and Backflush v1.5.pdf#c3",
+     "cite": "SOP-PRD-001 v1.5, pp.3-4, § 5. Procedure"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c0",
+     "cite": "SOP-INV-004 v1.0, p.1, § Battery Pack Storage and Handling"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c2",
+     "cite": "SOP-INV-004 v1.0, pp.2-3, § Practical Tips"
+    },
+    {
+     "id": "10_meeting_notes/2026-10-19 Weekly purchasing meeting.md#c1",
+     "cite": "2026-10-19 Weekly purchasing meeting.md, § Discussion"
+    },
+    {
+     "id": "02_procedures/SOP-QUA-002 Damaged Battery Pack Quarantine v1.1.pdf#c0",
+     "cite": "SOP-QUA-002 v1.1, p.1, § Damaged Battery Pack Quarantine"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c7",
+     "cite": "POL-BAT-004 v1.2, p.5, § Practical Tips"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c1",
+     "cite": "SOP-INV-004 v1.0, pp.1-2, § Common Errors"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c2",
+     "cite": "POL-BAT-004 v1.2, p.2, § Purpose and Scope"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PRD-72 Ledgerline 7.2 User Manual - Production and Quality v7.2.3.pdf#c93",
+     "cite": "MAN-PRD-72 v7.2.3, p.43, § Tips"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.0 Ledgerline Release Notes.pdf#c6",
+     "cite": "RN-7.2.0 v7.2.0, p.3, § Inventory: Lot and serial tracking (INV-LOT-10), used for ba"
+    }
+   ],
+   "withheld": false,
+   "answer": "Battery packs are not issued through the standard backflush routine (job JOB-PRD-015) [1]. Instead, because they require individual serial tracking, they are issued by serial on screen **INV-MRN-08** [1]. \n\nKey requirements for issuing battery packs include:\n- Battery packs cannot be backflushed or issued by shortcut methods; the serial entry grid is mandatory when issuing them to a works order [1][10].\n- Operators must book the serial numbers through the manual material screen to prevent battery packs from remaining as free stock in stores while finished bicycles show an incomplete issue history [1].\n- Workshop technicians must draw batteries only against issued build kits and return any surplus or unassigned packs to stores before the end of the shift [3].",
+   "cited": [
+    1,
+    10,
+    3
+   ],
+   "tokens_in": 4111,
+   "tokens_out": 700,
+   "llm_seconds": 7.319,
+   "cost_usd": 0.006279,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that battery packs are issued by serial on screen INV-MRN-08 rather than backflushed.",
+    "tokens_in": 441,
+    "tokens_out": 125,
+    "cost_usd": 0.000879
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 3,
+    "precision": 0.333
+   },
+   "total_s": 7.4579,
+   "cost_total_usd": 0.006279
+  },
+  {
+   "id": "Q-219",
+   "type": "rule",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13715190000039001,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 2,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-RET-006 Returns Policy v2.1.pdf#c4",
+     "cite": "POL-RET-006 v2.1, p.3, § Practical handling"
+    },
+    {
+     "id": "01_policies/POL-RET-006 Returns Policy v2.1.pdf#c3",
+     "cite": "POL-RET-006 v2.1, pp.2-3, § Practical tips"
+    },
+    {
+     "id": "02_procedures/SOP-SAL-002 Warranty Claims (RMA) v1.1.pdf#c3",
+     "cite": "SOP-SAL-002 v1.1, p.3, § Common mistakes by bike shops and internal staff"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c1",
+     "cite": "SOP-INV-004 v1.0, pp.1-2, § Common Errors"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c7",
+     "cite": "POL-BAT-004 v1.2, p.5, § Practical Tips"
+    },
+    {
+     "id": "02_procedures/SOP-SAL-002 Warranty Claims (RMA) v1.1.pdf#c4",
+     "cite": "SOP-SAL-002 v1.1, p.4, § What to check on the screen"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c61",
+     "cite": "MAN-SAL-72 v7.2.3, pp.29-30, § Purpose"
+    },
+    {
+     "id": "02_procedures/SOP-SAL-002 Warranty Claims (RMA) v1.1.pdf#c0",
+     "cite": "SOP-SAL-002 v1.1, p.1, § Warranty Claims from Bike Shops"
+    },
+    {
+     "id": "02_procedures/SOP-QUA-002 Damaged Battery Pack Quarantine v1.1.pdf#c6",
+     "cite": "SOP-QUA-002 v1.1, p.4, § What to do when something does not look right"
+    },
+    {
+     "id": "02_procedures/SOP-SAL-002 Warranty Claims (RMA) v1.1.pdf#c2",
+     "cite": "SOP-SAL-002 v1.1, pp.2-3, § Working practice across sites"
+    }
+   ],
+   "withheld": false,
+   "answer": "Frames carry a 5-year warranty [1][2]. \n\nBattery packs carry a 2-year warranty from the date of sale to the rider [1][2].",
+   "cited": [
+    1,
+    2
+   ],
+   "tokens_in": 4080,
+   "tokens_out": 289,
+   "llm_seconds": 4.178,
+   "cost_usd": 0.004558,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The answer accurately provides both the 5-year warranty for frames and the 2-year warranty for battery packs.",
+    "tokens_in": 322,
+    "tokens_out": 148,
+    "cost_usd": 0.000876
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 4.3152,
+   "cost_total_usd": 0.004558
+  },
+  {
+   "id": "Q-222",
+   "type": "rule",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13883460000033665,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-DRP-009 Data Retention Policy v1.4.pdf#c3",
+     "cite": "POL-DRP-009 v1.4, p.3, § Practical Tips"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/old/Supplier_Policy_v2.2.docx#c2",
+     "cite": "POL-SUP-003 v2.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c6",
+     "cite": "MAN-PUR-72 v7.2.3, p.5, § 6.2 Fields"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c143",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 206-209"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c136",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 178-181"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c97",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 22-25"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c105",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 54-57"
+    },
+    {
+     "id": "05_master_data/SUPPLIER_MASTER.xlsx#c133",
+     "cite": "SUPPLIER_MASTER.xlsx, Certificates rows 166-169"
+    }
+   ],
+   "withheld": false,
+   "answer": "Supplier certificates (UN 38.3, ISO) are kept for 10 years after the supplier is blocked, owned by Purchase [1]. \n\nIn Ledgerline, expired certificates are kept on the Certificates tab for the record, with the valid-to date shown in red once it has passed [5].",
+   "cited": [
+    1,
+    5
+   ],
+   "tokens_in": 4452,
+   "tokens_out": 377,
+   "llm_seconds": 4.83,
+   "cost_usd": 0.005228,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that supplier certificates are kept for 10 years after the supplier is blocked.",
+    "tokens_in": 319,
+    "tokens_out": 119,
+    "cost_usd": 0.000754
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 4.9688,
+   "cost_total_usd": 0.005228
+  },
+  {
+   "id": "Q-208",
+   "type": "rule",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1419169000000693,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 2,
+    "levels": {
+     "page": 2
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "01_policies/old/Supplier_Policy_v2.2.docx#c2",
+     "cite": "POL-SUP-003 v2.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c2",
+     "cite": "POL-PUR-001 v4.1, p.2, § 6. Supplier qualification"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-005 Certificate Renewal (UN 38.3) v1.1.pdf#c3",
+     "cite": "SOP-PUR-005 v1.1, pp.3-4, § 5. Procedure"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-005 Certificate Renewal (UN 38.3) v1.1.pdf#c2",
+     "cite": "SOP-PUR-005 v1.1, pp.2-3, § Practical Working Arrangements"
+    },
+    {
+     "id": "01_policies/AMD-SUP-2026-02 Amendment 2 Supplier Policy.pdf#c0",
+     "cite": "AMD-SUP-2026-02 v1.0, p.1, § Amendment 2 to the Supplier Policy"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.1 Ledgerline Release Notes.pdf#c3",
+     "cite": "RN-7.2.1 v7.2.1, p.2, § Purchasing: The certificate tab shows expired certificates i"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.1 Ledgerline Release Notes.pdf#c2",
+     "cite": "RN-7.2.1 v7.2.1, p.2, § Purchasing: The certificate tab shows expired certificates i"
+    },
+    {
+     "id": "08_release_notes/RN-7.2.3-P4 Ledgerline Patch Notes.pdf#c1",
+     "cite": "RN-7.2.3-P4, pp.1-2, § Upgrade Notes for Key Users"
+    }
+   ],
+   "withheld": false,
+   "answer": "No. An expired certificate counts as no certificate [2][4]. \n\nUnder current policy:\n- While the supplier remains ACTIVE in the supplier master, no lithium-cell part may be ordered from them until a new certificate is uploaded and checked [2].\n- Ledgerline ERP displays expired certificates in red text across the line entry on the certificate tab [9].\n- Under amendment AMD-SUP-2026-02 (in force since 1 September 2026), a UN 38.3 certificate is accepted only if it was issued within the last 12 months and its valid-to date is at least 60 days after the order date [7]. Any certificate not meeting these criteria counts as no certificate, and no new order may be raised once fewer than 60 days remain before expiry [5][7].\n- Upon certificate expiry, an e-mail must be sent to all buyers with the subject `CERT EXPIRED - DO NOT ORDER` along with the supplier's name and code [5].",
+   "cited": [
+    2,
+    4,
+    9,
+    7,
+    5
+   ],
+   "tokens_in": 3649,
+   "tokens_out": 907,
+   "llm_seconds": 7.043,
+   "cost_usd": 0.006752,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate explicitly states that an expired certificate counts as no certificate and accurately provides the required details.",
+    "tokens_in": 486,
+    "tokens_out": 112,
+    "cost_usd": 0.000863
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.4
+   },
+   "total_s": 7.1849,
+   "cost_total_usd": 0.006752
+  },
+  {
+   "id": "Q-213",
+   "type": "rule",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1458904999999504,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-APR-002 Approval Matrix v3.0.pdf#c1",
+     "cite": "POL-APR-002 v3.0, pp.1-2, § 3. The limits"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c1",
+     "cite": "POL-PUR-001 v4.1, pp.1-2, § 3. Requests before orders"
+    },
+    {
+     "id": "01_policies/old/Approval_Matrix_v2.0_2024.docx#c0",
+     "cite": "POL-APR-002 v2.0, § Approval Matrix for Purchasing"
+    },
+    {
+     "id": "01_policies/POL-APR-002 Approval Matrix v3.0.pdf#c2",
+     "cite": "POL-APR-002 v3.0, p.2, § 5. Examples"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c11",
+     "cite": "MAN-PUR-72 v7.2.3, p.8, § 11.9 The status after saving"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c44",
+     "cite": "MAN-SCR-72 v7.2.3, pp.27-28, § PUR-POA-04 PURCHASE ORDER APPROVAL"
+    },
+    {
+     "id": "11_training/New starter - Purchasing (2024) deck export.pdf#c0",
+     "cite": "New starter - Purchasing (2024) deck export.pdf, pp.1-8, § New starter induction: Purchasing at"
+    },
+    {
+     "id": "11_training/intranet_export_2016/approval_limits.html#c1",
+     "cite": "approval_limits.html, § Approval limits (2016)"
+    },
+    {
+     "id": "09_email_archive/2024/2024-03-10_Month-end_ release your approved orders.eml#c0",
+     "cite": "2024-03-10_Month-end_ release your approved orders.eml, § body"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c9",
+     "cite": "MAN-PUR-72 v7.2.3, p.7, § 10.2 Approving"
+    }
+   ],
+   "withheld": false,
+   "answer": "An order above £5,000,000 requires the written approval of the Managing Director outside Ledgerline [1]. \n\nLedgerline will display error `ERR-APR-0009` (no approver found) for the document, after which the plant head's office records the Managing Director's approval in the system [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 4006,
+   "tokens_out": 419,
+   "llm_seconds": 4.572,
+   "cost_usd": 0.005033,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate accurately identifies the Managing Director as the approver and includes all relevant details.",
+    "tokens_in": 359,
+    "tokens_out": 111,
+    "cost_usd": 0.000754
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 4.7179,
+   "cost_total_usd": 0.005033
+  },
+  {
+   "id": "Q-312",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14850070000102278,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 2,
+    "levels": {
+     "file": 2
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c35",
+     "cite": "MAN-ERR-72 v7.2.3, p.25, § ERR-STK-0102 INSUFFICIENT STOCK (<available>)"
+    },
+    {
+     "id": "04_service_definitions/purchase/sup_create.yaml#c1",
+     "cite": "svc:sup_create, § request.fields, service sup_create"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-001 Supplier Onboarding v3.1.pdf#c5",
+     "cite": "SOP-PUR-001 v3.1, pp.3-4, § 5. Procedure: notes and common mistakes"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c36",
+     "cite": "MAN-ERR-72 v7.2.3, pp.25-26, § ERR-SYS-0422 UNKNOWN FIELD <FIELD> / BAD VALUE FOR <FIELD>"
+    },
+    {
+     "id": "04_service_definitions/purchase/sup_create.yaml#c0",
+     "cite": "svc:sup_create, § request.fields, service sup_create"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c32",
+     "cite": "MAN-ERR-72 v7.2.3, p.23, § ERR-SEC-0001 ACCESS DENIED"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c3",
+     "cite": "POL-SUP-003 v2.3, p.2, § 5. Blocking and unblocking"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c15",
+     "cite": "MAN-ERR-72 v7.2.3, pp.11-12, § ERR-INV-0001 SUPPLIER INVOICE NOT FOUND"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c9",
+     "cite": "MAN-AP-72 v7.2.3, pp.5-6, § Messages"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c50",
+     "cite": "MAN-SCR-72 v7.2.3, p.30, § PUR-SUP-01 SUPPLIER MASTER CREATE"
+    }
+   ],
+   "withheld": false,
+   "answer": "For a duplicate, `sup_create` raises **`ERR-SUP-0118`** (`VAT NO ALREADY REGISTERED`) [1][2][5]. \n\nDuplicates are refused only when the VAT number is already registered; a supplier entered without a VAT number is never checked by the system [2][7][10].",
+   "cited": [
+    1,
+    2,
+    5,
+    7,
+    10
+   ],
+   "tokens_in": 4397,
+   "tokens_out": 350,
+   "llm_seconds": 3.813,
+   "cost_usd": 0.005071,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly identifies the error code ERR-SUP-0118 and provides accurate supporting context.",
+    "tokens_in": 347,
+    "tokens_out": 114,
+    "cost_usd": 0.000757
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.4
+   },
+   "total_s": 3.9615,
+   "cost_total_usd": 0.005071
+  },
+  {
+   "id": "Q-322",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13955469999928027,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 1,
+    "levels": {
+     "page": 1,
+     "file": 1
+    },
+    "hit@1": 1,
+    "cov@1": 0.5,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c10",
+     "cite": "MAN-PUR-72 v7.2.3, pp.7-8, § 11.4 The tax code"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c2",
+     "cite": "MAN-PUR-72 v7.2.3, pp.2-3, § 1.4 Screen codes"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c39",
+     "cite": "MAN-ERR-72 v7.2.3, pp.27-28, § ERR-WO-0201 QTY MUST BE > 0"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c3",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    },
+    {
+     "id": "11_training/QRC-02 Raising a purchase order - Fetch first.pdf#c1",
+     "cite": "QRC-02 v2026.1, p.1, § Checking order status"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c24",
+     "cite": "MAN-ERR-72 v7.2.3, pp.17-18, § ERR-PO-0201 QTY MUST BE > 0"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c31",
+     "cite": "MAN-ERR-72 v7.2.3, pp.22-23, § ERR-SCP-0007 PRODUCTION SCRAP NOT IN DRAFT (<status>)"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.4.pdf#c4",
+     "cite": "SOP-PUR-002 v1.4, p.3, § 5. Procedure"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c0",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c1",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    }
+   ],
+   "withheld": false,
+   "answer": "After `po_save`, the status bar displays `<PO number> SAVED` (or `<PO NO> SAVED`) [1][4]. \n\nThis message is shown regardless of whatever status the order was actually saved in (such as DR, PA, or AP) [1][4][8]. More generally, the status bar shows from left to right: the last message, your user ID, and your organisation unit [2].",
+   "cited": [
+    1,
+    4,
+    8,
+    2
+   ],
+   "tokens_in": 4199,
+   "tokens_out": 466,
+   "llm_seconds": 5.175,
+   "cost_usd": 0.005386,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer correctly identifies that the status bar displays '<PO NO> SAVED'.",
+    "tokens_in": 359,
+    "tokens_out": 130,
+    "cost_usd": 0.000832
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 0.5
+   },
+   "total_s": 5.3146,
+   "cost_total_usd": 0.005386
+  },
+  {
+   "id": "Q-334",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14232559999982186,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "file": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "04_service_definitions/purchase/tax_compute.yaml#c0",
+     "cite": "svc:tax_compute, § request.fields, service tax_compute"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c9",
+     "cite": "MAN-SVC-72 v7.2.3, p.8, § po_cancel PO CANCEL"
+    },
+    {
+     "id": "04_service_definitions/accounts_payable/tax_get.yaml#c0",
+     "cite": "svc:tax_get, § request.fields, service tax_get"
+    },
+    {
+     "id": "04_service_definitions/accounts_payable/tax_save.yaml#c0",
+     "cite": "svc:tax_save, § request.fields, service tax_save"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c8",
+     "cite": "MAN-SVC-72 v7.2.3, pp.7-8, § po_reject PO REJECT"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c137",
+     "cite": "MAN-AP-72 v7.2.3, p.63, § Retrieving an existing record"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c5",
+     "cite": "MAN-SVC-72 v7.2.3, p.5, § po_fetch PO DEFAULTS"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c10",
+     "cite": "MAN-PUR-72 v7.2.3, pp.7-8, § 11.4 The tax code"
+    },
+    {
+     "id": "07_data_dictionary/Ledgerline_7.2_tables_and_fields.xlsx#c12",
+     "cite": "Ledgerline_7.2_tables_and_fields.xlsx, Fields rows 104-116"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c138",
+     "cite": "MAN-AP-72 v7.2.3, pp.63-64, § Creating or modifying an entry"
+    }
+   ],
+   "withheld": false,
+   "answer": "The required (mandatory) fields for the `tax_compute` service are:\n\n- `basic` (type: float; BASIC VALUE) [1][2]\n- `tax_cd` (type: str; TAX CD) [1][2]\n\nThere are no optional fields [1].",
+   "cited": [
+    1,
+    2
+   ],
+   "tokens_in": 4117,
+   "tokens_out": 380,
+   "llm_seconds": 4.41,
+   "cost_usd": 0.004964,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly lists both required fields, basic and tax_cd, matching the reference answer.",
+    "tokens_in": 325,
+    "tokens_out": 91,
+    "cost_usd": 0.000643
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 4.5523,
+   "cost_total_usd": 0.004964
+  },
+  {
+   "id": "Q-335",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13673670000025595,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "file": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "04_service_definitions/purchase/po_hist.yaml#c0",
+     "cite": "svc:po_hist, § request.fields, service po_hist"
+    },
+    {
+     "id": "04_service_definitions/admin/par_hist.yaml#c0",
+     "cite": "svc:par_hist, § request.fields, service par_hist"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c92",
+     "cite": "MAN-SVC-72 v7.2.3, pp.68-69, § par_hist SYSTEM PARAMETER HIST"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c7",
+     "cite": "MAN-SVC-72 v7.2.3, pp.6-7, § po_get PO GET"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c45",
+     "cite": "MAN-SCR-72 v7.2.3, p.28, § PUR-POH-02 ORDER HISTORY BY ITEM"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_save.yaml#c0",
+     "cite": "svc:po_save, § request.fields, service po_save"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_search.yaml#c0",
+     "cite": "svc:po_search, § request.fields, service po_search"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_get.yaml#c0",
+     "cite": "svc:po_get, § request.fields, service po_get"
+    },
+    {
+     "id": "04_service_definitions/purchase/po_reject.yaml#c0",
+     "cite": "svc:po_reject, § request.fields, service po_reject"
+    },
+    {
+     "id": "04_service_definitions/service_index.csv#c35",
+     "cite": "service_index.csv, rows 245-251"
+    }
+   ],
+   "withheld": false,
+   "answer": "The required field for the `po_hist` service is:\n\n* `itm_cd` (ITEM CD, type string) [1][4].\n\n(The field `sup_cd` is optional) [1][4].",
+   "cited": [
+    1,
+    4
+   ],
+   "tokens_in": 4068,
+   "tokens_out": 336,
+   "llm_seconds": 4.377,
+   "cost_usd": 0.004742,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly identifies itm_cd as the required field.",
+    "tokens_in": 316,
+    "tokens_out": 75,
+    "cost_usd": 0.00057
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 4.5137,
+   "cost_total_usd": 0.004742
+  },
+  {
+   "id": "Q-002",
+   "type": "single_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13682599999992817,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 0.5,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.5,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.5,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#c6",
+     "cite": "POL-ITS-008 v3.2, pp.5-6, § Common errors"
+    },
+    {
+     "id": "11_training/old/Ledgerline basics for new starters (2019) deck export.pdf#c0",
+     "cite": "Ledgerline basics for new starters (2019) deck export.pdf, pp.1-4, § Ledgerline basics (2019)"
+    },
+    {
+     "id": "04_service_definitions/service_index.csv#c23",
+     "cite": "service_index.csv, rows 161-167"
+    },
+    {
+     "id": "11_training/New starter - Purchasing (2024) deck export.pdf#c0",
+     "cite": "New starter - Purchasing (2024) deck export.pdf, pp.1-8, § New starter induction: Purchasing at"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#c7",
+     "cite": "POL-ITS-008 v3.2, p.6, § Useful guidance"
+    },
+    {
+     "id": "04_service_definitions/inventory/itm_save.yaml#c0",
+     "cite": "svc:itm_save, § request.fields, service itm_save"
+    },
+    {
+     "id": "02_procedures/SOP-IT-002 Service Account Management v1.0.pdf#c1",
+     "cite": "SOP-IT-002 v1.0, pp.1-2, § Practical guidance"
+    },
+    {
+     "id": "04_service_definitions/production/wo_save.yaml#c0",
+     "cite": "svc:wo_save, § request.fields, service wo_save"
+    },
+    {
+     "id": "11_training/intranet_export_2016/contacts.html#c1",
+     "cite": "contacts.html, § Contacts"
+    },
+    {
+     "id": "11_training/intranet_export_2016/index.html#c0",
+     "cite": "index.html, § Purchasing home"
+    }
+   ],
+   "withheld": true,
+   "answer": "The extension for the IT service desk is 2210 [1][4].",
+   "cited": [
+    1,
+    4
+   ],
+   "tokens_in": 3464,
+   "tokens_out": 315,
+   "llm_seconds": 3.768,
+   "cost_usd": 0.004157,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly provides the extension 2210.",
+    "tokens_in": 273,
+    "tokens_out": 91,
+    "cost_usd": 0.000601
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 3.9048,
+   "cost_total_usd": 0.004157
+  },
+  {
+   "id": "Q-011",
+   "type": "single_lookup",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14284960000077263,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c6",
+     "cite": "POL-BAT-004 v1.2, pp.4-5, § Practical Tips"
+    },
+    {
+     "id": "11_training/BHT-01 Battery handling course slides.pdf#c0",
+     "cite": "BHT-01 v3, pp.1-6, § BHT-01 Battery handling"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c3",
+     "cite": "SOP-INV-004 v1.0, p.3, § Practical Tips"
+    },
+    {
+     "id": "01_policies/POL-HSE-010 Health and Safety Policy v5.0.pdf#c3",
+     "cite": "POL-HSE-010 v5.0, p.3, § Operation in Practice"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c2",
+     "cite": "POL-BAT-004 v1.2, p.2, § Purpose and Scope"
+    },
+    {
+     "id": "11_training/intranet_export_2016/page_health_and_safety_in_the_warehouse.html#c1",
+     "cite": "page_health_and_safety_in_the_warehouse.html, § Handling bicycle frames and electrical drive systems"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c1",
+     "cite": "SOP-INV-004 v1.0, pp.1-2, § Common Errors"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c5",
+     "cite": "POL-BAT-004 v1.2, p.4, § 4. Transport"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c0",
+     "cite": "SOP-INV-004 v1.0, p.1, § Battery Pack Storage and Handling"
+    },
+    {
+     "id": "02_procedures/SOP-INV-004 Battery Pack Storage and Handling v1.0.pdf#c4",
+     "cite": "SOP-INV-004 v1.0, p.4, § Common mistakes in the stores"
+    }
+   ],
+   "withheld": false,
+   "answer": "The battery-handling course is **BHT-01** (or **BHT-01 Battery handling**) [1][2]. \n\nIt must be repeated every **24 months** [1][2].",
+   "cited": [
+    1,
+    2
+   ],
+   "tokens_in": 3903,
+   "tokens_out": 439,
+   "llm_seconds": 4.627,
+   "cost_usd": 0.005031,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The answer accurately provides the course code (BHT-01) and the repetition interval (every 24 months).",
+    "tokens_in": 331,
+    "tokens_out": 144,
+    "cost_usd": 0.000867
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 4.7698,
+   "cost_total_usd": 0.005031
+  },
+  {
+   "id": "Q-010",
+   "type": "single_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13927049999983865,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 1,
+    "levels": {
+     "page": 2
+    },
+    "hit@1": 1,
+    "cov@1": 0.5,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "03_ledgerline_manuals/MAN-ADM-72 Ledgerline 7.2 System Administration Guide v7.2.3.pdf#c17",
+     "cite": "MAN-ADM-72 v7.2.3, p.10, § Common errors"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ADM-72 Ledgerline 7.2 System Administration Guide v7.2.3.pdf#c18",
+     "cite": "MAN-ADM-72 v7.2.3, pp.10-11, § Purpose of the nightly backup"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-BAT-72 Batch Jobs and Scheduler Reference (NBC schedule).pdf#c9",
+     "cite": "MAN-BAT-72, p.4, § JOB-SAL-010 EDI inbound orders"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ADM-72 Ledgerline 7.2 System Administration Guide v7.2.3.pdf#c1",
+     "cite": "MAN-ADM-72 v7.2.3, p.2, § Common mistakes to avoid"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-BAT-72 Batch Jobs and Scheduler Reference (NBC schedule).pdf#c2",
+     "cite": "MAN-BAT-72, p.1, § 1. The schedule"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-BAT-72 Batch Jobs and Scheduler Reference (NBC schedule).pdf#c3",
+     "cite": "MAN-BAT-72, p.1, § 1. The schedule"
+    },
+    {
+     "id": "10_meeting_notes/2026-01-11 IT steering.docx#c1",
+     "cite": "2026-01-11 IT steering.docx, § Purchasing, Parts Lead Times, and Motor Deliveries"
+    },
+    {
+     "id": "02_procedures/SOP-IT-002 Service Account Management v1.0.pdf#c0",
+     "cite": "SOP-IT-002 v1.0, p.1, § Service Account Management"
+    },
+    {
+     "id": "09_email_archive/2026/2026-02-15_Ledgerline read-only during backup window.eml#c0",
+     "cite": "2026-02-15_Ledgerline read-only during backup window.eml, § body"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-BAT-72 Batch Jobs and Scheduler Reference (NBC schedule).pdf#c15",
+     "cite": "MAN-BAT-72, p.8, § Checking database locks and records"
+    }
+   ],
+   "withheld": false,
+   "answer": "The nightly backup (JOB-SYS-001) runs daily at 01:30 [1][3][5][6]. During this window, Ledgerline is in read-only mode from 01:30 to 01:50 [1][3].",
+   "cited": [
+    1,
+    3,
+    5,
+    6
+   ],
+   "tokens_in": 4095,
+   "tokens_out": 343,
+   "llm_seconds": 3.89,
+   "cost_usd": 0.004793,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that the nightly backup runs daily at 01:30.",
+    "tokens_in": 345,
+    "tokens_out": 77,
+    "cost_usd": 0.000602
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 1.0
+   },
+   "total_s": 4.0293,
+   "cost_total_usd": 0.004793
+  },
+  {
+   "id": "Q-020",
+   "type": "single_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1424471000009362,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 3,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 0.3333
+   },
+   "items": [
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c0",
+     "cite": "SOP-INV-003 v1.2, p.1, § Stock Count (cycle and annual)"
+    },
+    {
+     "id": "99_scans/2023_stock_count_sheet_MAN_aisle_B.pdf#c0",
+     "cite": "2023_stock_count_sheet_MAN_aisle_B.pdf, p.1, § page 1"
+    },
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c3",
+     "cite": "SOP-INV-003 v1.2, p.3, § 5. Procedure"
+    },
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c1",
+     "cite": "SOP-INV-003 v1.2, pp.1-2, § Practical tips"
+    },
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c4",
+     "cite": "SOP-INV-003 v1.2, p.4, § What to check on the screen"
+    },
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c2",
+     "cite": "SOP-INV-003 v1.2, pp.2-3, § Practical Working Arrangements"
+    },
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c6",
+     "cite": "SOP-INV-003 v1.2, p.5, § Common errors"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-INV-72 Ledgerline 7.2 User Manual - Inventory v7.2.3.pdf#c27",
+     "cite": "MAN-INV-72 v7.2.3, p.13, § Worked example"
+    },
+    {
+     "id": "02_procedures/SOP-INV-003 Stock Count v1.2.pdf#c5",
+     "cite": "SOP-INV-003 v1.2, p.4, § What to do when something does not look right"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c21",
+     "cite": "MAN-SCR-72 v7.2.3, p.13, § INV-CNT-06 STOCK COUNT ENTRY"
+    }
+   ],
+   "withheld": false,
+   "answer": "The annual stock count is held on the last Saturday of March [3]. On that day, Ledgerline is closed for stores transactions [3].",
+   "cited": [
+    3
+   ],
+   "tokens_in": 3655,
+   "tokens_out": 235,
+   "llm_seconds": 3.629,
+   "cost_usd": 0.003985,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that the annual stock count is on the last Saturday of March.",
+    "tokens_in": 289,
+    "tokens_out": 136,
+    "cost_usd": 0.000799
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 3.7714,
+   "cost_total_usd": 0.003985
+  },
+  {
+   "id": "Q-412",
+   "type": "table_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1272804999989603,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "row": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "05_master_data/Rate Contracts 2025-26 and 2026-27.xlsx#c39",
+     "cite": "Rate Contracts 2025-26 and 2026-27.xlsx, 2026-27 rows 172-176"
+    },
+    {
+     "id": "06_transactions/reports/PO register 2026-10 (printed).pdf#c6",
+     "cite": "PO register 2026-10 (printed).pdf, p.1"
+    },
+    {
+     "id": "06_transactions/reports/PO register 2026-07 (printed).pdf#c29",
+     "cite": "PO register 2026-07 (printed).pdf, p.4, § OU NBC-MAN-01 / NBC-LDS-01 PERIOD 2026-07 RUN BY JOB-PUR-051"
+    },
+    {
+     "id": "06_transactions/reports/PO register 2026-01 (printed).pdf#c6",
+     "cite": "PO register 2026-01 (printed).pdf, p.1, § OU NBC-MAN-01 / NBC-LDS-01 PERIOD 2026-01 RUN BY JOB-PUR-051"
+    },
+    {
+     "id": "06_transactions/reports/PO register 2026-04 (printed).pdf#c24",
+     "cite": "PO register 2026-04 (printed).pdf, p.3, § OU NBC-MAN-01 / NBC-LDS-01 PERIOD 2026-04 RUN BY JOB-PUR-051"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c425",
+     "cite": "stock_ledger_2026-Q3.csv, rows 2977-2983"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c423",
+     "cite": "stock_ledger_2026-Q3.csv, rows 2963-2969"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c419",
+     "cite": "stock_ledger_2026-Q3.csv, rows 2935-2941"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c427",
+     "cite": "stock_ledger_2026-Q3.csv, rows 2991-2997"
+    },
+    {
+     "id": "06_transactions/stock_ledger_2026-Q3.csv#c426",
+     "cite": "stock_ledger_2026-Q3.csv, rows 2984-2990"
+    }
+   ],
+   "withheld": false,
+   "answer": "Under the 2026–27 rate contract (valid from 2026-04-01 to 2027-03-31), the rate for item CHG-4A-01 from Castlefield Chargers (CC-SAL-0031) is 96.00 [1]. \n\nThis rate is also reflected on recent purchase orders, including PO/2026/01179 dated 2026-10-23 [2], PO/2026/01014 dated 2026-07-28 [3], and PO/2026/00539 dated 2026-04-23 [5] (superseding the earlier rate of 93.50 seen on PO/2026/00030 in January 2026 [4]).",
+   "cited": [
+    1,
+    2,
+    3,
+    5,
+    4
+   ],
+   "tokens_in": 5631,
+   "tokens_out": 850,
+   "llm_seconds": 6.983,
+   "cost_usd": 0.008152,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states the rate of 96.00.",
+    "tokens_in": 471,
+    "tokens_out": 109,
+    "cost_usd": 0.000838
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.8
+   },
+   "total_s": 7.1103,
+   "cost_total_usd": 0.008152
+  },
+  {
+   "id": "Q-422",
+   "type": "table_lookup",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13721169999917038,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 1,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 1,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 1,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c1",
+     "cite": "POL-BAT-004 v1.2, pp.1-2, § Common errors and misunderstandings"
+    },
+    {
+     "id": "01_policies/POL-BAT-004 Battery Safety and Handling Policy v1.2.pdf#c3",
+     "cite": "POL-BAT-004 v1.2, pp.2-3, § Common Errors"
+    },
+    {
+     "id": "05_master_data/Warehouses.csv#c0",
+     "cite": "Warehouses.csv, rows 2-11"
+    },
+    {
+     "id": "11_training/intranet_export_2016/page_health_and_safety_in_the_warehouse.html#c0",
+     "cite": "page_health_and_safety_in_the_warehouse.html, § Health and safety in the warehouse"
+    },
+    {
+     "id": "06_transactions/reports/Stock status listing 2026-10-26 (printed).pdf#c3",
+     "cite": "Stock status listing 2026-10-26 (printed).pdf, p.1, § RUN 26-10-2026 06:15 BY JOB-INV-040"
+    },
+    {
+     "id": "06_transactions/reports/Stock status listing 2026-10-26 (printed).pdf#c2",
+     "cite": "Stock status listing 2026-10-26 (printed).pdf, p.1, § RUN 26-10-2026 06:15 BY JOB-INV-040"
+    },
+    {
+     "id": "06_transactions/reports/Stock status listing 2026-10-26 (printed).pdf#c1",
+     "cite": "Stock status listing 2026-10-26 (printed).pdf, p.1, § RUN 26-10-2026 06:15 BY JOB-INV-040"
+    },
+    {
+     "id": "06_transactions/reports/Stock status listing 2026-10-26 (printed).pdf#c144",
+     "cite": "Stock status listing 2026-10-26 (printed).pdf, p.26, § RUN 26-10-2026 06:15 BY JOB-INV-040"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-INV-72 Ledgerline 7.2 User Manual - Inventory v7.2.3.pdf#c75",
+     "cite": "MAN-INV-72 v7.2.3, p.37, § Purpose"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-INV-72 Ledgerline 7.2 User Manual - Inventory v7.2.3.pdf#c47",
+     "cite": "MAN-INV-72 v7.2.3, pp.22-23, § Screen overview"
+    }
+   ],
+   "withheld": false,
+   "answer": "**WH-MAN-BAT** is a legacy 6.x warehouse code for the Battery store under operating unit NBC-MAN-01, with its status listed as CLOSED [3]. \n\nIt was merged into Manchester main stores (WH-MAN-STR) in 2019 and must not be used [1][2][3]. It remains visible only on legacy screens, and booking against it causes discrepancies between system stock records and general stores availability [1][2].",
+   "cited": [
+    3,
+    1,
+    2
+   ],
+   "tokens_in": 4687,
+   "tokens_out": 554,
+   "llm_seconds": 6.006,
+   "cost_usd": 0.006152,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "merged into WH-MAN-STR"
+    ]
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly identifies WH-MAN-BAT as a legacy code merged into WH-MAN-STR.",
+    "tokens_in": 380,
+    "tokens_out": 154,
+    "cost_usd": 0.000949
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 3,
+    "precision": 0.333
+   },
+   "total_s": 6.1432,
+   "cost_total_usd": 0.006152
+  },
+  {
+   "id": "Q-413",
+   "type": "table_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13433819999954721,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "row": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "05_master_data/Rate Contracts 2025-26 and 2026-27.xlsx#c4",
+     "cite": "Rate Contracts 2025-26 and 2026-27.xlsx, 2026-27 rows 21-24"
+    },
+    {
+     "id": "05_master_data/Rate Contracts 2025-26 and 2026-27.xlsx#c382",
+     "cite": "Rate Contracts 2025-26 and 2026-27.xlsx, 2025-26 rows 20-23"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c328",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.87, § PARENT FG-ROC-M-SLV E-bike, Roch mountain, size M, silver"
+    },
+    {
+     "id": "06_transactions/reports/Stock status listing 2026-10-26 (printed).pdf#c2",
+     "cite": "Stock status listing 2026-10-26 (printed).pdf, p.1, § RUN 26-10-2026 06:15 BY JOB-INV-040"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c332",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.88, § PARENT FG-ROC-S-BLK E-bike, Roch mountain, size S, black"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c478",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.127, § PARENT FG-TAM-S-BLK E-bike, Tame folding, size S, black"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c177",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.47, § PARENT FG-IRK-M-RED E-bike, Irk cargo, size M, brick red"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c185",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.49, § PARENT FG-IRK-S-BLK E-bike, Irk cargo, size S, black"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c181",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.48, § PARENT FG-IRK-M-SLV E-bike, Irk cargo, size M, silver"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c30",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.8, § PARENT FG-ANC-M-RED E-bike, Ancoats city, size M, brick red"
+    }
+   ],
+   "withheld": false,
+   "answer": "The rate in force today for **MTR-HUB-250** (supplier `AM-BIR-0008`) is **142.00** (valid from 2026-04-01 to 2027-03-31) [1]. \n\n(The previous rate under the 2025–26 contract was 138.00 [2].)",
+   "cited": [
+    1,
+    2
+   ],
+   "tokens_in": 3218,
+   "tokens_out": 644,
+   "llm_seconds": 4.867,
+   "cost_usd": 0.005311,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states the rate of 142.00.",
+    "tokens_in": 360,
+    "tokens_out": 131,
+    "cost_usd": 0.000837
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 0.5
+   },
+   "total_s": 5.0013,
+   "cost_total_usd": 0.005311
+  },
+  {
+   "id": "Q-433",
+   "type": "table_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13775189999978465,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "row": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "05_master_data/ITEM_MASTER_2026-10-26.xlsx#c133",
+     "cite": "ITEM_MASTER_2026-10-26.xlsx, Items rows 412-415"
+    },
+    {
+     "id": "05_master_data/old/item_master_export_2025-03.csv#c66",
+     "cite": "item_master_export_2025-03.csv, rows 411-417"
+    },
+    {
+     "id": "05_master_data/ITEM_MASTER_2026-10-26.xlsx#c140",
+     "cite": "ITEM_MASTER_2026-10-26.xlsx, Items rows 440-443"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c4",
+     "cite": "MAN-PUR-72 v7.2.3, pp.3-4, § 3.3 Reading the list"
+    },
+    {
+     "id": "06_transactions/reports/Item master listing 2026-10 (printed).pdf#c52",
+     "cite": "Item master listing 2026-10 (printed).pdf, p.10, § RUN 01-10-2026 06:00 LC = LITHIUM-CELL FLAG"
+    },
+    {
+     "id": "01_policies/old/Supplier_Policy_v2.2.docx#c2",
+     "cite": "POL-SUP-003 v2.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "06_transactions/reports/Bill of materials listing 2026 (printed).pdf#c496",
+     "cite": "Bill of materials listing 2026 (printed).pdf, p.132, § PARENT FG-TAM-S-SLV E-bike, Tame folding, size S, silver"
+    },
+    {
+     "id": "05_master_data/Stock_on_hand_2026-10-26_0900.xlsx#c72",
+     "cite": "Stock_on_hand_2026-10-26_0900.xlsx, Stock rows 501-508"
+    },
+    {
+     "id": "05_master_data/ITEM_MASTER_2026-10-26.xlsx#c123",
+     "cite": "ITEM_MASTER_2026-10-26.xlsx, Items rows 377-380"
+    }
+   ],
+   "withheld": false,
+   "answer": "The reorder level for **LGT-REB** (Rear light with brake function) is **2800** [1][5]. \n\nIt is not a lithium-cell part; its lithium-cell flag (`cell_safety`) is set to **0** [1][5].",
+   "cited": [
+    1,
+    5
+   ],
+   "tokens_in": 4904,
+   "tokens_out": 637,
+   "llm_seconds": 6.13,
+   "cost_usd": 0.006673,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states the reorder level of 2800 and confirms it is not a lithium-cell part.",
+    "tokens_in": 352,
+    "tokens_out": 132,
+    "cost_usd": 0.000835
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 1.0
+   },
+   "total_s": 6.2678,
+   "cost_total_usd": 0.006673
+  },
+  {
+   "id": "Q-618",
+   "type": "version_conflict",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.14248939999924914,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 1,
+    "levels": {
+     "page": 2
+    },
+    "hit@1": 1,
+    "cov@1": 0.5,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 0.5,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v3.0 (effective 2027-01-01).pdf#c2",
+     "cite": "POL-TEX-007 v3.0, pp.2-3, § Practical tips"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c101",
+     "cite": "MAN-AP-72 v7.2.3, p.47, § Worked example"
+    },
+    {
+     "id": "09_email_archive/2026/2026-01-07_Expense claims before the summer.eml#c0",
+     "cite": "2026-01-07_Expense claims before the summer.eml, § body"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-ERR-72 Message and Error Code Reference v7.2.3.pdf#c12",
+     "cite": "MAN-ERR-72 v7.2.3, pp.9-10, § ERR-EDI-0140 UNKNOWN BUYER ITEM CODE"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SVC-72 Service Reference (all modules) v7.2.3.pdf#c47",
+     "cite": "MAN-SVC-72 v7.2.3, p.35, § exp_approve EXPENSE CLAIM APPROVE"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c10",
+     "cite": "MAN-SCR-72 v7.2.3, p.6, § AP-EXP-09 EXPENSE CLAIM ENTRY"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c95",
+     "cite": "MAN-AP-72 v7.2.3, p.45, § Step by step"
+    },
+    {
+     "id": "04_service_definitions/accounts_payable/exp_approve.yaml#c0",
+     "cite": "svc:exp_approve, § request.fields, service exp_approve"
+    },
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v2.4.pdf#c4",
+     "cite": "POL-TEX-007 v2.4, p.4, § Purpose and Operation"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-AP-72 Ledgerline 7.2 User Manual - Accounts Payable v7.2.3.pdf#c93",
+     "cite": "MAN-AP-72 v7.2.3, p.44, § Purpose"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The current policy and system documentation do not specify the deadline or allowable window for submitting an expense claim (note that under POL-TEX-007 v3.0, a 45-day submission deadline will come into effect from 2027-01-01 [1]).",
+   "cited": [
+    1
+   ],
+   "tokens_in": 4282,
+   "tokens_out": 2029,
+   "llm_seconds": 13.677,
+   "cost_usd": 0.011902,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "60 days",
+     "45 days"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate failed to state the current 60-day submission deadline, incorrectly claiming it is not in the documents.",
+    "tokens_in": 356,
+    "tokens_out": 188,
+    "cost_usd": 0.001069
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 13.8195,
+   "cost_total_usd": 0.011902
+  },
+  {
+   "id": "Q-610",
+   "type": "version_conflict",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1401067000006151,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 3,
+    "rank": 1,
+    "levels": {
+     "page": 3
+    },
+    "hit@1": 1,
+    "cov@1": 0.6667,
+    "fact@1": 1,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 1,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 1,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v3.0 (effective 2027-01-01).pdf#c1",
+     "cite": "POL-TEX-007 v3.0, pp.1-2, § Practical tips"
+    },
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v2.4.pdf#c1",
+     "cite": "POL-TEX-007 v2.4, p.2, § Purpose and Scope"
+    },
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v2.4.pdf#c2",
+     "cite": "POL-TEX-007 v2.4, pp.2-3, § Purpose and scope"
+    },
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v3.0 (effective 2027-01-01).pdf#c2",
+     "cite": "POL-TEX-007 v3.0, pp.2-3, § Practical tips"
+    },
+    {
+     "id": "01_policies/POL-TEX-007 Travel and Expenses Policy v2.4.pdf#c3",
+     "cite": "POL-TEX-007 v2.4, pp.3-4, § 4. Flights and rail"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SAL-72 Ledgerline 7.2 User Manual - Sales and Distribution v7.2.3.pdf#c109",
+     "cite": "MAN-SAL-72 v7.2.3, p.51, § Worked example"
+    },
+    {
+     "id": "05_master_data/Rate Contracts 2025-26 and 2026-27.xlsx#c32",
+     "cite": "Rate Contracts 2025-26 and 2026-27.xlsx, 2026-27 rows 144-147"
+    },
+    {
+     "id": "05_master_data/Price list PL-UK-RTL 2026.xlsx#c2",
+     "cite": "Price list PL-UK-RTL 2026.xlsx, PL-UK-RTL rows 19-26"
+    },
+    {
+     "id": "05_master_data/Price list PL-UK-RTL 2026.xlsx#c1",
+     "cite": "Price list PL-UK-RTL 2026.xlsx, PL-UK-RTL rows 11-18"
+    },
+    {
+     "id": "05_master_data/Price list PL-UK-RTL 2026.xlsx#c10",
+     "cite": "Price list PL-UK-RTL 2026.xlsx, PL-UK-RTL rows 82-89"
+    }
+   ],
+   "withheld": false,
+   "answer": "Under the policy currently in force (POL-TEX-007 v2.4), hotel rooms in London can be booked up to £190 a night, including breakfast [2][3]. If a booking cannot be secured within this limit, prior written consent from your department manager is required before travel [3].\n\nPlease note that under POL-TEX-007 v3.0 (which is not yet in force until 2027-01-01), the London hotel ceiling will increase to £210 a night, including breakfast [1].",
+   "cited": [
+    2,
+    3,
+    1
+   ],
+   "tokens_in": 4901,
+   "tokens_out": 653,
+   "llm_seconds": 6.09,
+   "cost_usd": 0.006737,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states the current rate of £190 and the future rate of £210 from 2027.",
+    "tokens_in": 416,
+    "tokens_out": 183,
+    "cost_usd": 0.001098
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 3,
+    "precision": 1.0
+   },
+   "total_s": 6.2301,
+   "cost_total_usd": 0.006737
+  },
+  {
+   "id": "Q-615",
+   "type": "version_conflict",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.1436258000012458,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 6,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.5,
+    "fact@10": 1,
+    "rr": 0.1667
+   },
+   "items": [
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3 (1).pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#c2",
+     "cite": "POL-SUP-003 v2.3, p.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/old/Supplier_Policy_v2.2.docx#c2",
+     "cite": "POL-SUP-003 v2.2, § 4. UN 38.3 certificates"
+    },
+    {
+     "id": "01_policies/old/purchase_policy_v3_2019.docx#c2",
+     "cite": "POL-PUR-001 v3.0, § Practical tips"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c4",
+     "cite": "POL-PUR-001 v4.1, p.3, § How do I calculate whether a purchase order falls within my "
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c2",
+     "cite": "POL-PUR-001 v4.1, p.2, § 6. Supplier qualification"
+    },
+    {
+     "id": "02_procedures/SOP-PRD-002 Engineering Change v1.0.pdf#c2",
+     "cite": "SOP-PRD-002 v1.0, pp.2-3, § How Roles Operate in Practice"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-005 Certificate Renewal (UN 38.3) v1.1.pdf#c1",
+     "cite": "SOP-PUR-005 v1.1, pp.1-2, § Practical tips"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-005 Certificate Renewal (UN 38.3) v1.1.pdf#c0",
+     "cite": "SOP-PUR-005 v1.1, p.1, § Certificate Renewal (UN 38.3)"
+    },
+    {
+     "id": "01_policies/POL-PUR-001_Purchase_Policy_v4.1.pdf#c0",
+     "cite": "POL-PUR-001 v4.1, p.1, § Purchase Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, chargers did not always require a UN 38.3 certificate [4][10]. \n\nUnder older policy (POL-PUR-001 v3.0), chargers and hub motors were explicitly exempt from this requirement under §6.2 [4]. In POL-PUR-001 v4.0 (effective 2025-04-01), the UN 38.3 rule was applied to battery packs and hub motors, but not chargers [10]. \n\nThe requirement was officially extended to chargers on 2026-04-01 with the release of POL-PUR-001 v4.1 [10]. \n\nToday, under POL-PUR-001 v4.1 (§6.2) and POL-SUP-003 v2.3 (§4.1), chargers are classed as lithium-cell parts [1][6]. They may only be bought from an active supplier holding a valid UN 38.3 certificate uploaded and verified in Ledgerline [1][5][6]. An expired certificate counts as no certificate, and no order may be placed until a valid certificate is on file [1][5][6].",
+   "cited": [
+    4,
+    10,
+    1,
+    6,
+    5
+   ],
+   "tokens_in": 4091,
+   "tokens_out": 1148,
+   "llm_seconds": 8.377,
+   "cost_usd": 0.008111,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate accurately states that chargers did not always need UN 38.3 and correctly explains the policy change history.",
+    "tokens_in": 540,
+    "tokens_out": 115,
+    "cost_usd": 0.00092
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.2
+   },
+   "total_s": 8.5206,
+   "cost_total_usd": 0.008111
+  },
+  {
+   "id": "Q-607",
+   "type": "version_conflict",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 0.13906069999939064,
+   "retrieval_llm_s": 0.0,
+   "retrieval_tokens_in": 0,
+   "retrieval_tokens_out": 0,
+   "retrieval_cost_usd": 0.0,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 2,
+    "levels": {
+     "page": 3
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.25,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.75,
+    "fact@5": 1,
+    "hit@10": 1,
+    "cov@10": 0.75,
+    "fact@10": 1,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "11_training/old/Ledgerline basics for new starters (2019) deck export.pdf#c0",
+     "cite": "Ledgerline basics for new starters (2019) deck export.pdf, pp.1-4, § Ledgerline basics (2019)"
+    },
+    {
+     "id": "03_ledgerline_manuals/old/Ledgerline 7.0 Purchasing Manual (2015).pdf#c2",
+     "cite": "MAN-PUR-70 v7.0, p.2, § Operation and local practice"
+    },
+    {
+     "id": "11_training/intranet_export_2016/how_to_raise_an_order.html#c0",
+     "cite": "how_to_raise_an_order.html, § How to raise an order"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.3 (FINAL).pdf#c4",
+     "cite": "SOP-PUR-002 v1.3, pp.3-4, § Common mistakes"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c9",
+     "cite": "MAN-PUR-72 v7.2.3, p.7, § 10.2 Approving"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-PUR-72 Ledgerline 7.2 User Manual - Purchasing v7.2.3.pdf#c10",
+     "cite": "MAN-PUR-72 v7.2.3, pp.7-8, § 11.4 The tax code"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c44",
+     "cite": "MAN-SCR-72 v7.2.3, pp.27-28, § PUR-POA-04 PURCHASE ORDER APPROVAL"
+    },
+    {
+     "id": "04_service_definitions/sales/so_fetch.yaml#c0",
+     "cite": "svc:so_fetch, § request.fields, service so_fetch"
+    },
+    {
+     "id": "04_service_definitions/service_index.csv#c48",
+     "cite": "service_index.csv, rows 337-343"
+    },
+    {
+     "id": "03_ledgerline_manuals/MAN-SCR-72 Screen Reference v7.2.3.pdf#c43",
+     "cite": "MAN-SCR-72 v7.2.3, p.27, § PUR-PO-01 PURCHASE ORDER ENTRY"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, Fetch is not optional on the order screen under Ledgerline 7.2.3 [5][10]. \n\nWhile older, superseded documentation previously stated that Fetch was optional [1][2][3], the current procedure requires you to press F3 (Fetch) after entering the supplier and item [5][10]. Save requires Fetch; if Fetch has not been run for the current supplier and item, Ledgerline refuses to save the order and returns error `ERR-SCR-0221` (FETCH NOT DONE) [5][10]. Furthermore, if you change the supplier or item after fetching, you must press Fetch again before saving [5].",
+   "cited": [
+    5,
+    10,
+    1,
+    2,
+    3
+   ],
+   "tokens_in": 3621,
+   "tokens_out": 660,
+   "llm_seconds": 6.05,
+   "cost_usd": 0.00571,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that Fetch is not optional and includes the required error code ERR-SCR-0221.",
+    "tokens_in": 451,
+    "tokens_out": 192,
+    "cost_usd": 0.001164
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 5,
+    "precision": 0.4
+   },
+   "total_s": 6.1891,
+   "cost_total_usd": 0.00571
+  }
+ ],
+ "summary": {
+  "overall": {
+   "n": 40,
+   "answer_correct": 0.875,
+   "fact_correct": 0.85,
+   "fact_n": 40,
+   "both_correct": 0.825,
+   "citation_correct": 1.0,
+   "citation_precision": 0.5596,
+   "retrieval_s": {
+    "n": 40,
+    "p50": 0.1394,
+    "p95": 0.1486,
+    "mean": 0.1413,
+    "max": 0.1784
+   },
+   "total_s": {
+    "n": 40,
+    "p50": 6.2096,
+    "p95": 13.8347,
+    "mean": 6.8283,
+    "max": 15.3373
+   },
+   "cost_per_q_usd": 0.006221,
+   "tokens_in_per_q": 4021.6,
+   "tokens_out_per_q": 703.7
+  },
+  "by_type": {
+   "single_lookup": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 1.0,
+    "citation_correct": 1.0,
+    "citation_precision": 0.75,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1409,
+     "p95": 0.1428,
+     "mean": 0.1403,
+     "max": 0.1428
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 3.967,
+     "p95": 4.6587,
+     "mean": 4.1188,
+     "max": 4.7698
+    },
+    "cost_per_q_usd": 0.004491,
+    "tokens_in_per_q": 3779.2,
+    "tokens_out_per_q": 333.0
+   },
+   "procedure": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 1.0,
+    "citation_correct": 1.0,
+    "citation_precision": 0.4957,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1387,
+     "p95": 0.1444,
+     "mean": 0.1397,
+     "max": 0.1454
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 7.6637,
+     "p95": 10.4402,
+     "mean": 7.7227,
+     "max": 10.8939
+    },
+    "cost_per_q_usd": 0.006622,
+    "tokens_in_per_q": 3881.0,
+    "tokens_out_per_q": 829.0
+   },
+   "rule": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 1.0,
+    "citation_correct": 1.0,
+    "citation_precision": 0.6,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1404,
+     "p95": 0.1453,
+     "mean": 0.1409,
+     "max": 0.1459
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 4.8434,
+     "p95": 6.8525,
+     "mean": 5.2967,
+     "max": 7.1849
+    },
+    "cost_per_q_usd": 0.005393,
+    "tokens_in_per_q": 4046.8,
+    "tokens_out_per_q": 498.0
+   },
+   "service_field": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 1.0,
+    "citation_correct": 1.0,
+    "citation_precision": 0.475,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1409,
+     "p95": 0.1476,
+     "mean": 0.1418,
+     "max": 0.1485
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 4.533,
+     "p95": 5.2003,
+     "mean": 4.5855,
+     "max": 5.3146
+    },
+    "cost_per_q_usd": 0.005041,
+    "tokens_in_per_q": 4195.2,
+    "tokens_out_per_q": 383.0
+   },
+   "table_lookup": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 0.75,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": 1.0,
+    "citation_precision": 0.6583,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1358,
+     "p95": 0.1377,
+     "mean": 0.1341,
+     "max": 0.1378
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 6.2055,
+     "p95": 6.9839,
+     "mean": 6.1307,
+     "max": 7.1103
+    },
+    "cost_per_q_usd": 0.006572,
+    "tokens_in_per_q": 4610.0,
+    "tokens_out_per_q": 671.2
+   },
+   "multi_hop": {
+    "n": 4,
+    "answer_correct": 0.25,
+    "fact_correct": 0.25,
+    "fact_n": 4,
+    "both_correct": 0.25,
+    "citation_correct": 1.0,
+    "citation_precision": 0.2375,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1376,
+     "p95": 0.1379,
+     "mean": 0.1375,
+     "max": 0.1379
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 9.8752,
+     "p95": 13.5838,
+     "mean": 10.2192,
+     "max": 14.1226
+    },
+    "cost_per_q_usd": 0.007351,
+    "tokens_in_per_q": 3994.0,
+    "tokens_out_per_q": 983.2
+   },
+   "version_conflict": {
+    "n": 4,
+    "answer_correct": 0.75,
+    "fact_correct": 0.75,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": 1.0,
+    "citation_precision": 0.65,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1413,
+     "p95": 0.1435,
+     "mean": 0.1413,
+     "max": 0.1436
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 7.3754,
+     "p95": 13.0247,
+     "mean": 8.6898,
+     "max": 13.8195
+    },
+    "cost_per_q_usd": 0.008115,
+    "tokens_in_per_q": 4223.8,
+    "tokens_out_per_q": 1122.5
+   },
+   "exact_code": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 1.0,
+    "citation_correct": 1.0,
+    "citation_precision": 0.5,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1473,
+     "p95": 0.1498,
+     "mean": 0.1474,
+     "max": 0.1501
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 7.9398,
+     "p95": 11.0461,
+     "mean": 8.0554,
+     "max": 11.3691
+    },
+    "cost_per_q_usd": 0.007231,
+    "tokens_in_per_q": 4150.8,
+    "tokens_out_per_q": 922.8
+   },
+   "not_in_docs": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 0.75,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": null,
+    "citation_precision": null,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1419,
+     "p95": 0.1425,
+     "mean": 0.1416,
+     "max": 0.1426
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 4.4454,
+     "p95": 5.9982,
+     "mean": 4.8679,
+     "max": 6.2708
+    },
+    "cost_per_q_usd": 0.004367,
+    "tokens_in_per_q": 3458.8,
+    "tokens_out_per_q": 367.0
+   },
+   "permission": {
+    "n": 4,
+    "answer_correct": 0.75,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": 1.0,
+    "citation_precision": 1.0,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 0.1391,
+     "p95": 0.1726,
+     "mean": 0.1484,
+     "max": 0.1784
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 7.1803,
+     "p95": 14.1589,
+     "mean": 8.5962,
+     "max": 15.3373
+    },
+    "cost_per_q_usd": 0.007024,
+    "tokens_in_per_q": 3876.0,
+    "tokens_out_per_q": 927.5
+   }
+  },
+  "retrieval": {
+   "overall": {
+    "n": 33,
+    "mrr": 0.7609,
+    "recall@1": 0.6364,
+    "coverage@1": 0.4939,
+    "fact_recall@1": 0.6667,
+    "recall@3": 0.8485,
+    "coverage@3": 0.6313,
+    "fact_recall@3": 0.8788,
+    "recall@5": 0.9091,
+    "coverage@5": 0.7601,
+    "fact_recall@5": 0.9394,
+    "recall@10": 0.9697,
+    "coverage@10": 0.8358,
+    "fact_recall@10": 1.0
+   },
+   "by_type": {
+    "single_lookup": {
+     "n": 4,
+     "mrr": 0.8333,
+     "recall@1": 0.75,
+     "coverage@1": 0.5,
+     "fact_recall@1": 0.75,
+     "recall@3": 1.0,
+     "coverage@3": 0.75,
+     "fact_recall@3": 1.0,
+     "recall@5": 1.0,
+     "coverage@5": 0.875,
+     "fact_recall@5": 1.0,
+     "recall@10": 1.0,
+     "coverage@10": 0.875,
+     "fact_recall@10": 1.0
+    },
+    "procedure": {
+     "n": 4,
+     "mrr": 0.5903,
+     "recall@1": 0.5,
+     "coverage@1": 0.5,
+     "fact_recall@1": 0.5,
+     "recall@3": 0.5,
+     "coverage@3": 0.5,
+     "fact_recall@3": 0.5,
+     "recall@5": 0.75,
+     "coverage@5": 0.75,
+     "fact_recall@5": 0.75,
+     "recall@10": 1.0,
+     "coverage@10": 1.0,
+     "fact_recall@10": 1.0
+    },
+    "rule": {
+     "n": 4,
+     "mrr": 0.75,
+     "recall@1": 0.5,
+     "coverage@1": 0.5,
+     "fact_recall@1": 0.75,
+     "recall@3": 1.0,
+     "coverage@3": 0.875,
+     "fact_recall@3": 1.0,
+     "recall@5": 1.0,
+     "coverage@5": 1.0,
+     "fact_recall@5": 1.0,
+     "recall@10": 1.0,
+     "coverage@10": 1.0,
+     "fact_recall@10": 1.0
+    },
+    "service_field": {
+     "n": 4,
+     "mrr": 0.875,
+     "recall@1": 0.75,
+     "coverage@1": 0.625,
+     "fact_recall@1": 0.75,
+     "recall@3": 1.0,
+     "coverage@3": 0.875,
+     "fact_recall@3": 1.0,
+     "recall@5": 1.0,
+     "coverage@5": 1.0,
+     "fact_recall@5": 1.0,
+     "recall@10": 1.0,
+     "coverage@10": 1.0,
+     "fact_recall@10": 1.0
+    },
+    "table_lookup": {
+     "n": 4,
+     "mrr": 0.75,
+     "recall@1": 0.75,
+     "coverage@1": 0.75,
+     "fact_recall@1": 0.75,
+     "recall@3": 0.75,
+     "coverage@3": 0.75,
+     "fact_recall@3": 1.0,
+     "recall@5": 0.75,
+     "coverage@5": 0.75,
+     "fact_recall@5": 1.0,
+     "recall@10": 0.75,
+     "coverage@10": 0.75,
+     "fact_recall@10": 1.0
+    },
+    "multi_hop": {
+     "n": 4,
+     "mrr": 0.875,
+     "recall@1": 0.75,
+     "coverage@1": 0.1579,
+     "fact_recall@1": 0.75,
+     "recall@3": 1.0,
+     "coverage@3": 0.208,
+     "fact_recall@3": 1.0,
+     "recall@5": 1.0,
+     "coverage@5": 0.208,
+     "fact_recall@5": 1.0,
+     "recall@10": 1.0,
+     "coverage@10": 0.333,
+     "fact_recall@10": 1.0
+    },
+    "version_conflict": {
+     "n": 4,
+     "mrr": 0.6667,
+     "recall@1": 0.5,
+     "coverage@1": 0.2917,
+     "fact_recall@1": 0.5,
+     "recall@3": 0.75,
+     "coverage@3": 0.4375,
+     "fact_recall@3": 0.5,
+     "recall@5": 0.75,
+     "coverage@5": 0.5625,
+     "fact_recall@5": 0.75,
+     "recall@10": 1.0,
+     "coverage@10": 0.8125,
+     "fact_recall@10": 1.0
+    },
+    "exact_code": {
+     "n": 4,
+     "mrr": 0.6875,
+     "recall@1": 0.5,
+     "coverage@1": 0.5,
+     "fact_recall@1": 0.5,
+     "recall@3": 0.75,
+     "coverage@3": 0.5625,
+     "fact_recall@3": 1.0,
+     "recall@5": 1.0,
+     "coverage@5": 0.875,
+     "fact_recall@5": 1.0,
+     "recall@10": 1.0,
+     "coverage@10": 0.875,
+     "fact_recall@10": 1.0
+    },
+    "not_in_docs": {
+     "n": 0
+    },
+    "permission": {
+     "n": 1,
+     "mrr": 1.0,
+     "recall@1": 1.0,
+     "coverage@1": 1.0,
+     "fact_recall@1": 1.0,
+     "recall@3": 1.0,
+     "coverage@3": 1.0,
+     "fact_recall@3": 1.0,
+     "recall@5": 1.0,
+     "coverage@5": 1.0,
+     "fact_recall@5": 1.0,
+     "recall@10": 1.0,
+     "coverage@10": 1.0,
+     "fact_recall@10": 1.0
+    }
+   },
+   "latency_s": {
+    "n": 40,
+    "p50": 0.1394,
+    "p95": 0.1486,
+    "mean": 0.1413,
+    "max": 0.1784
+   },
+   "match_levels": {
+    "page": 38,
+    "file": 8,
+    "row": 3
+   }
+  },
+  "judge_vs_fact": {
+   "n": 40,
+   "agree": 0.925,
+   "kappa": 0.684,
+   "fact_only": 1,
+   "judge_only": 2
+  },
+  "judge_cost_usd": 0.0383
+ },
+ "answer_words": 250,
+ "withheld_notice": true,
+ "answer_model": "openrouter:google/gemini-3.8-flash",
+ "judge_model": "openrouter:google/gemini-3.8-flash"
+}

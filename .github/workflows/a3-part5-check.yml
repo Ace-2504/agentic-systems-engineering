@@ -1,0 +1,50 @@
+# A3 · Part 5 · rule 12 of Lecture 3: "Measure again after every change, in CI."
+# On every push that changes the domain's documents, the Part 5 code or the chosen configuration, rebuild the index
+# from A3/domain/docs on a fresh machine and run A3/part5/check_retrieval.py. It fails (red cross on the commit) if
+# recall@5 drops below 90%, if a confidential chunk reaches a non-HR user, or if a document has two versions in force.
+# No API key and no model calls. Search latency is not checked here: GitHub's machines have no GPU, and the 200 ms
+# target is measured on one machine (the RTX 3060), as in Part 2.
+name: A3 Part 5 retrieval check
+
+on:
+  push:
+    paths:
+      - "A3/domain/**"
+      - "A3/part5/**"
+      - "A3/logs/part5_grid.json"
+      - ".github/workflows/a3-part5-check.yml"
+  pull_request:
+    paths:
+      - "A3/domain/**"
+      - "A3/part5/**"
+      - "A3/logs/part5_grid.json"
+  workflow_dispatch:   # a "Run workflow" button on the Actions tab
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: .github/workflows/a3-part5-check.yml   # no requirements.txt here; the install list is in this file
+
+      - name: Install the course package and Lecture 3's packages (CPU-only PyTorch)
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install "ledgerline-erp[all] @ git+https://github.com/RajatDandekar/agents-for-enterprises.git#subdirectory=ledgerline"
+          pip install pypdf==5.1.0 pdfplumber==0.11.4 openpyxl python-docx tiktoken scipy chromadb==1.0.15 sentence-transformers
+
+      - name: Cache the embedding and reranking models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-bge-small-reranker-base-v1
+
+      - name: Run the Part 5 check
+        run: python A3/part5/check_retrieval.py

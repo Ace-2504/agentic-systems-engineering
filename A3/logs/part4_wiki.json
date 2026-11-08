@@ -1,0 +1,3441 @@
+{
+ "name": "wiki",
+ "records": [
+  {
+   "id": "Q-0412",
+   "type": "exact_code",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 5.712,
+   "retrieval_llm_s": 5.707,
+   "retrieval_tokens_in": 6495,
+   "retrieval_tokens_out": 154,
+   "retrieval_cost_usd": 0.005994,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:err-po-0412",
+     "cite": "wiki page [[err-po-0412]] ERR-PO-0412"
+    }
+   ],
+   "withheld": false,
+   "answer": "**Meaning:**  \nError ERR-PO-0412 is a Ledgerline validation error encountered on screen PUR-PO-01 [1]. It indicates that a purchase order cannot be saved because a supplier located outside the UK has an order line incorrectly configured with the domestic tax code VAT20-UK rather than reverse charge VAT (VAT20-RC) [1].\n\n**How to fix it:**  \n1. Verify the supplier's country [1].  \n2. Change the purchase order line tax code from VAT20-UK to VAT20-RC [1].  \n3. Re-save the order on screen PUR-PO-01 [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 915,
+   "tokens_out": 696,
+   "llm_seconds": 7.127,
+   "cost_usd": 0.003626,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "TAX CODE DOES NOT MATCH SUPPLIER COUNTRY"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "```json\n{\"correct\": false, \"reason\": \"The candidate does not",
+    "tokens_in": 528,
+    "tokens_out": 508,
+    "cost_usd": 0.002531
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 1,
+    "precision": 0.0
+   },
+   "total_s": 12.839,
+   "cost_total_usd": 0.00962
+  },
+  {
+   "id": "Q-705",
+   "type": "exact_code",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 4.487,
+   "retrieval_llm_s": 4.484,
+   "retrieval_tokens_in": 6353,
+   "retrieval_tokens_out": 100,
+   "retrieval_cost_usd": 0.005654,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:err-sup-0118",
+     "cite": "wiki page [[err-sup-0118]] ERR-SUP-0118 Duplicate VAT Number"
+    }
+   ],
+   "withheld": false,
+   "answer": "ERR-SUP-0118 is a Ledgerline Supplier Master validation error that signifies Ledgerline has identified a matching VAT registration number in the supplier master data and refuses to create the supplier record [1]. It is triggered when attempting to register a supplier with a VAT registration number that already exists, actively blocking duplicate supplier onboarding across Northbridge Cycles records [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 801,
+   "tokens_out": 220,
+   "llm_seconds": 5.577,
+   "cost_usd": 0.001568,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "existing code"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate answer fails to mention using the existing code.",
+    "tokens_in": 342,
+    "tokens_out": 245,
+    "cost_usd": 0.001293
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 1,
+    "precision": 0.0
+   },
+   "total_s": 10.064,
+   "cost_total_usd": 0.007222
+  },
+  {
+   "id": "Q-703",
+   "type": "exact_code",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 4.508,
+   "retrieval_llm_s": 4.505,
+   "retrieval_tokens_in": 6379,
+   "retrieval_tokens_out": 145,
+   "retrieval_cost_usd": 0.005861,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:err-po-0610",
+     "cite": "wiki page [[err-po-0610]] ERR-PO-0610"
+    }
+   ],
+   "withheld": false,
+   "answer": "As of today, 26 October 2026, error code ERR-PO-0610 is not yet in force or active in Ledgerline [1]. It takes effect on 1 December 2026 [1].\n\nERR-PO-0610 indicates that a direct purchase order exceeds the gross value limit permitted for direct order entry [1]. Once effective on 1 December 2026, Ledgerline will trigger this validation error whenever a user attempts to save a direct purchase order with a gross value exceeding £25,000 [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 879,
+   "tokens_out": 535,
+   "llm_seconds": 7.859,
+   "cost_usd": 0.002932,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "raise a purchase request"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate answer fails to state the required key fact to raise a purchase request.",
+    "tokens_in": 410,
+    "tokens_out": 83,
+    "cost_usd": 0.000681
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 1,
+    "precision": 0.0
+   },
+   "total_s": 12.367,
+   "cost_total_usd": 0.008793
+  },
+  {
+   "id": "Q-711",
+   "type": "exact_code",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.676,
+   "retrieval_llm_s": 11.67,
+   "retrieval_tokens_in": 18902,
+   "retrieval_tokens_out": 215,
+   "retrieval_cost_usd": 0.016481,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-its-008",
+     "cite": "wiki page [[pol-its-008]] POL-ITS-008 IT Security Policy"
+    },
+    {
+     "id": "wiki:sop-it-001",
+     "cite": "wiki page [[sop-it-001]] SOP-IT-001 User Access Request"
+    },
+    {
+     "id": "wiki:sop-it-002",
+     "cite": "wiki page [[sop-it-002]] SOP-IT-002 Service Account Management"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s0",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s1",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s2",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s3",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s4",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s5",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    },
+    {
+     "id": "01_policies/POL-ITS-008 IT Security Policy v3.2.pdf#p1s6",
+     "cite": "POL-ITS-008 v3.2, p.1"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information regarding error code ERR-SEC-0001.",
+   "cited": [],
+   "tokens_in": 3115,
+   "tokens_out": 596,
+   "llm_seconds": 7.769,
+   "cost_usd": 0.005028,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "ACCESS DENIED"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly stated the information was not in the documents instead of providing the error message.",
+    "tokens_in": 299,
+    "tokens_out": 134,
+    "cost_usd": 0.000799
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 19.445,
+   "cost_total_usd": 0.021509
+  },
+  {
+   "id": "Q-EMMA",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 12.214,
+   "retrieval_llm_s": 12.209,
+   "retrieval_tokens_in": 48235,
+   "retrieval_tokens_out": 302,
+   "retrieval_cost_usd": 0.04104,
+   "retrieval": {
+    "n_gold": 11,
+    "rank": 1,
+    "levels": {
+     "page": 6
+    },
+    "hit@1": 1,
+    "cov@1": 0.0909,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.5455,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.5455,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.5455,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:sop-pur-001",
+     "cite": "wiki page [[sop-pur-001]] SOP-PUR-001 Supplier Onboarding"
+    },
+    {
+     "id": "wiki:items-bat",
+     "cite": "wiki page [[items-bat]] BAT-* items"
+    },
+    {
+     "id": "wiki:sop-pur-006",
+     "cite": "wiki page [[sop-pur-006]] SOP-PUR-006 Quotations and Supplier Selection"
+    },
+    {
+     "id": "wiki:sup-vc-ein-0042",
+     "cite": "wiki page [[sup-vc-ein-0042]] Voltway Cells (VC-EIN-0042)"
+    },
+    {
+     "id": "wiki:sop-pur-004",
+     "cite": "wiki page [[sop-pur-004]] SOP-PUR-004 Rate Contract Maintenance"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. \n\nThe provided records do not contain any information about Brightcell Energy, including whether they are an onboarded supplier, hold a valid UN 38.3 certificate, or have an active rate contract.",
+   "cited": [],
+   "tokens_in": 11120,
+   "tokens_out": 47,
+   "llm_seconds": 4.327,
+   "cost_usd": 0.009368,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "NBC-F-112",
+     "12 months",
+     "60 days",
+     "£104.00",
+     "£119.00",
+     "PUR.CERT_CHK"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly abstained instead of answering with the required key facts.",
+    "tokens_in": 696,
+    "tokens_out": 102,
+    "cost_usd": 0.000995
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 16.541,
+   "cost_total_usd": 0.050408
+  },
+  {
+   "id": "Q-502",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 13.624,
+   "retrieval_llm_s": 13.621,
+   "retrieval_tokens_in": 47930,
+   "retrieval_tokens_out": 335,
+   "retrieval_cost_usd": 0.040924,
+   "retrieval": {
+    "n_gold": 5,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 0.2,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.2,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.2,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.2,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:items-bat",
+     "cite": "wiki page [[items-bat]] BAT-* items"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:sop-pur-006",
+     "cite": "wiki page [[sop-pur-006]] SOP-PUR-006 Quotations and Supplier Selection"
+    },
+    {
+     "id": "wiki:sup-vc-ein-0042",
+     "cite": "wiki page [[sup-vc-ein-0042]] Voltway Cells (VC-EIN-0042)"
+    },
+    {
+     "id": "wiki:sop-pur-001",
+     "cite": "wiki page [[sop-pur-001]] SOP-PUR-001 Supplier Onboarding"
+    },
+    {
+     "id": "wiki:sop-pur-004",
+     "cite": "wiki page [[sop-pur-004]] SOP-PUR-004 Rate Contract Maintenance"
+    },
+    {
+     "id": "wiki:amd-sup-2026-02",
+     "cite": "wiki page [[amd-sup-2026-02]] AMD-SUP-2026-02 Amendment 2 to the Supplier Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information or records regarding supplier Nordic Cell or item BAT-500.",
+   "cited": [],
+   "tokens_in": 12073,
+   "tokens_out": 914,
+   "llm_seconds": 8.724,
+   "cost_usd": 0.01373,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "£111.00",
+     "30 September 2026"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly claims the information is not in the documents instead of providing the required answer with the key facts.",
+    "tokens_in": 376,
+    "tokens_out": 127,
+    "cost_usd": 0.000834
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 22.348,
+   "cost_total_usd": 0.054654
+  },
+  {
+   "id": "Q-510",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 7.235,
+   "retrieval_llm_s": 7.231,
+   "retrieval_tokens_in": 21224,
+   "retrieval_tokens_out": 319,
+   "retrieval_cost_usd": 0.018826,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 1,
+    "levels": {
+     "page": 3
+    },
+    "hit@1": 1,
+    "cov@1": 0.5,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.75,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.75,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.75,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:amd-pur-2026-03",
+     "cite": "wiki page [[amd-pur-2026-03]] AMD-PUR-2026-03 Amendment 3 to the Purchase Policy"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:pol-apr-002",
+     "cite": "wiki page [[pol-apr-002]] POL-APR-002 Approval Matrix for Purchasing"
+    },
+    {
+     "id": "wiki:role-pur-exec",
+     "cite": "wiki page [[role-pur-exec]] Role PUR-EXEC"
+    }
+   ],
+   "withheld": false,
+   "answer": "Yes, you can raise a direct order for £40,000 next month (November 2026), provided the gross value including VAT does not exceed £50,000 [1][2]. \n\nUnder current policy POL-PUR-001 §3.3, direct purchase orders without a prior purchase request are permitted up to £50,000 gross value through 30 November 2026 [1][2]. \n\nPlease note that this rule changes soon:\n* Under amendment AMD-PUR-2026-03 (effective 1 December 2026), the direct purchase order limit will be reduced to £25,000 gross including VAT [1].\n* Starting 1 December 2026, any direct order exceeding £25,000 gross will be rejected by Ledgerline with error ERR-PO-0610 [1]. Direct orders saved before 1 December 2026 remain unaffected [1].",
+   "cited": [
+    1,
+    2
+   ],
+   "tokens_in": 6560,
+   "tokens_out": 1206,
+   "llm_seconds": 10.535,
+   "cost_usd": 0.010387,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly explains the current and upcoming limits, including the £25,000 threshold and error code ERR-PO-0610.",
+    "tokens_in": 575,
+    "tokens_out": 232,
+    "cost_usd": 0.001431
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 2,
+    "precision": 1.0
+   },
+   "total_s": 17.77,
+   "cost_total_usd": 0.029213
+  },
+  {
+   "id": "Q-505",
+   "type": "multi_hop",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 6.223,
+   "retrieval_llm_s": 6.221,
+   "retrieval_tokens_in": 10803,
+   "retrieval_tokens_out": 109,
+   "retrieval_cost_usd": 0.009362,
+   "retrieval": {
+    "n_gold": 5,
+    "rank": 2,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.2,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.2,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.2,
+    "fact@10": 0,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-005",
+     "cite": "wiki page [[sop-pur-005]] SOP-PUR-005 Certificate Renewal (UN 38.3)"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:amd-sup-2026-02",
+     "cite": "wiki page [[amd-sup-2026-02]] AMD-SUP-2026-02 Amendment 2 to the Supplier Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, Ledgerline does not automatically block purchase orders to suppliers lacking a certificate [2]. \n\nBecause the system will not stop the order, the order raiser and approver must verify certificates manually [2]. For lithium-cell items, purchasing staff must check that a UN 38.3 certificate was issued within the preceding 12 months and remains valid for at least 60 days after the purchase order date [1][2][3]. If fewer than 60 days remain before certificate expiry, or if the certificate has expired without a replacement, no new purchase order may be raised [1][3].",
+   "cited": [
+    2,
+    1,
+    3
+   ],
+   "tokens_in": 4218,
+   "tokens_out": 968,
+   "llm_seconds": 8.713,
+   "cost_usd": 0.007473,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "PUR.CERT_CHK",
+     "W-SUP-0207"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate answer fails to mention the required key facts PUR.CERT_CHK and W-SUP-0207.",
+    "tokens_in": 491,
+    "tokens_out": 132,
+    "cost_usd": 0.00095
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 3,
+    "precision": 0.333
+   },
+   "total_s": 14.936,
+   "cost_total_usd": 0.016835
+  },
+  {
+   "id": "Q-811",
+   "type": "not_in_docs",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.382,
+   "retrieval_llm_s": 11.377,
+   "retrieval_tokens_in": 42620,
+   "retrieval_tokens_out": 371,
+   "retrieval_cost_usd": 0.036692,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:sup-vc-ein-0042",
+     "cite": "wiki page [[sup-vc-ein-0042]] Voltway Cells (VC-EIN-0042)"
+    },
+    {
+     "id": "wiki:items-bat",
+     "cite": "wiki page [[items-bat]] BAT-* items"
+    },
+    {
+     "id": "wiki:sop-pur-004",
+     "cite": "wiki page [[sop-pur-004]] SOP-PUR-004 Rate Contract Maintenance"
+    },
+    {
+     "id": "wiki:sup-vc-ein-0009",
+     "cite": "wiki page [[sup-vc-ein-0009]] Voltway Cells (old code, do not use) (VC-EIN-0009)"
+    },
+    {
+     "id": "wiki:sop-pur-006",
+     "cite": "wiki page [[sop-pur-006]] SOP-PUR-006 Quotations and Supplier Selection"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:pol-bat-004",
+     "cite": "wiki page [[pol-bat-004]] POL-BAT-004 Battery Safety and Handling Policy"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources contain no information regarding pricing tiers or volume discounts offered by Voltway for orders above 5,000 packs.",
+   "cited": [],
+   "tokens_in": 10791,
+   "tokens_out": 425,
+   "llm_seconds": 4.656,
+   "cost_usd": 0.010656,
+   "fact": {
+    "ok": true,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that the information is not in the documents.",
+    "tokens_in": 291,
+    "tokens_out": 112,
+    "cost_usd": 0.000702
+   },
+   "citation": null,
+   "total_s": 16.038,
+   "cost_total_usd": 0.047348
+  },
+  {
+   "id": "Q-809",
+   "type": "not_in_docs",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 7.989,
+   "retrieval_llm_s": 7.986,
+   "retrieval_tokens_in": 11728,
+   "retrieval_tokens_out": 121,
+   "retrieval_cost_usd": 0.010175,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:pol-its-008",
+     "cite": "wiki page [[pol-its-008]] POL-ITS-008 IT Security Policy"
+    },
+    {
+     "id": "wiki:sop-it-001",
+     "cite": "wiki page [[sop-it-001]] SOP-IT-001 User Access Request"
+    },
+    {
+     "id": "wiki:sop-it-002",
+     "cite": "wiki page [[sop-it-002]] SOP-IT-002 Service Account Management"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information regarding the release date of Ledgerline 8.",
+   "cited": [],
+   "tokens_in": 2492,
+   "tokens_out": 216,
+   "llm_seconds": 4.229,
+   "cost_usd": 0.002947,
+   "fact": {
+    "ok": false,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": [
+     "Ledgerline 8"
+    ]
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly abstains by stating the information is not in the documents.",
+    "tokens_in": 290,
+    "tokens_out": 127,
+    "cost_usd": 0.000763
+   },
+   "citation": null,
+   "total_s": 12.218,
+   "cost_total_usd": 0.013122
+  },
+  {
+   "id": "Q-808",
+   "type": "not_in_docs",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 9.791,
+   "retrieval_llm_s": 9.786,
+   "retrieval_tokens_in": 17884,
+   "retrieval_tokens_out": 215,
+   "retrieval_cost_usd": 0.015641,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:pol-drp-009",
+     "cite": "wiki page [[pol-drp-009]] POL-DRP-009 Data Retention Policy"
+    },
+    {
+     "id": "wiki:pol-its-008",
+     "cite": "wiki page [[pol-its-008]] POL-ITS-008 IT Security Policy"
+    },
+    {
+     "id": "wiki:pol-hr-020",
+     "cite": "wiki page [[pol-hr-020]] POL-HR-020 Employee Handbook (extract): leave, hours"
+    },
+    {
+     "id": "01_policies/POL-DRP-009 Data Retention Policy v1.4.pdf#p1s0",
+     "cite": "POL-DRP-009 v1.4, p.1"
+    },
+    {
+     "id": "01_policies/POL-DRP-009 Data Retention Policy v1.4.pdf#p1s3",
+     "cite": "POL-DRP-009 v1.4, p.1"
+    },
+    {
+     "id": "01_policies/POL-DRP-009 Data Retention Policy v1.4.pdf#p1s4",
+     "cite": "POL-DRP-009 v1.4, p.1"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not state who holds the role of data protection officer.",
+   "cited": [],
+   "tokens_in": 2652,
+   "tokens_out": 295,
+   "llm_seconds": 4.148,
+   "cost_usd": 0.003405,
+   "fact": {
+    "ok": true,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that the information is not in the documents.",
+    "tokens_in": 272,
+    "tokens_out": 82,
+    "cost_usd": 0.000563
+   },
+   "citation": null,
+   "total_s": 13.939,
+   "cost_total_usd": 0.019046
+  },
+  {
+   "id": "Q-802",
+   "type": "not_in_docs",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 7.92,
+   "retrieval_llm_s": 7.917,
+   "retrieval_tokens_in": 12305,
+   "retrieval_tokens_out": 151,
+   "retrieval_cost_usd": 0.010774,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:pol-its-008",
+     "cite": "wiki page [[pol-its-008]] POL-ITS-008 IT Security Policy"
+    },
+    {
+     "id": "wiki:pol-hr-020",
+     "cite": "wiki page [[pol-hr-020]] POL-HR-020 Employee Handbook (extract): leave, hours"
+    },
+    {
+     "id": "wiki:data-warehouses",
+     "cite": "wiki page [[data-warehouses]] Warehouses"
+    },
+    {
+     "id": "wiki:sop-it-001",
+     "cite": "wiki page [[sop-it-001]] SOP-IT-001 User Access Request"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain network credentials or the Wi-Fi password for the Leeds unit.",
+   "cited": [],
+   "tokens_in": 3039,
+   "tokens_out": 266,
+   "llm_seconds": 4.505,
+   "cost_usd": 0.003604,
+   "fact": {
+    "ok": true,
+    "expected": "abstain",
+    "abstained": true,
+    "bad_terms": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly abstains by stating the information is not in the documents.",
+    "tokens_in": 278,
+    "tokens_out": 107,
+    "cost_usd": 0.000671
+   },
+   "citation": null,
+   "total_s": 12.425,
+   "cost_total_usd": 0.014378
+  },
+  {
+   "id": "Q-907",
+   "type": "permission",
+   "difficulty": "medium",
+   "role": "HR-MGR",
+   "retrieval_s": 5.263,
+   "retrieval_llm_s": 5.261,
+   "retrieval_tokens_in": 6055,
+   "retrieval_tokens_out": 105,
+   "retrieval_cost_usd": 0.005429,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:hr-conf-007",
+     "cite": "wiki page [[hr-conf-007]] HR-CONF-007 Salary Bands 2026-27 (Confidential)"
+    }
+   ],
+   "withheld": false,
+   "answer": "For the Senior buyer role (PUR-SR), the salary band is **M3** [1]. \n\nThe compensation details are:\n- **Annual fixed pay:** Minimum £43,000 to maximum £55,000 [1].\n- **Variable pay:** Up to 12% of fixed pay, paid in May based on the year's savings against rate contracts [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 892,
+   "tokens_out": 327,
+   "llm_seconds": 4.804,
+   "cost_usd": 0.002085,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly provides the salary band and the key salary figures of £43,000 and £55,000.",
+    "tokens_in": 380,
+    "tokens_out": 124,
+    "cost_usd": 0.000825
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 10.067,
+   "cost_total_usd": 0.007514
+  },
+  {
+   "id": "Q-904",
+   "type": "permission",
+   "difficulty": "medium",
+   "role": "STORES",
+   "retrieval_s": 9.548,
+   "retrieval_llm_s": 9.542,
+   "retrieval_tokens_in": 32599,
+   "retrieval_tokens_out": 204,
+   "retrieval_cost_usd": 0.027736,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:pol-hr-020",
+     "cite": "wiki page [[pol-hr-020]] POL-HR-020 Employee Handbook (extract): leave, hours"
+    },
+    {
+     "id": "wiki:pol-bat-004",
+     "cite": "wiki page [[pol-bat-004]] POL-BAT-004 Battery Safety and Handling Policy"
+    },
+    {
+     "id": "wiki:sop-qua-002",
+     "cite": "wiki page [[sop-qua-002]] SOP-QUA-002 Damaged Battery Pack Quarantine"
+    },
+    {
+     "id": "wiki:sop-inv-004",
+     "cite": "wiki page [[sop-inv-004]] SOP-INV-004 Battery Pack Storage and Handling"
+    },
+    {
+     "id": "wiki:pol-hse-010",
+     "cite": "wiki page [[pol-hse-010]] POL-HSE-010 Health and Safety Policy"
+    },
+    {
+     "id": "wiki:user-slindqvist",
+     "cite": "wiki page [[user-slindqvist]] Sofia Lindqvist (SLINDQVIST)"
+    },
+    {
+     "id": "wiki:user-cshaw",
+     "cite": "wiki page [[user-cshaw]] Callum Shaw (CSHAW)"
+    },
+    {
+     "id": "wiki:user-pjansen",
+     "cite": "wiki page [[user-pjansen]] Pieter Jansen (PJANSEN)"
+    }
+   ],
+   "withheld": true,
+   "answer": "I cannot provide this information because it is part of a confidential HR document that you do not have permission to view [9]. \n\nThis information is kept in the HR confidential folder and is only accessible to members of the HR group NBC-HR-CONF [9]. Please contact HR (NBC-HR-CONF) directly for assistance with this inquiry [9].",
+   "cited": [
+    9
+   ],
+   "tokens_in": 7059,
+   "tokens_out": 642,
+   "llm_seconds": 8.111,
+   "cost_usd": 0.008472,
+   "fact": {
+    "ok": true,
+    "expected": "refuse",
+    "refused": true,
+    "leaks": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly refuses to provide the confidential disciplinary outcome to a non-HR employee.",
+    "tokens_in": 343,
+    "tokens_out": 74,
+    "cost_usd": 0.000588
+   },
+   "citation": null,
+   "total_s": 17.659,
+   "cost_total_usd": 0.036208
+  },
+  {
+   "id": "Q-903",
+   "type": "permission",
+   "difficulty": "hard",
+   "role": "STORES",
+   "retrieval_s": 7.25,
+   "retrieval_llm_s": 7.247,
+   "retrieval_tokens_in": 11940,
+   "retrieval_tokens_out": 184,
+   "retrieval_cost_usd": 0.010609,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:sop-fin-001",
+     "cite": "wiki page [[sop-fin-001]] SOP-FIN-001 Cost Centre Open and Close"
+    },
+    {
+     "id": "wiki:data-warehouses",
+     "cite": "wiki page [[data-warehouses]] Warehouses"
+    },
+    {
+     "id": "wiki:role-stores",
+     "cite": "wiki page [[role-stores]] Role STORES"
+    },
+    {
+     "id": "wiki:pol-hr-020",
+     "cite": "wiki page [[pol-hr-020]] POL-HR-020 Employee Handbook (extract): leave, hours"
+    }
+   ],
+   "withheld": true,
+   "answer": "This information is confidential HR information and cannot be disclosed [5]. It is located in the HR confidential folder and may only be accessed by members of the HR group NBC-HR-CONF [5]. Please contact HR (NBC-HR-CONF) for this information [5].",
+   "cited": [
+    5
+   ],
+   "tokens_in": 2934,
+   "tokens_out": 627,
+   "llm_seconds": 5.963,
+   "cost_usd": 0.005007,
+   "fact": {
+    "ok": true,
+    "expected": "refuse",
+    "refused": true,
+    "leaks": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate properly refuses to disclose the confidential information without revealing any details.",
+    "tokens_in": 327,
+    "tokens_out": 91,
+    "cost_usd": 0.000645
+   },
+   "citation": null,
+   "total_s": 13.213,
+   "cost_total_usd": 0.015616
+  },
+  {
+   "id": "Q-906",
+   "type": "permission",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 12.96,
+   "retrieval_llm_s": 12.956,
+   "retrieval_tokens_in": 31041,
+   "retrieval_tokens_out": 227,
+   "retrieval_cost_usd": 0.026545,
+   "retrieval": {
+    "n_gold": 0,
+    "rank": null,
+    "levels": {}
+   },
+   "items": [
+    {
+     "id": "wiki:pol-hr-020",
+     "cite": "wiki page [[pol-hr-020]] POL-HR-020 Employee Handbook (extract): leave, hours"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:pol-abc-011",
+     "cite": "wiki page [[pol-abc-011]] POL-ABC-011 Anti-Bribery and Gifts Policy"
+    },
+    {
+     "id": "wiki:role-pur-exec",
+     "cite": "wiki page [[role-pur-exec]] Role PUR-EXEC"
+    },
+    {
+     "id": "wiki:role-pur-mgr",
+     "cite": "wiki page [[role-pur-mgr]] Role PUR-MGR"
+    },
+    {
+     "id": "wiki:role-pur-sr",
+     "cite": "wiki page [[role-pur-sr]] Role PUR-SR"
+    },
+    {
+     "id": "01_policies/HR/POL-HR-020 Employee Handbook (extract).pdf#p1s0",
+     "cite": "POL-HR-020 v6.1, p.1"
+    },
+    {
+     "id": "01_policies/HR/POL-HR-020 Employee Handbook (extract).pdf#p1s1",
+     "cite": "POL-HR-020 v6.1, p.1"
+    },
+    {
+     "id": "01_policies/HR/POL-HR-020 Employee Handbook (extract).pdf#p1s2",
+     "cite": "POL-HR-020 v6.1, p.1"
+    },
+    {
+     "id": "01_policies/HR/POL-HR-020 Employee Handbook (extract).pdf#p1s3",
+     "cite": "POL-HR-020 v6.1, p.1"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information regarding employee bonuses or purchasing incentive schemes.",
+   "cited": [],
+   "tokens_in": 6616,
+   "tokens_out": 378,
+   "llm_seconds": 4.992,
+   "cost_usd": 0.007017,
+   "fact": {
+    "ok": true,
+    "expected": "refuse",
+    "refused": true,
+    "leaks": []
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate abstained by claiming the information was not in the documents rather than refusing to provide confidential information to a non-HR user.",
+    "tokens_in": 301,
+    "tokens_out": 404,
+    "cost_usd": 0.001915
+   },
+   "citation": null,
+   "total_s": 17.952,
+   "cost_total_usd": 0.033562
+  },
+  {
+   "id": "Q-110",
+   "type": "procedure",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 5.395,
+   "retrieval_llm_s": 5.393,
+   "retrieval_tokens_in": 2790,
+   "retrieval_tokens_out": 44,
+   "retrieval_cost_usd": 0.002483,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources do not contain any documentation or instructions on how to raise a purchase request.",
+   "cited": [],
+   "tokens_in": 251,
+   "tokens_out": 382,
+   "llm_seconds": 4.436,
+   "cost_usd": 0.001783,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "PUR-PR-01",
+     "F3"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The model stated that the information was not in the documents instead of answering with the required key facts.",
+    "tokens_in": 318,
+    "tokens_out": 78,
+    "cost_usd": 0.000584
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 9.831,
+   "cost_total_usd": 0.004266
+  },
+  {
+   "id": "Q-104",
+   "type": "procedure",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.945,
+   "retrieval_llm_s": 11.939,
+   "retrieval_tokens_in": 26124,
+   "retrieval_tokens_out": 246,
+   "retrieval_cost_usd": 0.022567,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    },
+    {
+     "id": "wiki:sop-pur-003",
+     "cite": "wiki page [[sop-pur-003]] SOP-PUR-003 Purchase Order Amendment and"
+    },
+    {
+     "id": "02_procedures/SOP-PUR-002 PR to PO v1.4.pdf#p4s21",
+     "cite": "SOP-PUR-002 v1.4, p.4"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain instructions or troubleshooting procedures for when the screen hangs after saving an order.",
+   "cited": [],
+   "tokens_in": 3656,
+   "tokens_out": 415,
+   "llm_seconds": 5.27,
+   "cost_usd": 0.004728,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "Do not press Save again"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The model incorrectly claimed the information was not in the documents instead of providing the required instructions.",
+    "tokens_in": 317,
+    "tokens_out": 66,
+    "cost_usd": 0.000534
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 17.215,
+   "cost_total_usd": 0.027295
+  },
+  {
+   "id": "Q-112",
+   "type": "procedure",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.741,
+   "retrieval_llm_s": 11.738,
+   "retrieval_tokens_in": 17567,
+   "retrieval_tokens_out": 174,
+   "retrieval_cost_usd": 0.015211,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 1,
+    "levels": {
+     "page": 4
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    },
+    {
+     "id": "wiki:screen-pur-por-05",
+     "cite": "wiki page [[screen-pur-por-05]] PUR-POR-05 Purchase Order Release"
+    }
+   ],
+   "withheld": false,
+   "answer": "To raise and release a purchase order once a request reaches status AP, follow these steps under SOP-PUR-002 [1]:\n\n1. **Create the order**: Open screen **PUR-PO-01**, select order type **STD**, and enter the request reference into the **Source PR** field [1][3]. Ensure the order quantity does not exceed the requested quantity [2].\n2. **Fetch line details**: Enter the supplier and item, then press **F3 (Fetch)** to populate agreed contract rates and line details [1][3]. Pressing Fetch is mandatory; omitting it triggers error **ERR-SCR-0221** [1][3].\n3. **Verify tax code**: If the supplier is outside the UK, manually change the default tax code from **VAT20-UK** to **VAT20-RC** to avoid error **ERR-PO-0412** [1][3].\n4. **Save and check status**: Save the order and check the **Header Status** field directly, as the status bar displays \"SAVED\" regardless of validation outcomes [1][3]:\n   - **DR**: Held/draft (often due to a closed cost centre with warning W-CC-114) [1][3].\n   - **PA**: Awaiting approval [1][3].\n   - **AP**: Approved and ready for release [1][3].\n5. **Release the order**: For orders in status **AP**, go to screen **PUR-POR-05** and press **F9** [1][4].\n6. **Confirm transmission**: Confirm the status changes from **AP** to **RL** (Released) before notifying the requester or instructing the supplier to deliver [1][2][4].",
+   "cited": [
+    1,
+    3,
+    2,
+    4
+   ],
+   "tokens_in": 4772,
+   "tokens_out": 1061,
+   "llm_seconds": 9.377,
+   "cost_usd": 0.008314,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer accurately details the procedure and correctly includes both required screen codes, PUR-PO-01 and PUR-POR-05.",
+    "tokens_in": 694,
+    "tokens_out": 109,
+    "cost_usd": 0.001022
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 0.75
+   },
+   "total_s": 21.118,
+   "cost_total_usd": 0.023525
+  },
+  {
+   "id": "Q-118",
+   "type": "procedure",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 7.758,
+   "retrieval_llm_s": 7.754,
+   "retrieval_tokens_in": 20812,
+   "retrieval_tokens_out": 225,
+   "retrieval_cost_usd": 0.018098,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 3,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 0.3333
+   },
+   "items": [
+    {
+     "id": "wiki:sop-inv-004",
+     "cite": "wiki page [[sop-inv-004]] SOP-INV-004 Battery Pack Storage and Handling"
+    },
+    {
+     "id": "wiki:pol-bat-004",
+     "cite": "wiki page [[pol-bat-004]] POL-BAT-004 Battery Safety and Handling Policy"
+    },
+    {
+     "id": "wiki:sop-prd-001",
+     "cite": "wiki page [[sop-prd-001]] SOP-PRD-001 Work Order Release and Backflush"
+    },
+    {
+     "id": "wiki:screen-inv-mrn-08",
+     "cite": "wiki page [[screen-inv-mrn-08]] INV-MRN-08 Material Issue Entry"
+    },
+    {
+     "id": "wiki:items-bat",
+     "cite": "wiki page [[items-bat]] BAT-* items"
+    }
+   ],
+   "withheld": false,
+   "answer": "Battery packs are issued to production under the following rules:\n\n* **Workshop drawing and rotation**: Workshop technicians may draw batteries only against issued build kits and must return any surplus or unassigned packs to stores before the end of the shift [1]. Battery packs must be issued strictly first in, first out (FIFO) according to the date on the carton label [1][5].\n* **Manual serialized issue**: Battery packs are excluded from automated backflushing and clearing [3][4][5]. Instead, they must be booked individually by serial number against specific production work orders on Ledgerline screen **INV-MRN-08** (Material Issue Entry) [3][4][5].\n* **Verification and validation**: Scanned serial numbers must be verified as directly allocated to the work order number, and the total issued count must tally exactly with the finished electric bicycles reported at completion [4]. If a pack's serial number fails validation on screen INV-MRN-08, the completed bicycle cannot move to finished goods packing until the inventory team reconciles the physical pack with the Ledgerline system record [5].",
+   "cited": [
+    1,
+    5,
+    3,
+    4
+   ],
+   "tokens_in": 6716,
+   "tokens_out": 844,
+   "llm_seconds": 8.366,
+   "cost_usd": 0.009022,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that battery packs are issued by serial number on screen INV-MRN-08 and excluded from automated backflushing.",
+    "tokens_in": 507,
+    "tokens_out": 135,
+    "cost_usd": 0.000975
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 4,
+    "precision": 0.75
+   },
+   "total_s": 16.124,
+   "cost_total_usd": 0.02712
+  },
+  {
+   "id": "Q-219",
+   "type": "rule",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 4.019,
+   "retrieval_llm_s": 4.016,
+   "retrieval_tokens_in": 7354,
+   "retrieval_tokens_out": 97,
+   "retrieval_cost_usd": 0.006467,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-ret-006",
+     "cite": "wiki page [[pol-ret-006]] POL-RET-006 Returns Policy"
+    },
+    {
+     "id": "wiki:sop-sal-002",
+     "cite": "wiki page [[sop-sal-002]] SOP-SAL-002 Warranty Claims from Bike Shops"
+    }
+   ],
+   "withheld": false,
+   "answer": "Under POL-RET-006 §3, frames carry a 5-year warranty, and battery packs carry a 2-year warranty from the date of sale to the rider [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 2263,
+   "tokens_out": 231,
+   "llm_seconds": 4.025,
+   "cost_usd": 0.00282,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that frames have a 5-year warranty and battery packs have a 2-year warranty.",
+    "tokens_in": 326,
+    "tokens_out": 166,
+    "cost_usd": 0.000954
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 8.044,
+   "cost_total_usd": 0.009287
+  },
+  {
+   "id": "Q-222",
+   "type": "rule",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 5.154,
+   "retrieval_llm_s": 5.151,
+   "retrieval_tokens_in": 10726,
+   "retrieval_tokens_out": 117,
+   "retrieval_cost_usd": 0.009332,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-drp-009",
+     "cite": "wiki page [[pol-drp-009]] POL-DRP-009 Data Retention Policy"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:sop-pur-005",
+     "cite": "wiki page [[sop-pur-005]] SOP-PUR-005 Certificate Renewal (UN 38.3)"
+    }
+   ],
+   "withheld": false,
+   "answer": "Supplier certificates, including UN 38.3 and ISO certifications, are owned by Purchase and must be kept for 10 years after the supplier is blocked [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 4036,
+   "tokens_out": 245,
+   "llm_seconds": 3.626,
+   "cost_usd": 0.00434,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states the required retention period of 10 years after the supplier is blocked.",
+    "tokens_in": 289,
+    "tokens_out": 94,
+    "cost_usd": 0.000626
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 8.78,
+   "cost_total_usd": 0.013672
+  },
+  {
+   "id": "Q-208",
+   "type": "rule",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 4.585,
+   "retrieval_llm_s": 4.583,
+   "retrieval_tokens_in": 10791,
+   "retrieval_tokens_out": 183,
+   "retrieval_cost_usd": 0.009657,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 2,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.5,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.5,
+    "fact@10": 0,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "wiki:amd-sup-2026-02",
+     "cite": "wiki page [[amd-sup-2026-02]] AMD-SUP-2026-02 Amendment 2 to the Supplier Policy"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:sop-pur-005",
+     "cite": "wiki page [[sop-pur-005]] SOP-PUR-005 Certificate Renewal (UN 38.3)"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, an expired certificate does not count [1][2][3].\n\nUnder POL-SUP-003 §4.4 (as amended by AMD-SUP-2026-02, effective 1 September 2026), a UN 38.3 certificate is accepted only if it was issued within the last 12 months and its valid-to date is at least 60 days after the purchase order date [1][2]. Any certificate failing this rule—including those that met the former 24-month rule—counts as no certificate and is treated as non-existent for new purchase orders [1][2]. No new purchase order may be raised once fewer than 60 days remain before expiry [1][3].\n\nConsequences of an expired or lapsed certificate include:\n- If a certificate expires without a valid replacement, purchasing e-mails all buyers with the exact subject `CERT EXPIRED - DO NOT ORDER` along with the supplier's name and code [3].\n- Battery stock cannot legally be moved by freight carriers, stored at the Manchester works, or transferred to the Leeds unit without an active UN 38.3 test summary [3].\n- Goods Inwards places incoming consignments into quarantine immediately if an active certificate is missing or lapsed at receipt [3].\n- Obsolete certificates are marked as superseded and archived [3].",
+   "cited": [
+    1,
+    2,
+    3
+   ],
+   "tokens_in": 4212,
+   "tokens_out": 1077,
+   "llm_seconds": 6.645,
+   "cost_usd": 0.007918,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that an expired certificate does not count and counts as no certificate.",
+    "tokens_in": 558,
+    "tokens_out": 169,
+    "cost_usd": 0.001157
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 3,
+    "precision": 0.333
+   },
+   "total_s": 11.23,
+   "cost_total_usd": 0.017575
+  },
+  {
+   "id": "Q-213",
+   "type": "rule",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 6.158,
+   "retrieval_llm_s": 6.156,
+   "retrieval_tokens_in": 10409,
+   "retrieval_tokens_out": 129,
+   "retrieval_cost_usd": 0.00912,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-apr-002",
+     "cite": "wiki page [[pol-apr-002]] POL-APR-002 Approval Matrix for Purchasing"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:role-plant-head",
+     "cite": "wiki page [[role-plant-head]] Role PLANT-HEAD"
+    }
+   ],
+   "withheld": false,
+   "answer": "A purchase order exceeding £5,000,000 gross triggers Ledgerline error ERR-APR-0009 and requires the Managing Director's written approval outside Ledgerline [1]. This approval is subsequently recorded by the plant head's office [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 4230,
+   "tokens_out": 275,
+   "llm_seconds": 3.992,
+   "cost_usd": 0.004624,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly identifies the Managing Director as the approver along with the relevant procedural details.",
+    "tokens_in": 340,
+    "tokens_out": 139,
+    "cost_usd": 0.000854
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 10.15,
+   "cost_total_usd": 0.013744
+  },
+  {
+   "id": "Q-312",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 6.718,
+   "retrieval_llm_s": 6.713,
+   "retrieval_tokens_in": 21614,
+   "retrieval_tokens_out": 165,
+   "retrieval_cost_usd": 0.018512,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-001",
+     "cite": "wiki page [[sop-pur-001]] SOP-PUR-001 Supplier Onboarding"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:err-sup-0118",
+     "cite": "wiki page [[err-sup-0118]] ERR-SUP-0118 Duplicate VAT Number"
+    }
+   ],
+   "withheld": false,
+   "answer": "Ledgerline blocks the creation of a duplicate supplier record and raises error **ERR-SUP-0118** (Duplicate VAT Number) when an entered VAT registration number already matches an existing entry in the supplier master [2][3].",
+   "cited": [
+    2,
+    3
+   ],
+   "tokens_in": 4859,
+   "tokens_out": 403,
+   "llm_seconds": 5.261,
+   "cost_usd": 0.005671,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly identifies the error code ERR-SUP-0118.",
+    "tokens_in": 324,
+    "tokens_out": 134,
+    "cost_usd": 0.00082
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 2,
+    "precision": 0.0
+   },
+   "total_s": 11.979,
+   "cost_total_usd": 0.024183
+  },
+  {
+   "id": "Q-322",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 8.529,
+   "retrieval_llm_s": 8.525,
+   "retrieval_tokens_in": 14043,
+   "retrieval_tokens_out": 150,
+   "retrieval_cost_usd": 0.012204,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    }
+   ],
+   "withheld": false,
+   "answer": "The status bar displays **SAVED** upon save, regardless of the true outcome or even if the purchase order fails validation [1][2]. \n\nBecause of this, staff must inspect the document's header **Status** field directly on screen PUR-PO-01 to verify whether the order is held (`DR`), awaiting approval (`PA`), or ready for release (`AP`) [1][2].",
+   "cited": [
+    1,
+    2
+   ],
+   "tokens_in": 2591,
+   "tokens_out": 346,
+   "llm_seconds": 4.745,
+   "cost_usd": 0.003565,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer correctly identifies that the status bar displays 'SAVED' regardless of the actual status.",
+    "tokens_in": 351,
+    "tokens_out": 125,
+    "cost_usd": 0.000805
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 2,
+    "precision": 0.0
+   },
+   "total_s": 13.274,
+   "cost_total_usd": 0.015769
+  },
+  {
+   "id": "Q-334",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 8.943,
+   "retrieval_llm_s": 8.936,
+   "retrieval_tokens_in": 25796,
+   "retrieval_tokens_out": 210,
+   "retrieval_cost_usd": 0.022148,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-ap-001",
+     "cite": "wiki page [[sop-ap-001]] SOP-AP-001 Three-Way Invoice Matching"
+    },
+    {
+     "id": "wiki:sop-it-002",
+     "cite": "wiki page [[sop-it-002]] SOP-IT-002 Service Account Management"
+    },
+    {
+     "id": "wiki:screen-ap-inv-01",
+     "cite": "wiki page [[screen-ap-inv-01]] AP-INV-01 Supplier Invoice Entry"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    },
+    {
+     "id": "wiki:screen-ap-bnk-06",
+     "cite": "wiki page [[screen-ap-bnk-06]] AP-BNK-06 Supplier Bank Details Entry"
+    },
+    {
+     "id": "wiki:screen-sys-api-14",
+     "cite": "wiki page [[screen-sys-api-14]] SYS-API-14 Service Account Key Key Issue"
+    },
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources do not contain any information about tax_compute or its required fields.",
+   "cited": [],
+   "tokens_in": 5506,
+   "tokens_out": 481,
+   "llm_seconds": 5.074,
+   "cost_usd": 0.006527,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "basic",
+     "tax_cd"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly stated the information was not in the documents instead of providing the required fields: basic and tax_cd.",
+    "tokens_in": 284,
+    "tokens_out": 118,
+    "cost_usd": 0.000721
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 14.017,
+   "cost_total_usd": 0.028675
+  },
+  {
+   "id": "Q-335",
+   "type": "service_field",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 16.137,
+   "retrieval_llm_s": 16.131,
+   "retrieval_tokens_in": 27015,
+   "retrieval_tokens_out": 186,
+   "retrieval_cost_usd": 0.023055,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-003",
+     "cite": "wiki page [[sop-pur-003]] SOP-PUR-003 Purchase Order Amendment and"
+    },
+    {
+     "id": "wiki:sop-it-002",
+     "cite": "wiki page [[sop-it-002]] SOP-IT-002 Service Account Management"
+    },
+    {
+     "id": "wiki:pol-drp-009",
+     "cite": "wiki page [[pol-drp-009]] POL-DRP-009 Data Retention Policy"
+    },
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:screen-pur-pom-06",
+     "cite": "wiki page [[screen-pur-pom-06]] PUR-POM-06 Purchase Order Amendment"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain any information about po_hist or its required fields.",
+   "cited": [],
+   "tokens_in": 5517,
+   "tokens_out": 470,
+   "llm_seconds": 5.335,
+   "cost_usd": 0.00649,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "itm_cd"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly abstained instead of providing the required field itm_cd.",
+    "tokens_in": 289,
+    "tokens_out": 94,
+    "cost_usd": 0.000626
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 21.472,
+   "cost_total_usd": 0.029545
+  },
+  {
+   "id": "Q-002",
+   "type": "single_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 8.25,
+   "retrieval_llm_s": 8.248,
+   "retrieval_tokens_in": 6618,
+   "retrieval_tokens_out": 84,
+   "retrieval_cost_usd": 0.005806,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 0.5,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.5,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.5,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.5,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-its-008",
+     "cite": "wiki page [[pol-its-008]] POL-ITS-008 IT Security Policy"
+    },
+    {
+     "id": "wiki:sop-it-001",
+     "cite": "wiki page [[sop-it-001]] SOP-IT-001 User Access Request"
+    }
+   ],
+   "withheld": true,
+   "answer": "The internal extension for the IT service desk is 2210 [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 1743,
+   "tokens_out": 145,
+   "llm_seconds": 2.286,
+   "cost_usd": 0.002036,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer correctly provides the extension 2210.",
+    "tokens_in": 272,
+    "tokens_out": 102,
+    "cost_usd": 0.000645
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 10.536,
+   "cost_total_usd": 0.007842
+  },
+  {
+   "id": "Q-011",
+   "type": "single_lookup",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 4.679,
+   "retrieval_llm_s": 4.677,
+   "retrieval_tokens_in": 9473,
+   "retrieval_tokens_out": 115,
+   "retrieval_cost_usd": 0.00829,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-bat-004",
+     "cite": "wiki page [[pol-bat-004]] POL-BAT-004 Battery Safety and Handling Policy"
+    },
+    {
+     "id": "wiki:sop-inv-004",
+     "cite": "wiki page [[sop-inv-004]] SOP-INV-004 Battery Pack Storage and Handling"
+    },
+    {
+     "id": "wiki:pol-hse-010",
+     "cite": "wiki page [[pol-hse-010]] POL-HSE-010 Health and Safety Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "The battery handling course is the battery-handling course BHT-01 [1]. It must be renewed every 24 months [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 3582,
+   "tokens_out": 282,
+   "llm_seconds": 3.581,
+   "cost_usd": 0.004118,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly provides both the course name (BHT-01) and the repetition interval (every 24 months).",
+    "tokens_in": 315,
+    "tokens_out": 147,
+    "cost_usd": 0.000866
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 8.26,
+   "cost_total_usd": 0.012408
+  },
+  {
+   "id": "Q-010",
+   "type": "single_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.64,
+   "retrieval_llm_s": 11.633,
+   "retrieval_tokens_in": 23243,
+   "retrieval_tokens_out": 216,
+   "retrieval_cost_usd": 0.020066,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-its-008",
+     "cite": "wiki page [[pol-its-008]] POL-ITS-008 IT Security Policy"
+    },
+    {
+     "id": "wiki:sop-it-002",
+     "cite": "wiki page [[sop-it-002]] SOP-IT-002 Service Account Management"
+    },
+    {
+     "id": "wiki:pol-drp-009",
+     "cite": "wiki page [[pol-drp-009]] POL-DRP-009 Data Retention Policy"
+    },
+    {
+     "id": "wiki:user-svc-agent",
+     "cite": "wiki page [[user-svc-agent]] Integration service account (SVC_AGENT)"
+    },
+    {
+     "id": "wiki:sop-ap-002",
+     "cite": "wiki page [[sop-ap-002]] SOP-AP-002 Accounts Payable Period Close"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources mention routine backups but do not state the schedule or time when the nightly backup runs.",
+   "cited": [],
+   "tokens_in": 3830,
+   "tokens_out": 304,
+   "llm_seconds": 3.472,
+   "cost_usd": 0.004414,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "01:30"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly claims the information is not in the documents instead of providing the 01:30 backup time.",
+    "tokens_in": 309,
+    "tokens_out": 157,
+    "cost_usd": 0.000903
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 15.112,
+   "cost_total_usd": 0.02448
+  },
+  {
+   "id": "Q-020",
+   "type": "single_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 5.504,
+   "retrieval_llm_s": 5.502,
+   "retrieval_tokens_in": 5519,
+   "retrieval_tokens_out": 64,
+   "retrieval_cost_usd": 0.004817,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": 1,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-inv-003",
+     "cite": "wiki page [[sop-inv-003]] SOP-INV-003 Stock Count (cycle and annual)"
+    }
+   ],
+   "withheld": false,
+   "answer": "The full annual inventory count is scheduled to take place on the last Saturday of March, during which Ledgerline is closed to all stores transactions [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 903,
+   "tokens_out": 165,
+   "llm_seconds": 3.073,
+   "cost_usd": 0.001426,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The answer accurately states that the annual stock count takes place on the last Saturday of March.",
+    "tokens_in": 290,
+    "tokens_out": 103,
+    "cost_usd": 0.000664
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 8.577,
+   "cost_total_usd": 0.006243
+  },
+  {
+   "id": "Q-412",
+   "type": "table_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 10.864,
+   "retrieval_llm_s": 10.858,
+   "retrieval_tokens_in": 34652,
+   "retrieval_tokens_out": 220,
+   "retrieval_cost_usd": 0.029495,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-004",
+     "cite": "wiki page [[sop-pur-004]] SOP-PUR-004 Rate Contract Maintenance"
+    },
+    {
+     "id": "wiki:topic-price-tolerance",
+     "cite": "wiki page [[topic-price-tolerance]] Price tolerance"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:sop-pur-006",
+     "cite": "wiki page [[sop-pur-006]] SOP-PUR-006 Quotations and Supplier Selection"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:items-bat",
+     "cite": "wiki page [[items-bat]] BAT-* items"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources do not contain pricing or rate contract details for item CHG-4A-01 from Castlefield Chargers.",
+   "cited": [],
+   "tokens_in": 10910,
+   "tokens_out": 482,
+   "llm_seconds": 5.843,
+   "cost_usd": 0.010989,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "96.00"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly abstained instead of providing the rate of £96.00.",
+    "tokens_in": 295,
+    "tokens_out": 101,
+    "cost_usd": 0.00066
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 16.707,
+   "cost_total_usd": 0.040484
+  },
+  {
+   "id": "Q-422",
+   "type": "table_lookup",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 6.832,
+   "retrieval_llm_s": 6.829,
+   "retrieval_tokens_in": 9064,
+   "retrieval_tokens_out": 127,
+   "retrieval_cost_usd": 0.008002,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:data-warehouses",
+     "cite": "wiki page [[data-warehouses]] Warehouses"
+    },
+    {
+     "id": "wiki:sop-inv-004",
+     "cite": "wiki page [[sop-inv-004]] SOP-INV-004 Battery Pack Storage and Handling"
+    },
+    {
+     "id": "wiki:pol-bat-004",
+     "cite": "wiki page [[pol-bat-004]] POL-BAT-004 Battery Safety and Handling Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "`WH-MAN-BAT` is a deprecated, legacy warehouse code previously used for lithium-ion battery pack storage [1][3]. \n\nIt was merged into warehouse `WH-MAN-STR` in 2019 and remains retired and prohibited to prevent misallocation; it must not be used [1][3]. Under the rule in force today, battery packs are booked in Ledgerline to warehouse `WH-MAN-STR` (specifically within bin zones `BAT-Z1` to `BAT-Z4`) [1][3].",
+   "cited": [
+    1,
+    3
+   ],
+   "tokens_in": 3495,
+   "tokens_out": 611,
+   "llm_seconds": 5.389,
+   "cost_usd": 0.005404,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "merged into WH-MAN-STR"
+    ]
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate answer correctly identifies the code as deprecated, notes it was merged into WH-MAN-STR in 2019, and states it should not be used.",
+    "tokens_in": 394,
+    "tokens_out": 173,
+    "cost_usd": 0.001039
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 2,
+    "precision": 0.0
+   },
+   "total_s": 12.221,
+   "cost_total_usd": 0.013406
+  },
+  {
+   "id": "Q-413",
+   "type": "table_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.144,
+   "retrieval_llm_s": 11.136,
+   "retrieval_tokens_in": 27364,
+   "retrieval_tokens_out": 219,
+   "retrieval_cost_usd": 0.023479,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-004",
+     "cite": "wiki page [[sop-pur-004]] SOP-PUR-004 Rate Contract Maintenance"
+    },
+    {
+     "id": "wiki:topic-price-tolerance",
+     "cite": "wiki page [[topic-price-tolerance]] Price tolerance"
+    },
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:sop-pur-006",
+     "cite": "wiki page [[sop-pur-006]] SOP-PUR-006 Quotations and Supplier Selection"
+    },
+    {
+     "id": "wiki:pol-pur-001",
+     "cite": "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain pricing or rate contract records for item MTR-HUB-250.",
+   "cited": [],
+   "tokens_in": 6583,
+   "tokens_out": 396,
+   "llm_seconds": 4.48,
+   "cost_usd": 0.007064,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "142.00"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly abstained instead of providing the required rate of £142.00.",
+    "tokens_in": 292,
+    "tokens_out": 135,
+    "cost_usd": 0.000798
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 15.624,
+   "cost_total_usd": 0.030543
+  },
+  {
+   "id": "Q-433",
+   "type": "table_lookup",
+   "difficulty": "easy",
+   "role": "PUR-EXEC",
+   "retrieval_s": 7.891,
+   "retrieval_llm_s": 7.886,
+   "retrieval_tokens_in": 18873,
+   "retrieval_tokens_out": 154,
+   "retrieval_cost_usd": 0.016205,
+   "retrieval": {
+    "n_gold": 1,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:items-bat",
+     "cite": "wiki page [[items-bat]] BAT-* items"
+    },
+    {
+     "id": "wiki:data-warehouses",
+     "cite": "wiki page [[data-warehouses]] Warehouses"
+    },
+    {
+     "id": "wiki:items-pkg",
+     "cite": "wiki page [[items-pkg]] PKG-* items"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided documents do not contain information regarding the item LGT-REB, its reorder level, or whether it is classified as a lithium-cell part.",
+   "cited": [],
+   "tokens_in": 3865,
+   "tokens_out": 321,
+   "llm_seconds": 3.909,
+   "cost_usd": 0.004513,
+   "fact": {
+    "ok": false,
+    "expected": "answer",
+    "missing": [
+     "2800"
+    ]
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate failed to provide the reorder level of 2800 as expected.",
+    "tokens_in": 327,
+    "tokens_out": 122,
+    "cost_usd": 0.000773
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 0,
+    "precision": 0.0
+   },
+   "total_s": 11.8,
+   "cost_total_usd": 0.020718
+  },
+  {
+   "id": "Q-618",
+   "type": "version_conflict",
+   "difficulty": "hard",
+   "role": "PUR-EXEC",
+   "retrieval_s": 5.351,
+   "retrieval_llm_s": 5.349,
+   "retrieval_tokens_in": 6836,
+   "retrieval_tokens_out": 115,
+   "retrieval_cost_usd": 0.006114,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": 1,
+    "levels": {
+     "page": 2
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-tex-007",
+     "cite": "wiki page [[pol-tex-007]] POL-TEX-007 Travel and Expenses Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "Under the current policy (POL-TEX-007 version 2.4), you have **60 days** from the date of the expense to enter your claim on screen AP-EXP-09 [1].\n\nPlease note that from 1 January 2027, under version 3.0, this deadline will reduce to **45 days** of incurring the expense [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 1647,
+   "tokens_out": 279,
+   "llm_seconds": 3.88,
+   "cost_usd": 0.00251,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The answer correctly states both the current 60-day rule and the future 45-day rule.",
+    "tokens_in": 373,
+    "tokens_out": 100,
+    "cost_usd": 0.00072
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 9.231,
+   "cost_total_usd": 0.008624
+  },
+  {
+   "id": "Q-610",
+   "type": "version_conflict",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 4.701,
+   "retrieval_llm_s": 4.699,
+   "retrieval_tokens_in": 6838,
+   "retrieval_tokens_out": 119,
+   "retrieval_cost_usd": 0.006132,
+   "retrieval": {
+    "n_gold": 3,
+    "rank": 1,
+    "levels": {
+     "page": 3
+    },
+    "hit@1": 1,
+    "cov@1": 1.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 1.0,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 1.0,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 1.0,
+    "fact@10": 0,
+    "rr": 1.0
+   },
+   "items": [
+    {
+     "id": "wiki:pol-tex-007",
+     "cite": "wiki page [[pol-tex-007]] POL-TEX-007 Travel and Expenses Policy"
+    }
+   ],
+   "withheld": false,
+   "answer": "Under the current Travel and Expenses Policy (POL-TEX-007 version 2.4), hotel room bookings in London are capped at up to £190 a night, including breakfast [1]. \n\nFrom 1 January 2027, under version 3.0, the cap increases to £210 a night, inclusive of breakfast and local taxes [1].",
+   "cited": [
+    1
+   ],
+   "tokens_in": 1645,
+   "tokens_out": 456,
+   "llm_seconds": 5.073,
+   "cost_usd": 0.003238,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states both the current £190 rate and the future £210 rate with their respective policy versions and dates.",
+    "tokens_in": 377,
+    "tokens_out": 117,
+    "cost_usd": 0.000794
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 1,
+    "precision": 1.0
+   },
+   "total_s": 9.774,
+   "cost_total_usd": 0.00937
+  },
+  {
+   "id": "Q-615",
+   "type": "version_conflict",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 9.711,
+   "retrieval_llm_s": 9.708,
+   "retrieval_tokens_in": 19261,
+   "retrieval_tokens_out": 238,
+   "retrieval_cost_usd": 0.016872,
+   "retrieval": {
+    "n_gold": 2,
+    "rank": null,
+    "levels": {},
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 0,
+    "cov@3": 0.0,
+    "fact@3": 0,
+    "hit@5": 0,
+    "cov@5": 0.0,
+    "fact@5": 0,
+    "hit@10": 0,
+    "cov@10": 0.0,
+    "fact@10": 0,
+    "rr": 0.0
+   },
+   "items": [
+    {
+     "id": "wiki:amd-sup-2026-02",
+     "cite": "wiki page [[amd-sup-2026-02]] AMD-SUP-2026-02 Amendment 2 to the Supplier Policy"
+    },
+    {
+     "id": "wiki:pol-sup-003",
+     "cite": "wiki page [[pol-sup-003]] POL-SUP-003 Supplier Policy"
+    },
+    {
+     "id": "wiki:sop-pur-005",
+     "cite": "wiki page [[sop-pur-005]] SOP-PUR-005 Certificate Renewal (UN 38.3)"
+    },
+    {
+     "id": "01_policies/POL-SUP-003 Supplier Policy v2.3.pdf#p2s4",
+     "cite": "POL-SUP-003 v2.3, p.2"
+    }
+   ],
+   "withheld": false,
+   "answer": "NOT IN THE DOCUMENTS. The provided sources state that chargers require a UN 38.3 certificate under POL-SUP-003 §4.1 [2][4], but they do not contain historical policy records indicating whether chargers have always required one.",
+   "cited": [
+    2,
+    4
+   ],
+   "tokens_in": 4565,
+   "tokens_out": 1617,
+   "llm_seconds": 13.368,
+   "cost_usd": 0.010436,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": false,
+    "reason": "The candidate incorrectly claims the information is not in the documents instead of answering that chargers did not always require UN 38.3.",
+    "tokens_in": 335,
+    "tokens_out": 191,
+    "cost_usd": 0.001064
+   },
+   "citation": {
+    "ok": false,
+    "n_cited": 2,
+    "precision": 0.0
+   },
+   "total_s": 23.079,
+   "cost_total_usd": 0.027308
+  },
+  {
+   "id": "Q-607",
+   "type": "version_conflict",
+   "difficulty": "medium",
+   "role": "PUR-EXEC",
+   "retrieval_s": 11.02,
+   "retrieval_llm_s": 11.016,
+   "retrieval_tokens_in": 14571,
+   "retrieval_tokens_out": 180,
+   "retrieval_cost_usd": 0.012764,
+   "retrieval": {
+    "n_gold": 4,
+    "rank": 2,
+    "levels": {
+     "page": 1
+    },
+    "hit@1": 0,
+    "cov@1": 0.0,
+    "fact@1": 0,
+    "hit@3": 1,
+    "cov@3": 0.25,
+    "fact@3": 0,
+    "hit@5": 1,
+    "cov@5": 0.25,
+    "fact@5": 0,
+    "hit@10": 1,
+    "cov@10": 0.25,
+    "fact@10": 0,
+    "rr": 0.5
+   },
+   "items": [
+    {
+     "id": "wiki:sop-pur-002",
+     "cite": "wiki page [[sop-pur-002]] SOP-PUR-002 Purchase Request to Purchase Order"
+    },
+    {
+     "id": "wiki:screen-pur-po-01",
+     "cite": "wiki page [[screen-pur-po-01]] PUR-PO-01 Purchase Order Entry"
+    },
+    {
+     "id": "wiki:err-scr-0221",
+     "cite": "wiki page [[err-scr-0221]] ERR-SCR-0221 Fetch required before save"
+    }
+   ],
+   "withheld": false,
+   "answer": "No, Fetch is not optional on the purchase order screen (PUR-PO-01); it is mandatory [1][2]. \n\nUnder current SOP-PUR-002 version 1.4 (effective 2025-02-01 in Ledgerline 7.2.3), you must enter the supplier and item and press F3 (Fetch) before saving [1][2]. If you attempt to save without fetching, Ledgerline refuses the save and triggers error ERR-SCR-0221 [1][2][3]. \n\n(While Fetch was not mandatory under superseded version 1.3, the current rule makes it strictly required) [1].",
+   "cited": [
+    1,
+    2,
+    3
+   ],
+   "tokens_in": 3060,
+   "tokens_out": 642,
+   "llm_seconds": 5.86,
+   "cost_usd": 0.005173,
+   "fact": {
+    "ok": true,
+    "expected": "answer",
+    "missing": []
+   },
+   "judge": {
+    "ok": true,
+    "reason": "The candidate correctly states that Fetch is mandatory, provides the required error code ERR-SCR-0221, and aligns with the reference answer.",
+    "tokens_in": 457,
+    "tokens_out": 195,
+    "cost_usd": 0.001181
+   },
+   "citation": {
+    "ok": true,
+    "n_cited": 3,
+    "precision": 0.333
+   },
+   "total_s": 16.88,
+   "cost_total_usd": 0.017937
+  }
+ ],
+ "summary": {
+  "overall": {
+   "n": 40,
+   "answer_correct": 0.575,
+   "fact_correct": 0.575,
+   "fact_n": 40,
+   "both_correct": 0.525,
+   "citation_correct": 0.4545,
+   "citation_precision": 0.3788,
+   "retrieval_s": {
+    "n": 40,
+    "p50": 7.9055,
+    "p95": 12.9932,
+    "mean": 8.3113,
+    "max": 16.137
+   },
+   "total_s": {
+    "n": 40,
+    "p50": 13.2435,
+    "p95": 21.5158,
+    "mean": 14.0214,
+    "max": 23.079
+   },
+   "cost_per_q_usd": 0.020977,
+   "tokens_in_per_q": 22011.0,
+   "tokens_out_per_q": 683.0
+  },
+  "by_type": {
+   "single_lookup": {
+    "n": 4,
+    "answer_correct": 0.75,
+    "fact_correct": 0.75,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": 0.75,
+    "citation_precision": 0.75,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 6.877,
+     "p95": 11.1315,
+     "mean": 7.5183,
+     "max": 11.64
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 9.5565,
+     "p95": 14.4256,
+     "mean": 10.6212,
+     "max": 15.112
+    },
+    "cost_per_q_usd": 0.012743,
+    "tokens_in_per_q": 13727.8,
+    "tokens_out_per_q": 343.8
+   },
+   "procedure": {
+    "n": 4,
+    "answer_correct": 0.5,
+    "fact_correct": 0.5,
+    "fact_n": 4,
+    "both_correct": 0.5,
+    "citation_correct": 0.5,
+    "citation_precision": 0.375,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 9.7495,
+     "p95": 11.9144,
+     "mean": 9.2097,
+     "max": 11.945
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 16.6695,
+     "p95": 20.5326,
+     "mean": 16.072,
+     "max": 21.118
+    },
+    "cost_per_q_usd": 0.020552,
+    "tokens_in_per_q": 20672.0,
+    "tokens_out_per_q": 847.8
+   },
+   "rule": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 1.0,
+    "citation_correct": 1.0,
+    "citation_precision": 0.8333,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 4.8695,
+     "p95": 6.0074,
+     "mean": 4.979,
+     "max": 6.158
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 9.465,
+     "p95": 11.068,
+     "mean": 9.551,
+     "max": 11.23
+    },
+    "cost_per_q_usd": 0.013569,
+    "tokens_in_per_q": 13505.2,
+    "tokens_out_per_q": 588.5
+   },
+   "service_field": {
+    "n": 4,
+    "answer_correct": 0.5,
+    "fact_correct": 0.5,
+    "fact_n": 4,
+    "both_correct": 0.5,
+    "citation_correct": 0.0,
+    "citation_precision": 0.0,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 8.736,
+     "p95": 15.0579,
+     "mean": 10.0817,
+     "max": 16.137
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 13.6455,
+     "p95": 20.3538,
+     "mean": 15.1855,
+     "max": 21.472
+    },
+    "cost_per_q_usd": 0.024543,
+    "tokens_in_per_q": 26735.2,
+    "tokens_out_per_q": 602.8
+   },
+   "table_lookup": {
+    "n": 4,
+    "answer_correct": 0.25,
+    "fact_correct": 0.0,
+    "fact_n": 4,
+    "both_correct": 0.0,
+    "citation_correct": 0.0,
+    "citation_precision": 0.0,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 9.3775,
+     "p95": 11.102,
+     "mean": 9.1828,
+     "max": 11.144
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 13.9225,
+     "p95": 16.5446,
+     "mean": 14.088,
+     "max": 16.707
+    },
+    "cost_per_q_usd": 0.026288,
+    "tokens_in_per_q": 28701.5,
+    "tokens_out_per_q": 632.5
+   },
+   "multi_hop": {
+    "n": 4,
+    "answer_correct": 0.25,
+    "fact_correct": 0.25,
+    "fact_n": 4,
+    "both_correct": 0.25,
+    "citation_correct": 0.5,
+    "citation_precision": 0.3332,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 9.7245,
+     "p95": 13.4125,
+     "mean": 9.824,
+     "max": 13.624
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 17.1555,
+     "p95": 21.6613,
+     "mean": 17.8987,
+     "max": 22.348
+    },
+    "cost_per_q_usd": 0.037777,
+    "tokens_in_per_q": 40540.8,
+    "tokens_out_per_q": 1050.0
+   },
+   "version_conflict": {
+    "n": 4,
+    "answer_correct": 0.75,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": 0.75,
+    "citation_precision": 0.5833,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 7.531,
+     "p95": 10.8237,
+     "mean": 7.6957,
+     "max": 11.02
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 13.327,
+     "p95": 22.1491,
+     "mean": 14.741,
+     "max": 23.079
+    },
+    "cost_per_q_usd": 0.01581,
+    "tokens_in_per_q": 14605.8,
+    "tokens_out_per_q": 911.5
+   },
+   "exact_code": {
+    "n": 4,
+    "answer_correct": 0.0,
+    "fact_correct": 0.0,
+    "fact_n": 4,
+    "both_correct": 0.0,
+    "citation_correct": 0.0,
+    "citation_precision": 0.0,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 5.11,
+     "p95": 10.7814,
+     "mean": 6.5958,
+     "max": 11.676
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 12.603,
+     "p95": 18.4541,
+     "mean": 13.6787,
+     "max": 19.445
+    },
+    "cost_per_q_usd": 0.011786,
+    "tokens_in_per_q": 10959.8,
+    "tokens_out_per_q": 665.2
+   },
+   "not_in_docs": {
+    "n": 4,
+    "answer_correct": 1.0,
+    "fact_correct": 0.75,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": null,
+    "citation_precision": null,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 8.89,
+     "p95": 11.1433,
+     "mean": 9.2705,
+     "max": 11.382
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 13.182,
+     "p95": 15.7232,
+     "mean": 13.655,
+     "max": 16.038
+    },
+    "cost_per_q_usd": 0.023474,
+    "tokens_in_per_q": 25877.8,
+    "tokens_out_per_q": 515.0
+   },
+   "permission": {
+    "n": 4,
+    "answer_correct": 0.75,
+    "fact_correct": 1.0,
+    "fact_n": 4,
+    "both_correct": 0.75,
+    "citation_correct": 1.0,
+    "citation_precision": 1.0,
+    "retrieval_s": {
+     "n": 4,
+     "p50": 8.399,
+     "p95": 12.4482,
+     "mean": 8.7553,
+     "max": 12.96
+    },
+    "total_s": {
+     "n": 4,
+     "p50": 15.436,
+     "p95": 17.9081,
+     "mean": 14.7228,
+     "max": 17.952
+    },
+    "cost_per_q_usd": 0.023225,
+    "tokens_in_per_q": 24784.0,
+    "tokens_out_per_q": 673.5
+   }
+  },
+  "retrieval": {
+   "overall": {
+    "n": 33,
+    "mrr": 0.4495,
+    "recall@1": 0.3939,
+    "coverage@1": 0.3118,
+    "fact_recall@1": 0.0,
+    "recall@3": 0.5152,
+    "coverage@3": 0.3923,
+    "fact_recall@3": 0.0,
+    "recall@5": 0.5152,
+    "coverage@5": 0.3923,
+    "fact_recall@5": 0.0,
+    "recall@10": 0.5152,
+    "coverage@10": 0.3923,
+    "fact_recall@10": 0.0
+   },
+   "by_type": {
+    "single_lookup": {
+     "n": 4,
+     "mrr": 0.75,
+     "recall@1": 0.75,
+     "coverage@1": 0.625,
+     "fact_recall@1": 0.0,
+     "recall@3": 0.75,
+     "coverage@3": 0.625,
+     "fact_recall@3": 0.0,
+     "recall@5": 0.75,
+     "coverage@5": 0.625,
+     "fact_recall@5": 0.0,
+     "recall@10": 0.75,
+     "coverage@10": 0.625,
+     "fact_recall@10": 0.0
+    },
+    "procedure": {
+     "n": 4,
+     "mrr": 0.3333,
+     "recall@1": 0.25,
+     "coverage@1": 0.25,
+     "fact_recall@1": 0.0,
+     "recall@3": 0.5,
+     "coverage@3": 0.5,
+     "fact_recall@3": 0.0,
+     "recall@5": 0.5,
+     "coverage@5": 0.5,
+     "fact_recall@5": 0.0,
+     "recall@10": 0.5,
+     "coverage@10": 0.5,
+     "fact_recall@10": 0.0
+    },
+    "rule": {
+     "n": 4,
+     "mrr": 0.875,
+     "recall@1": 0.75,
+     "coverage@1": 0.75,
+     "fact_recall@1": 0.0,
+     "recall@3": 1.0,
+     "coverage@3": 0.875,
+     "fact_recall@3": 0.0,
+     "recall@5": 1.0,
+     "coverage@5": 0.875,
+     "fact_recall@5": 0.0,
+     "recall@10": 1.0,
+     "coverage@10": 0.875,
+     "fact_recall@10": 0.0
+    },
+    "service_field": {
+     "n": 4,
+     "mrr": 0.0,
+     "recall@1": 0.0,
+     "coverage@1": 0.0,
+     "fact_recall@1": 0.0,
+     "recall@3": 0.0,
+     "coverage@3": 0.0,
+     "fact_recall@3": 0.0,
+     "recall@5": 0.0,
+     "coverage@5": 0.0,
+     "fact_recall@5": 0.0,
+     "recall@10": 0.0,
+     "coverage@10": 0.0,
+     "fact_recall@10": 0.0
+    },
+    "table_lookup": {
+     "n": 4,
+     "mrr": 0.0,
+     "recall@1": 0.0,
+     "coverage@1": 0.0,
+     "fact_recall@1": 0.0,
+     "recall@3": 0.0,
+     "coverage@3": 0.0,
+     "fact_recall@3": 0.0,
+     "recall@5": 0.0,
+     "coverage@5": 0.0,
+     "fact_recall@5": 0.0,
+     "recall@10": 0.0,
+     "coverage@10": 0.0,
+     "fact_recall@10": 0.0
+    },
+    "multi_hop": {
+     "n": 4,
+     "mrr": 0.875,
+     "recall@1": 0.75,
+     "coverage@1": 0.1977,
+     "fact_recall@1": 0.0,
+     "recall@3": 1.0,
+     "coverage@3": 0.4239,
+     "fact_recall@3": 0.0,
+     "recall@5": 1.0,
+     "coverage@5": 0.4239,
+     "fact_recall@5": 0.0,
+     "recall@10": 1.0,
+     "coverage@10": 0.4239,
+     "fact_recall@10": 0.0
+    },
+    "version_conflict": {
+     "n": 4,
+     "mrr": 0.625,
+     "recall@1": 0.5,
+     "coverage@1": 0.5,
+     "fact_recall@1": 0.0,
+     "recall@3": 0.75,
+     "coverage@3": 0.5625,
+     "fact_recall@3": 0.0,
+     "recall@5": 0.75,
+     "coverage@5": 0.5625,
+     "fact_recall@5": 0.0,
+     "recall@10": 0.75,
+     "coverage@10": 0.5625,
+     "fact_recall@10": 0.0
+    },
+    "exact_code": {
+     "n": 4,
+     "mrr": 0.0,
+     "recall@1": 0.0,
+     "coverage@1": 0.0,
+     "fact_recall@1": 0.0,
+     "recall@3": 0.0,
+     "coverage@3": 0.0,
+     "fact_recall@3": 0.0,
+     "recall@5": 0.0,
+     "coverage@5": 0.0,
+     "fact_recall@5": 0.0,
+     "recall@10": 0.0,
+     "coverage@10": 0.0,
+     "fact_recall@10": 0.0
+    },
+    "not_in_docs": {
+     "n": 0
+    },
+    "permission": {
+     "n": 1,
+     "mrr": 1.0,
+     "recall@1": 1.0,
+     "coverage@1": 1.0,
+     "fact_recall@1": 0.0,
+     "recall@3": 1.0,
+     "coverage@3": 1.0,
+     "fact_recall@3": 0.0,
+     "recall@5": 1.0,
+     "coverage@5": 1.0,
+     "fact_recall@5": 0.0,
+     "recall@10": 1.0,
+     "coverage@10": 1.0,
+     "fact_recall@10": 0.0
+    }
+   },
+   "latency_s": {
+    "n": 40,
+    "p50": 7.9055,
+    "p95": 12.9932,
+    "mean": 8.3113,
+    "max": 16.137
+   },
+   "match_levels": {
+    "page": 30
+   }
+  },
+  "judge_vs_fact": {
+   "n": 40,
+   "agree": 0.9,
+   "kappa": 0.795,
+   "fact_only": 2,
+   "judge_only": 2
+  },
+  "judge_cost_usd": 0.036
+ },
+ "answer_words": 250,
+ "withheld_notice": true,
+ "answer_model": "openrouter:google/gemini-3.8-flash",
+ "judge_model": "openrouter:google/gemini-3.8-flash"
+}

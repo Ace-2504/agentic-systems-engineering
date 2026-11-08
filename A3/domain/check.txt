@@ -1,0 +1,38 @@
+CHECK 1 - gold quotes and must_contain strings (questions.jsonl)
+  D-01 single_lookup: quote in 01_policies/POL-INS-002 Transit Insurance Claims Policy v1.0.pdf at page 1: FOUND; 7 words
+  D-01 must_contain 'TRN-2026-08812': FOUND
+  D-02 procedure: quote in 02_procedures/PRC-INS-01 Damaged Goods Claim Procedure.docx at section 'Steps': FOUND; 16 words
+  D-02 procedure: quote in 02_procedures/PRC-INS-01 Damaged Goods Claim Procedure.docx at section 'Steps': FOUND; 16 words
+  D-02 must_contain 'within 24 hours of delivery': FOUND
+  D-02 must_contain 'within 7 days': FOUND
+  D-03 rule: quote in 01_policies/POL-TAX-007 Reverse Charge Policy v1.0.pdf at page 1: FOUND; 16 words
+  D-03 must_contain 'paid in cash only': FOUND
+  D-04 service_field: quote in 03_ledgerline_manuals/LL-AP Payables User Manual v4.2.pdf at page 2: FOUND; 23 words
+  D-04 must_contain 'parked': FOUND
+  D-05 table_lookup: quote in 05_master_data/Vendor Master.xlsx at sheet Vendors row 6: FOUND; 8 words
+  D-05 must_contain 'DEC-SR-2026-014': FOUND
+  D-05 must_contain '31 March 2027': FOUND
+  D-06 multi_hop: quote in 03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf at page 1: FOUND; 10 words
+  D-06 multi_hop: quote in 01_policies/POL-AP-001 Accounts Payable Policy v2.1.pdf at page 1: FOUND; 13 words
+  D-06 must_contain 'H-QTY': FOUND
+  D-06 must_contain 'Ganesh Pawar': FOUND
+  D-07 version_conflict: quote in 01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf at page 1: FOUND; 14 words
+  D-07 version_conflict: quote in 07_correspondence/2026-11-02 FD - Payment approval limit from 1 December.eml at section 'Body': FOUND; 9 words
+  D-07 must_contain 'Rs.50,00,000': FOUND
+  D-07 must_contain 'Rs.25,00,000': FOUND
+  D-07 must_contain '1 December 2026': FOUND
+  D-08 exact_code: quote in 03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf at page 1: FOUND; 14 words
+  D-08 must_contain 'IRN not found or cancelled': FOUND
+  D-09 not_in_docs: no gold sources (not_in_docs) - OK
+  D-10 permission: quote in 01_policies/HR/CONFIDENTIAL/HR-CONF-003 Finance Salary Bands FY2026-27.xlsx at sheet Bands row 2: FOUND; 2 words
+  D-10 must_contain 'NBC-HR-CONF': FOUND
+All quotes found: YES
+
+CHECK 2 - every number and code in every document is in facts.jsonl
+  41 files scanned; numbers or codes missing from the registry: 0
+
+CHECK 3 - planted byte-identical duplicate
+  identical: ['02_procedures/PRC-AP-03 Friday Payment Run Procedure (1).docx', '02_procedures/PRC-AP-03 Friday Payment Run Procedure.docx']
+  duplicate groups: 1
+
+RESULT: quotes all found; registry complete

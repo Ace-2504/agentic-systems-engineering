@@ -1,0 +1,192 @@
+[
+ {
+  "id": "Q-510",
+  "question": "Can I raise a direct order for £40,000 of brake pads next month?",
+  "type": "multi_hop",
+  "role": "PUR-EXEC",
+  "chain": [
+   {
+    "step": "index",
+    "what": "index.md"
+   },
+   {
+    "step": "page",
+    "what": "pol-pur-001",
+    "turn": 1,
+    "from": null
+   },
+   {
+    "step": "link",
+    "what": "amd-pur-2026-03",
+    "turn": 1,
+    "from": "pol-pur-001"
+   },
+   {
+    "step": "link",
+    "what": "pol-apr-002",
+    "turn": 2,
+    "from": "pol-pur-001"
+   },
+   {
+    "step": "link",
+    "what": "role-pur-exec",
+    "turn": 2,
+    "from": "pol-apr-002"
+   },
+   {
+    "step": "done",
+    "why": "Today is 26 October 2026, so next month is November 2026. Under POL-PUR-001 §3 and AMD-PUR-2026-03, direct purchase orders without a purchase request are permitted up to £50,000 gross (including VAT) ",
+    "turn": 3
+   }
+  ],
+  "nav_calls": 3,
+  "nav_seconds": 11.973,
+  "nav_usd": 0.015563,
+  "items": [
+   "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy",
+   "wiki page [[amd-pur-2026-03]] AMD-PUR-2026-03 Amendment 3 to the Purchase Policy",
+   "wiki page [[pol-apr-002]] POL-APR-002 Approval Matrix for Purchasing",
+   "wiki page [[role-pur-exec]] Role PUR-EXEC"
+  ],
+  "answer": "Yes, you can raise a direct order for £40,000 next month (November 2026) [1][2]. \n\nKey details to keep in mind:\n- **Direct order threshold:** Until 30 November 2026, direct purchase orders without a prior purchase request are permitted up to £50,000 gross value including VAT [1][2]. \n- **Gross value:** The order value evaluated against this threshold includes VAT, freight, and packing [1][3].\n- **Upcoming change:** From 1 December 2026, under amendment AMD-PUR-2026-03, the direct order limit drops to £25,000 or less; any direct order exceeding £25,000 gross raised on or after that date will be rejected with error ERR-PO-0610 [1][2]. Direct orders saved before 1 December 2026 remain unaffected [2].\n- **General requirements:** The order must be charged to an open cost centre (checked via FIN-CC-01) [1] and placed with an active supplier onboarded in the supplier master [1]. If covered by an active rate contract, it must be ordered at the contract rate [1].",
+  "cited": [
+   1,
+   2,
+   3
+  ],
+  "answer_usd": 0.009989,
+  "judge": {
+   "ok": true,
+   "reason": "The answer correctly states both required key facts (£25,000 limit and ERR-PO-0610) along with the upcoming policy change date.",
+   "tokens_in": 631,
+   "tokens_out": 80,
+   "cost_usd": 0.000851
+  },
+  "fact": {
+   "ok": true,
+   "expected": "answer",
+   "missing": []
+  },
+  "citation": {
+   "ok": true,
+   "n_cited": 3,
+   "precision": 0.667
+  }
+ },
+ {
+  "id": "Q-610",
+  "question": "What hotel rate can I book in London?",
+  "type": "version_conflict",
+  "role": "PUR-EXEC",
+  "chain": [
+   {
+    "step": "index",
+    "what": "index.md"
+   },
+   {
+    "step": "page",
+    "what": "pol-tex-007",
+    "turn": 1,
+    "from": null
+   },
+   {
+    "step": "done",
+    "why": "POL-TEX-007 clause 3 specifies that hotel room bookings in London are currently capped at £190 a night (including breakfast) under version 2.4, effective until 1 January 2027 when it rises to £210.",
+    "turn": 2
+   }
+  ],
+  "nav_calls": 2,
+  "nav_seconds": 6.715,
+  "nav_usd": 0.006013,
+  "items": [
+   "wiki page [[pol-tex-007]] POL-TEX-007 Travel and Expenses Policy"
+  ],
+  "answer": "Under the current Travel and Expenses Policy (POL-TEX-007 version 2.4), hotel room bookings in London are capped at up to £190 a night, including breakfast [1]. \n\nFrom 1 January 2027, under version 3.0, the cap increases to £210 a night, inclusive of breakfast and local taxes [1].",
+  "cited": [
+   1
+  ],
+  "answer_usd": 0.003238,
+  "judge": {
+   "ok": true,
+   "reason": "The candidate correctly states both the current £190 rate and the future £210 rate with their respective policy versions and dates.",
+   "tokens_in": 377,
+   "tokens_out": 117,
+   "cost_usd": 0.000794
+  },
+  "fact": {
+   "ok": true,
+   "expected": "answer",
+   "missing": []
+  },
+  "citation": {
+   "ok": true,
+   "n_cited": 1,
+   "precision": 1.0
+  }
+ },
+ {
+  "id": "Q-213",
+  "question": "Who approves an order above £5,000,000?",
+  "type": "rule",
+  "role": "PUR-EXEC",
+  "chain": [
+   {
+    "step": "index",
+    "what": "index.md"
+   },
+   {
+    "step": "page",
+    "what": "pol-apr-002",
+    "turn": 1,
+    "from": null
+   },
+   {
+    "step": "link",
+    "what": "pol-pur-001",
+    "turn": 1,
+    "from": "pol-apr-002"
+   },
+   {
+    "step": "link",
+    "what": "role-plant-head",
+    "turn": 1,
+    "from": "pol-apr-002"
+   },
+   {
+    "step": "done",
+    "why": "According to POL-APR-002 §3, documents exceeding £5,000,000 gross trigger Ledgerline error ERR-APR-0009 and require the Managing Director's written approval outside Ledgerline, which is subsequently r",
+    "turn": 2
+   }
+  ],
+  "nav_calls": 2,
+  "nav_seconds": 4.971,
+  "nav_usd": 0.009083,
+  "items": [
+   "wiki page [[pol-apr-002]] POL-APR-002 Approval Matrix for Purchasing",
+   "wiki page [[pol-pur-001]] POL-PUR-001 Purchase Policy",
+   "wiki page [[role-plant-head]] Role PLANT-HEAD"
+  ],
+  "answer": "A purchase order exceeding £5,000,000 gross triggers Ledgerline error ERR-APR-0009 and requires the Managing Director's written approval outside Ledgerline [1]. This approval is subsequently recorded by the plant head's office [1].",
+  "cited": [
+   1
+  ],
+  "answer_usd": 0.004624,
+  "judge": {
+   "ok": true,
+   "reason": "The candidate correctly identifies the Managing Director as the approver along with the relevant procedural details.",
+   "tokens_in": 340,
+   "tokens_out": 139,
+   "cost_usd": 0.000854
+  },
+  "fact": {
+   "ok": true,
+   "expected": "answer",
+   "missing": []
+  },
+  "citation": {
+   "ok": true,
+   "n_cited": 1,
+   "precision": 1.0
+  }
+ }
+]
