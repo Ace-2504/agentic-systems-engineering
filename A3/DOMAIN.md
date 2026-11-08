@@ -78,7 +78,7 @@ each:
 | 9 | Filter by permission before ranking, and say what was withheld. | Confidential chunks are kept out of every non-HR search before ranking, and the "withheld" notice tells the model a restricted source exists. 0 leaks. | Yes |
 | 10 | Handle versions and effective dates explicitly. | Effective dates are read in any written form; an older version still in force is marked superseded; out-of-date spreadsheet rows say so (`part5/domain_rules.py`). | Yes |
 | 11 | Choose a wiki when synthesis across documents matters and the corpus changes slowly. | Considered and not chosen: 41 files, one multi-hop question in twelve, and the whole set fits in one prompt. | Yes (a decision) |
-| 12 | Measure again after every change, in CI. | Re-measured on this domain (sections 6 and 7). `part5/check_retrieval.py` fails (exit code 1) if recall@5, the permission filter or the version marks regress, and runs without a key. | Partly: not yet wired into a CI service |
+| 12 | Measure again after every change, in CI. | Re-measured on this domain (sections 6 and 7). `part5/check_retrieval.py` fails (exit code 1) if recall@5, the permission filter or the version marks regress. GitHub Actions (`.github/workflows/a3-part5-check.yml`) runs it on every change to the domain, the Part 5 code or the chosen configuration: [first passing run](https://github.com/Ace-2504/agentic-systems-engineering/actions/runs/42513502686). | Yes |
 
 ## 3. Twenty questions, sorted
 
@@ -287,11 +287,13 @@ These are facts about how users ask, not about the documents.
 - **Rule 12.** Re-measuring here is what showed the reranker's value on users' wording, and the dense pick's blind
   spot for codes.
 
+**Rule 12, in CI, is met.** GitHub Actions runs `part5/check_retrieval.py` on a fresh machine on every change
+to the domain, the Part 5 code or the chosen configuration ([first passing run](https://github.com/Ace-2504/agentic-systems-engineering/actions/runs/42513502686): all three checks pass).
+Search latency is not checked there, because GitHub's machines have no GPU; it stays a same-machine check.
+
 **Still not fully met:**
 - **Rules 2 and 3 need real users.** The questions are invented and their wording is mine. The targets are set by me
   as the capstone's designer, not agreed with an AP team.
-- **Rule 12 says "in CI".** `part5/check_retrieval.py` is ready for that: it runs without a key, takes about 25
-  seconds, and exits with 1 on a regression. It is not yet wired into a CI service.
 
 The golden set is also small (10 questions scored for recall), and the configuration was picked on the same questions
 it is reported on, as in Part 2. One multi-hop question in twelve is not enough to measure multi-hop, which is where
