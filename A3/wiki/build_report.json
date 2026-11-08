@@ -1,0 +1,86 @@
+{
+ "started": "2026-11-07T22:47:35Z",
+ "sources": 50,
+ "parts": 50,
+ "registry_slugs": 319,
+ "merge": {
+  "tokens_in": 1636,
+  "tokens_out": 1,
+  "llm_seconds": 2.037,
+  "usd": 0.00135,
+  "proposed": 0,
+  "accepted": 0
+ },
+ "facts_dropped_permission": 0,
+ "pages": 118,
+ "pages_by_type": {
+  "policy": 17,
+  "data-source": 1,
+  "error": 23,
+  "item-family": 2,
+  "role": 5,
+  "screen": 29,
+  "procedure": 23,
+  "supplier": 4,
+  "topic": 1,
+  "person": 13
+ },
+ "pages_by_audience": {
+  "staff": 114,
+  "hr": 4
+ },
+ "links": 496,
+ "links_resolved": 496,
+ "orphans": [
+  "hr-conf-007",
+  "hr-conf-009",
+  "hr-conf-011",
+  "sup-vpc-rot-0107"
+ ],
+ "references": 773,
+ "facts": 838,
+ "facts_quote_verified": 830,
+ "facts_page_fixed": 1,
+ "wiki_words": 54882,
+ "read_errors": 0,
+ "seconds": {
+  "parse": 32.8,
+  "read": 98.7,
+  "merge": 2.1,
+  "write": 109.9,
+  "total": 244.2
+ },
+ "llm": {
+  "read": {
+   "calls": 50,
+   "tokens_in": 329026,
+   "tokens_out": 117929,
+   "llm_seconds": 783.2,
+   "usd": 0.7579,
+   "replayed": 3
+  },
+  "write": {
+   "calls": 118,
+   "tokens_in": 413901,
+   "tokens_out": 101110,
+   "llm_seconds": 870.9,
+   "usd": 0.7585,
+   "replayed": 1
+  },
+  "all": {
+   "calls": 169,
+   "tokens_in": 744563,
+   "tokens_out": 219040,
+   "llm_seconds": 1656.2,
+   "usd": 1.5178,
+   "replayed": 4
+  }
+ },
+ "spend": {
+  "calls": 169,
+  "live_calls": 165,
+  "replayed_calls": 4,
+  "live_usd": 1.4604
+ },
+ "wall_seconds": 244.3
+}

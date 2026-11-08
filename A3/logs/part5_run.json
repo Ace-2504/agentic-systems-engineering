@@ -1,0 +1,1710 @@
+{
+ "targets": {
+  "recall@5": 0.9,
+  "answer": 0.9,
+  "citations": 0.95,
+  "search_p95_ms": 200,
+  "answer_p95_s": 10.0
+ },
+ "runs": {
+  "Part 4 winner": {
+   "name": "Part 4 winner",
+   "records": [
+    {
+     "id": "D-01",
+     "type": "single_lookup",
+     "difficulty": "easy",
+     "role": "INS-DESK",
+     "retrieval_s": 0.13402119999955175,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 1,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 1,
+      "cov@1": 1.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "01_policies/POL-INS-002 Transit Insurance Claims Policy v1.0.pdf#c0",
+       "cite": "POL-INS-002 v1.0, p.1, § Transit Insurance Claims Policy"
+      },
+      {
+       "id": "02_procedures/PRC-INS-01 Damaged Goods Claim Procedure.docx#c0",
+       "cite": "PRC-INS-01 Damaged Goods Claim Procedure.docx, § PRC-INS-01 Damaged Goods Claim Procedure"
+      },
+      {
+       "id": "07_correspondence/2026-10-28 Meeting notes - Insurance desk start.md#c0",
+       "cite": "2026-10-28 Meeting notes - Insurance desk start.md, § Meeting notes - Insurance desk start"
+      },
+      {
+       "id": "04_forms/FRM-INS-01 Insurance Claim Intimation Form.docx#c0",
+       "cite": "FRM-INS-01 Insurance Claim Intimation Form.docx, § FRM-INS-01 Insurance Claim Intimation Form"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c0",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices rows 2-6"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.0.pdf#c0",
+       "cite": "POL-AP-001 v2.0, p.1, § Accounts Payable Policy"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.1.pdf#c0",
+       "cite": "POL-AP-001 v2.1, p.1, § Accounts Payable Policy"
+      },
+      {
+       "id": "05_master_data/Approval Matrix.xlsx#c0",
+       "cite": "Approval Matrix.xlsx, Approvals rows 2-10"
+      },
+      {
+       "id": "05_master_data/GL Account Codes.xlsx#c0",
+       "cite": "GL Account Codes.xlsx, Accounts rows 2-8"
+      },
+      {
+       "id": "02_procedures/PRC-PUR-01 Defective Goods Return Procedure.docx#c0",
+       "cite": "PRC-PUR-01 Defective Goods Return Procedure.docx, § PRC-PUR-01 Defective Goods Return Procedure"
+      }
+     ],
+     "withheld": false,
+     "answer": "Northbridge's transit insurance policy number is **TRN-2026-08812** [1][2].",
+     "cited": [
+      1,
+      2
+     ],
+     "tokens_in": 3014,
+     "tokens_out": 193,
+     "llm_seconds": 4.173,
+     "cost_usd": 0.003283,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly states the required transit insurance policy number.",
+      "tokens_in": 334,
+      "tokens_out": 98,
+      "cost_usd": 0.00068
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 2,
+      "precision": 0.5
+     },
+     "total_s": 4.307,
+     "cost_total_usd": 0.003283
+    },
+    {
+     "id": "D-02",
+     "type": "procedure",
+     "difficulty": "medium",
+     "role": "STORES-PUNE",
+     "retrieval_s": 0.11750030000257539,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 2,
+      "rank": 1,
+      "levels": {
+       "file": 2
+      },
+      "hit@1": 1,
+      "cov@1": 1.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "02_procedures/PRC-INS-01 Damaged Goods Claim Procedure.docx#c0",
+       "cite": "PRC-INS-01 Damaged Goods Claim Procedure.docx, § PRC-INS-01 Damaged Goods Claim Procedure"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c1",
+       "cite": "RCM Services Table.xlsx, Services row 8"
+      },
+      {
+       "id": "01_policies/POL-INS-002 Transit Insurance Claims Policy v1.0.pdf#c0",
+       "cite": "POL-INS-002 v1.0, p.1, § Transit Insurance Claims Policy"
+      },
+      {
+       "id": "02_procedures/PRC-PUR-01 Defective Goods Return Procedure.docx#c0",
+       "cite": "PRC-PUR-01 Defective Goods Return Procedure.docx, § PRC-PUR-01 Defective Goods Return Procedure"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c0",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices rows 2-6"
+      },
+      {
+       "id": "01_policies/POL-TAX-007 Reverse Charge Policy v1.0.pdf#c0",
+       "cite": "POL-TAX-007 v1.0, p.1, § Reverse Charge Policy"
+      },
+      {
+       "id": "07_correspondence/2026-11-02 FD - Payment approval limit from 1 December.eml#c0",
+       "cite": "2026-11-02 FD - Payment approval limit from 1 December.eml, § body"
+      },
+      {
+       "id": "05_master_data/Vendor Master.xlsx#c0",
+       "cite": "Vendor Master.xlsx, Vendors rows 2-6"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      }
+     ],
+     "withheld": false,
+     "answer": "For goods damaged in transit, Stores must take the following steps immediately [1][4]:\n\n1. **Record the damage:** Record the damaged goods on the goods receipt with photographs [1].\n2. **Driver's remark:** Have the driver sign a remark on the consignment note/goods receipt before leaving [1][4].\n3. **Quarantine the goods:** Keep the damaged goods aside until the insurer's surveyor has inspected them [1][4].\n4. **Do not request a credit note:** Do not ask the supplier for a credit note first, because this delays notification [4].\n\n**Key timelines for the claim:**\n- **Same day:** Ask Northbridge drafts the claim intimation on form FRM-INS-01 [1].\n- **Within 24 hours of delivery:** The Insurance desk must notify the insurer, quoting policy TRN-2026-08812 [1][4].\n- **Within 7 days of delivery:** The Insurance desk must send written notice of the claim to the transporter [1][4].",
+     "cited": [
+      1,
+      4
+     ],
+     "tokens_in": 3361,
+     "tokens_out": 814,
+     "llm_seconds": 6.458,
+     "cost_usd": 0.006131,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The answer provides all the required steps and key timelines, including notifying the insurer within 24 hours and the transporter within 7 days.",
+      "tokens_in": 590,
+      "tokens_out": 218,
+      "cost_usd": 0.001386
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 2,
+      "precision": 0.5
+     },
+     "total_s": 6.5755,
+     "cost_total_usd": 0.006131
+    },
+    {
+     "id": "D-03",
+     "type": "rule",
+     "difficulty": "easy",
+     "role": "AP-EXEC",
+     "retrieval_s": 0.12289880000025732,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 1,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 1,
+      "cov@1": 1.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "01_policies/POL-TAX-007 Reverse Charge Policy v1.0.pdf#c0",
+       "cite": "POL-TAX-007 v1.0, p.1, § Reverse Charge Policy"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      },
+      {
+       "id": "02_procedures/PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx#c0",
+       "cite": "PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx, § PRC-TAX-03 Reverse Charge and Self-Invoice Procedure"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c1",
+       "cite": "RCM Services Table.xlsx, Services row 8"
+      },
+      {
+       "id": "01_policies/POL-TAX-006 TDS Policy v1.1.pdf#c0",
+       "cite": "POL-TAX-006 v1.1, p.1, § TDS Policy"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c1",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices row 7"
+      },
+      {
+       "id": "05_master_data/Vendor Master.xlsx#c0",
+       "cite": "Vendor Master.xlsx, Vendors rows 2-6"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.0.pdf#c0",
+       "cite": "POL-AP-001 v2.0, p.1, § Accounts Payable Policy"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.1.pdf#c0",
+       "cite": "POL-AP-001 v2.1, p.1, § Accounts Payable Policy"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c0",
+       "cite": "POL-TAX-005 v1.2, p.1, § GST Input Tax Credit Policy"
+      }
+     ],
+     "withheld": false,
+     "answer": "No, reverse-charge GST cannot be set off against input tax credit (ITC) [1]. \n\nUnder company policy and CGST Act section 49(4), reverse-charge GST must be paid in cash only, never from ITC [1]. It is paid in cash with GSTR-3B and can be claimed back as credit in the same return after it is paid [1][3].",
+     "cited": [
+      1,
+      3
+     ],
+     "tokens_in": 3439,
+     "tokens_out": 444,
+     "llm_seconds": 4.883,
+     "cost_usd": 0.004669,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate clearly states that reverse-charge GST cannot be set off against ITC and must be paid in cash only.",
+      "tokens_in": 388,
+      "tokens_out": 188,
+      "cost_usd": 0.001096
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 2,
+      "precision": 0.5
+     },
+     "total_s": 5.0059,
+     "cost_total_usd": 0.004669
+    },
+    {
+     "id": "D-04",
+     "type": "service_field",
+     "difficulty": "medium",
+     "role": "AP-EXEC",
+     "retrieval_s": 0.12137530000472907,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 5,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 0,
+      "cov@1": 0.0,
+      "fact@1": null,
+      "hit@3": 0,
+      "cov@3": 0.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 0.2
+     },
+     "items": [
+      {
+       "id": "02_procedures/PRC-AP-03 Friday Payment Run Procedure (1).docx#c0",
+       "cite": "PRC-AP-03 Friday Payment Run Procedure (1).docx, § PRC-AP-03 Friday Payment Run Procedure"
+      },
+      {
+       "id": "02_procedures/PRC-AP-03 Friday Payment Run Procedure.docx#c0",
+       "cite": "PRC-AP-03 Friday Payment Run Procedure.docx, § PRC-AP-03 Friday Payment Run Procedure"
+      },
+      {
+       "id": "01_policies/POL-TAX-006 TDS Policy v1.1.pdf#c0",
+       "cite": "POL-TAX-006 v1.1, p.1, § TDS Policy"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-AP Payables User Manual v4.2.pdf#c1",
+       "cite": "LL-AP Payables User Manual v4.2.pdf, pp.1-2, § 4. FIN-AP-03 Hold queue"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c1",
+       "cite": "POL-TAX-005 v1.2, pp.1-2, § 5.1 The 180-day rule"
+      },
+      {
+       "id": "02_procedures/PRC-AP-04 Morning Bank Check Procedure.docx#c0",
+       "cite": "PRC-AP-04 Morning Bank Check Procedure.docx, § PRC-AP-04 Morning Bank Check Procedure"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c1",
+       "cite": "POL-PAY-003 v1.4, pp.1-2, § 4.2 Treasury's rate"
+      },
+      {
+       "id": "05_master_data/Payment Calendar FY2026-27.xlsx#c0",
+       "cite": "Payment Calendar FY2026-27.xlsx, Runs rows 2-7"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-AP Payables User Manual v4.2.pdf#c0",
+       "cite": "LL-AP Payables User Manual v4.2.pdf, p.1, § Ledgerline Payables User Manual"
+      }
+     ],
+     "withheld": false,
+     "answer": "No, it is not going out in this Friday's batch [1][5]. \n\nThe status code **PK** means **parked** (not scheduled) [1][2][5]. A payment with status PK is not included in the payment run and will not be paid until the block is cleared [5]. Although a parked payment can appear scheduled on the proposal list on FIN-AP-05, it remains blocked from the run [5].",
+     "cited": [
+      1,
+      5,
+      2
+     ],
+     "tokens_in": 3127,
+     "tokens_out": 374,
+     "llm_seconds": 4.93,
+     "cost_usd": 0.004123,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly states that the payment is not going out because PK means parked and blocked from the run.",
+      "tokens_in": 392,
+      "tokens_out": 121,
+      "cost_usd": 0.000823
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 3,
+      "precision": 0.333
+     },
+     "total_s": 5.0514,
+     "cost_total_usd": 0.004123
+    },
+    {
+     "id": "D-05",
+     "type": "table_lookup",
+     "difficulty": "medium",
+     "role": "TAX-MGR",
+     "retrieval_s": 0.12639910000143573,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 1,
+      "levels": {
+       "row": 1
+      },
+      "hit@1": 1,
+      "cov@1": 1.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "05_master_data/Vendor Master.xlsx#c0",
+       "cite": "Vendor Master.xlsx, Vendors rows 2-6"
+      },
+      {
+       "id": "01_policies/POL-TAX-006 TDS Policy v1.1.pdf#c0",
+       "cite": "POL-TAX-006 v1.1, p.1, § TDS Policy"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c1",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices row 7"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c1",
+       "cite": "RCM Services Table.xlsx, Services row 8"
+      },
+      {
+       "id": "01_policies/POL-TAX-006 TDS Policy v1.1.pdf#c1",
+       "cite": "POL-TAX-006 v1.1, pp.1-2, § 5.1 Deposit"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      },
+      {
+       "id": "05_master_data/TDS Section Table.xlsx#c0",
+       "cite": "TDS Section Table.xlsx, Sections rows 2-6"
+      },
+      {
+       "id": "04_forms/FRM-SEC-02 Bank Account Change Request Form.docx#c0",
+       "cite": "POL-SEC-004, § FRM-SEC-02 Bank Account Change Request Form"
+      },
+      {
+       "id": "02_procedures/PRC-TAX-02 TDS Deposit and Quarterly Return Procedure.docx#c0",
+       "cite": "PRC-TAX-02 TDS Deposit and Quarterly Return Procedure.docx, § PRC-TAX-02 TDS Deposit and Quarterly Return Procedure"
+      },
+      {
+       "id": "01_policies/POL-INS-002 Transit Insurance Claims Policy v1.0.pdf#c0",
+       "cite": "POL-INS-002 v1.0, p.1, § Transit Insurance Claims Policy"
+      }
+     ],
+     "withheld": false,
+     "answer": "Yes, Northbridge has Saurashtra Roadways' small-transporter declaration on file, recorded in the Vendor Master [1][2]. \n\n* **Declaration number:** DEC-SR-2026-014 [1]\n* **Expiry date:** Valid until 31 March 2027 [1]",
+     "cited": [
+      1,
+      2
+     ],
+     "tokens_in": 2904,
+     "tokens_out": 364,
+     "llm_seconds": 4.352,
+     "cost_usd": 0.003897,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate provides the correct declaration number and expiry date as required.",
+      "tokens_in": 407,
+      "tokens_out": 84,
+      "cost_usd": 0.000682
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 2,
+      "precision": 0.5
+     },
+     "total_s": 4.4784,
+     "cost_total_usd": 0.003897
+    },
+    {
+     "id": "D-06",
+     "type": "multi_hop",
+     "difficulty": "hard",
+     "role": "AP-EXEC",
+     "retrieval_s": 0.13624369999888586,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 2,
+      "rank": 2,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 0,
+      "cov@1": 0.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 0.5,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 0.5,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 0.5,
+      "fact@10": null,
+      "rr": 0.5
+     },
+     "items": [
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c0",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices rows 2-6"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf#c0",
+       "cite": "LL-ERR Error Code Reference v4.0.pdf, p.1, § Ledgerline Error Code Reference"
+      },
+      {
+       "id": "05_master_data/Vendor Master.xlsx#c0",
+       "cite": "Vendor Master.xlsx, Vendors rows 2-6"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf#c1",
+       "cite": "LL-ERR Error Code Reference v4.0.pdf, p.1, § 4. Payments (FIN-AP-05)"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c1",
+       "cite": "RCM Services Table.xlsx, Services row 8"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-AP Payables User Manual v4.2.pdf#c1",
+       "cite": "LL-AP Payables User Manual v4.2.pdf, pp.1-2, § 4. FIN-AP-03 Hold queue"
+      },
+      {
+       "id": "02_procedures/PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx#c0",
+       "cite": "PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx, § PRC-TAX-03 Reverse Charge and Self-Invoice Procedure"
+      },
+      {
+       "id": "01_policies/POL-INS-002 Transit Insurance Claims Policy v1.0.pdf#c0",
+       "cite": "POL-INS-002 v1.0, p.1, § Transit Insurance Claims Policy"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-AP Payables User Manual v4.2.pdf#c0",
+       "cite": "LL-AP Payables User Manual v4.2.pdf, p.1, § Ledgerline Payables User Manual"
+      },
+      {
+       "id": "02_procedures/PRC-AP-01 Invoice Entry Procedure.docx#c0",
+       "cite": "PRC-AP-01 Invoice Entry Procedure.docx, § PRC-AP-01 Invoice Entry Procedure"
+      }
+     ],
+     "withheld": false,
+     "answer": "**What is blocking it:**\nInvoice PB-118 is blocked on hold **H-QTY** because the billed quantity exceeds the accepted quantity (error **ERR-AP-0215**) [1][2].\n\n**Whose sign-off clears it:**\n- To resolve the hold, ask **stores** to confirm the accepted quantity [2]. \n- In the Ledgerline hold queue (**FIN-AP-03**), the hold can only be cleared by a user permitted by the **Approval Matrix**, who will see the Release button [6].",
+     "cited": [
+      1,
+      2,
+      6
+     ],
+     "tokens_in": 3158,
+     "tokens_out": 680,
+     "llm_seconds": 6.536,
+     "cost_usd": 0.00541,
+     "fact": {
+      "ok": false,
+      "expected": "answer",
+      "missing": [
+       "Ganesh Pawar"
+      ]
+     },
+     "judge": {
+      "ok": false,
+      "reason": "The candidate answer fails to mention Ganesh Pawar as required by the key facts.",
+      "tokens_in": 446,
+      "tokens_out": 64,
+      "cost_usd": 0.000632
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 3,
+      "precision": 0.333
+     },
+     "total_s": 6.6722,
+     "cost_total_usd": 0.00541
+    },
+    {
+     "id": "D-07",
+     "type": "version_conflict",
+     "difficulty": "hard",
+     "role": "FIN-CTRL",
+     "retrieval_s": 0.1342674999978044,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 2,
+      "rank": 1,
+      "levels": {
+       "page": 1,
+       "file": 1
+      },
+      "hit@1": 1,
+      "cov@1": 0.5,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      },
+      {
+       "id": "07_correspondence/2026-11-02 FD - Payment approval limit from 1 December.eml#c0",
+       "cite": "2026-11-02 FD - Payment approval limit from 1 December.eml, § body"
+      },
+      {
+       "id": "02_procedures/PRC-AP-03 Friday Payment Run Procedure.docx#c0",
+       "cite": "PRC-AP-03 Friday Payment Run Procedure.docx, § PRC-AP-03 Friday Payment Run Procedure"
+      },
+      {
+       "id": "02_procedures/PRC-AP-03 Friday Payment Run Procedure (1).docx#c0",
+       "cite": "PRC-AP-03 Friday Payment Run Procedure (1).docx, § PRC-AP-03 Friday Payment Run Procedure"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c1",
+       "cite": "POL-PAY-003 v1.4, pp.1-2, § 4.2 Treasury's rate"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf#c1",
+       "cite": "LL-ERR Error Code Reference v4.0.pdf, p.1, § 4. Payments (FIN-AP-05)"
+      },
+      {
+       "id": "01_policies/POL-TAX-006 TDS Policy v1.1.pdf#c0",
+       "cite": "POL-TAX-006 v1.1, p.1, § TDS Policy"
+      },
+      {
+       "id": "07_correspondence/2026-11-03 Treasury - Rates for early payment decisions.eml#c0",
+       "cite": "2026-11-03 Treasury - Rates for early payment decisions.eml, § body"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c1",
+       "cite": "POL-TAX-005 v1.2, pp.1-2, § 5.1 The 180-day rule"
+      },
+      {
+       "id": "04_forms/FRM-AP-07 Early Payment Request Form.docx#c0",
+       "cite": "FRM-AP-07 Early Payment Request Form.docx, § FRM-AP-07 Early Payment Request Form"
+      }
+     ],
+     "withheld": false,
+     "answer": "Today (9 November 2026), payments above **Rs.50,00,000** require your approval as financial controller, in addition to accounts payable [1][2][3]. \n\nPlease note the upcoming change: from 1 December 2026, this large-payment threshold reduces to **Rs.25,00,000**, but until then the Rs.50,00,000 limit continues to apply [2].\n\n*(Note: Additionally, any early payment made more than 7 days before its due date requires your approval and a reason, regardless of amount [1][3][10].)*",
+     "cited": [
+      1,
+      2,
+      3,
+      10
+     ],
+     "tokens_in": 2698,
+     "tokens_out": 545,
+     "llm_seconds": 5.522,
+     "cost_usd": 0.004474,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly states the current Rs.50,00,000 limit as well as the upcoming Rs.25,00,000 limit effective 1 December 2026.",
+      "tokens_in": 512,
+      "tokens_out": 132,
+      "cost_usd": 0.000967
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 4,
+      "precision": 0.5
+     },
+     "total_s": 5.6563,
+     "cost_total_usd": 0.004474
+    },
+    {
+     "id": "D-08",
+     "type": "exact_code",
+     "difficulty": "medium",
+     "role": "AP-EXEC",
+     "retrieval_s": 0.14537839999684365,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 1,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 1,
+      "cov@1": 1.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf#c0",
+       "cite": "LL-ERR Error Code Reference v4.0.pdf, p.1, § Ledgerline Error Code Reference"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      },
+      {
+       "id": "01_policies/POL-TAX-007 Reverse Charge Policy v1.0.pdf#c0",
+       "cite": "POL-TAX-007 v1.0, p.1, § Reverse Charge Policy"
+      },
+      {
+       "id": "02_procedures/PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx#c0",
+       "cite": "PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx, § PRC-TAX-03 Reverse Charge and Self-Invoice Procedure"
+      },
+      {
+       "id": "07_correspondence/2026-10-21 Meeting notes - GST reconciliation escalations.md#c0",
+       "cite": "2026-10-21 Meeting notes - GST reconciliation escalations.md, § Meeting notes - GST reconciliation escalations"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c1",
+       "cite": "POL-TAX-005 v1.2, pp.1-2, § 5.1 The 180-day rule"
+      },
+      {
+       "id": "02_procedures/PRC-PUR-01 Defective Goods Return Procedure.docx#c0",
+       "cite": "PRC-PUR-01 Defective Goods Return Procedure.docx, § PRC-PUR-01 Defective Goods Return Procedure"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c0",
+       "cite": "POL-TAX-005 v1.2, p.1, § GST Input Tax Credit Policy"
+      },
+      {
+       "id": "05_master_data/Vendor Master.xlsx#c0",
+       "cite": "Vendor Master.xlsx, Vendors rows 2-6"
+      },
+      {
+       "id": "02_procedures/PRC-AP-01 Invoice Entry Procedure.docx#c0",
+       "cite": "PRC-AP-01 Invoice Entry Procedure.docx, § PRC-AP-01 Invoice Entry Procedure"
+      }
+     ],
+     "withheld": false,
+     "answer": "The error code **ERR-GST-0418** displays the message: \n\n> *\"IRN not found or cancelled on the e-invoice portal. Input tax credit not booked.\"* [1]\n\n### What it means:\nThe Invoice Reference Number (IRN) was not found or has been cancelled on the e-invoice portal, so input tax credit cannot be claimed or booked [1][8]. An invoice from a supplier required to issue e-invoices that lacks a valid IRN receives no credit and must be held [8].\n\n### What to do:\n1. **Escalate to the tax manager:** Refer the bill to Meera Kulkarni within 24 hours [1][5][8] (or to Vikram Nair if she is away [5]).\n2. **Contact the supplier:** Ask the supplier to provide a valid e-invoice [1].",
+     "cited": [
+      1,
+      8,
+      5
+     ],
+     "tokens_in": 3022,
+     "tokens_out": 641,
+     "llm_seconds": 5.89,
+     "cost_usd": 0.005137,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The answer accurately explains the error code, stating that the IRN was not found or cancelled, and provides the correct next steps.",
+      "tokens_in": 485,
+      "tokens_out": 170,
+      "cost_usd": 0.001101
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 3,
+      "precision": 0.333
+     },
+     "total_s": 6.0354,
+     "cost_total_usd": 0.005137
+    },
+    {
+     "id": "D-09",
+     "type": "not_in_docs",
+     "difficulty": "medium",
+     "role": "PUR-EXEC",
+     "retrieval_s": 0.14019199999893317,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 0,
+      "rank": null,
+      "levels": {}
+     },
+     "items": [
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c2",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Offers row 2"
+      },
+      {
+       "id": "05_master_data/Vendor Master.xlsx#c0",
+       "cite": "Vendor Master.xlsx, Vendors rows 2-6"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c0",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices rows 2-6"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c1",
+       "cite": "RCM Services Table.xlsx, Services row 8"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      },
+      {
+       "id": "07_correspondence/2026-11-03 Treasury - Rates for early payment decisions.eml#c0",
+       "cite": "2026-11-03 Treasury - Rates for early payment decisions.eml, § body"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c1",
+       "cite": "POL-TAX-005 v1.2, pp.1-2, § 5.1 The 180-day rule"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c1",
+       "cite": "POL-PAY-003 v1.4, pp.1-2, § 4.2 Treasury's rate"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c1",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices row 7"
+      }
+     ],
+     "withheld": false,
+     "answer": "NOT IN THE DOCUMENTS. The provided documents do not state what interest rate or late-payment penalty Voltway Cells Pvt. Ltd. may charge for paying after the due date.",
+     "cited": [],
+     "tokens_in": 2959,
+     "tokens_out": 412,
+     "llm_seconds": 5.244,
+     "cost_usd": 0.004141,
+     "fact": {
+      "ok": true,
+      "expected": "abstain",
+      "abstained": true,
+      "bad_terms": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly abstains by stating that the documents do not contain the requested information.",
+      "tokens_in": 329,
+      "tokens_out": 60,
+      "cost_usd": 0.000519
+     },
+     "citation": null,
+     "total_s": 5.3842,
+     "cost_total_usd": 0.004141
+    },
+    {
+     "id": "D-10",
+     "type": "permission",
+     "difficulty": "medium",
+     "role": "AP-EXEC",
+     "retrieval_s": 0.14412750000337837,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 0,
+      "rank": null,
+      "levels": {}
+     },
+     "items": [
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c1",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices row 7"
+      },
+      {
+       "id": "07_correspondence/2026-11-02 FD - Payment approval limit from 1 December.eml#c0",
+       "cite": "2026-11-02 FD - Payment approval limit from 1 December.eml, § body"
+      },
+      {
+       "id": "07_correspondence/2026-11-05 Tax - IMS reminder and match tolerance.eml#c0",
+       "cite": "2026-11-05 Tax - IMS reminder and match tolerance.eml, § body"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c1",
+       "cite": "POL-PAY-003 v1.4, pp.1-2, § 4.2 Treasury's rate"
+      },
+      {
+       "id": "02_procedures/PRC-AP-03 Friday Payment Run Procedure (1).docx#c0",
+       "cite": "PRC-AP-03 Friday Payment Run Procedure (1).docx, § PRC-AP-03 Friday Payment Run Procedure"
+      },
+      {
+       "id": "02_procedures/PRC-AP-03 Friday Payment Run Procedure.docx#c0",
+       "cite": "PRC-AP-03 Friday Payment Run Procedure.docx, § PRC-AP-03 Friday Payment Run Procedure"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c2",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Offers row 2"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.0.pdf#c1",
+       "cite": "POL-AP-001 v2.0, pp.1-2, § 3.3 Duplicates"
+      },
+      {
+       "id": "06_transactions/Open AP Invoices 2026-11-09.xlsx#c0",
+       "cite": "Open AP Invoices 2026-11-09.xlsx, Invoices rows 2-6"
+      }
+     ],
+     "withheld": true,
+     "answer": "I cannot share this information as it is confidential HR information [11]. \n\nThis information is kept in the HR confidential folder and is readable only by members of the HR group NBC-HR-CONF [11]. Please contact HR (NBC-HR-CONF) directly for inquiries regarding pay ranges and compensation [11].",
+     "cited": [
+      11
+     ],
+     "tokens_in": 2783,
+     "tokens_out": 448,
+     "llm_seconds": 4.779,
+     "cost_usd": 0.004144,
+     "fact": {
+      "ok": true,
+      "expected": "refuse",
+      "refused": true,
+      "leaks": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly refuses to provide the confidential salary information and mentions the required key fact NBC-HR-CONF.",
+      "tokens_in": 367,
+      "tokens_out": 72,
+      "cost_usd": 0.0006
+     },
+     "citation": null,
+     "total_s": 4.9231,
+     "cost_total_usd": 0.004144
+    },
+    {
+     "id": "D-11",
+     "type": "version_conflict",
+     "difficulty": "medium",
+     "role": "AP-EXEC",
+     "retrieval_s": 0.1425868999940576,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 2,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 0,
+      "cov@1": 0.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 0.5
+     },
+     "items": [
+      {
+       "id": "01_policies/POL-TAX-007 Reverse Charge Policy v1.0.pdf#c0",
+       "cite": "POL-TAX-007 v1.0, p.1, § Reverse Charge Policy"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.1.pdf#c0",
+       "cite": "POL-AP-001 v2.1, p.1, § Accounts Payable Policy"
+      },
+      {
+       "id": "01_policies/POL-AP-001 Accounts Payable Policy v2.0.pdf#c0",
+       "cite": "POL-AP-001 v2.0, p.1, § Accounts Payable Policy"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      },
+      {
+       "id": "01_policies/POL-TAX-006 TDS Policy v1.1.pdf#c0",
+       "cite": "POL-TAX-006 v1.1, p.1, § TDS Policy"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c1",
+       "cite": "POL-TAX-005 v1.2, pp.1-2, § 5.1 The 180-day rule"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c0",
+       "cite": "POL-TAX-005 v1.2, p.1, § GST Input Tax Credit Policy"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c1",
+       "cite": "RCM Services Table.xlsx, Services row 8"
+      },
+      {
+       "id": "02_procedures/PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx#c0",
+       "cite": "PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx, § PRC-TAX-03 Reverse Charge and Self-Invoice Procedure"
+      }
+     ],
+     "withheld": false,
+     "answer": "Under the current Accounts Payable Policy (POL-AP-001 v2.1), an invoice goes on price hold **H-PRC** if its unit price is **more than 2%** above the purchase order price [2]. \n\nKey details:\n- A supplier can bill up to 2% over the purchase order price; anything exceeding 2% is placed on hold and cannot be paid until the hold is released [2].\n- This tolerance is checked line by line, not on the invoice total [2].\n\n*(Note: The previous version, POL-AP-001 v2.0, allowed a 3% tolerance, but this was superseded by v2.1 effective 1 April 2026 [2][3]).*",
+     "cited": [
+      2,
+      3
+     ],
+     "tokens_in": 3693,
+     "tokens_out": 521,
+     "llm_seconds": 4.446,
+     "cost_usd": 0.005196,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly states the 2% threshold under the current policy.",
+      "tokens_in": 503,
+      "tokens_out": 109,
+      "cost_usd": 0.000865
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 2,
+      "precision": 0.5
+     },
+     "total_s": 4.5886,
+     "cost_total_usd": 0.005196
+    },
+    {
+     "id": "D-12",
+     "type": "rule",
+     "difficulty": "easy",
+     "role": "TAX-MGR",
+     "retrieval_s": 0.13709660000313306,
+     "retrieval_llm_s": 0.0,
+     "retrieval_tokens_in": 0,
+     "retrieval_tokens_out": 0,
+     "retrieval_cost_usd": 0.0,
+     "retrieval": {
+      "n_gold": 1,
+      "rank": 1,
+      "levels": {
+       "page": 1
+      },
+      "hit@1": 1,
+      "cov@1": 1.0,
+      "fact@1": null,
+      "hit@3": 1,
+      "cov@3": 1.0,
+      "fact@3": null,
+      "hit@5": 1,
+      "cov@5": 1.0,
+      "fact@5": null,
+      "hit@10": 1,
+      "cov@10": 1.0,
+      "fact@10": null,
+      "rr": 1.0
+     },
+     "items": [
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c0",
+       "cite": "POL-TAX-005 v1.2, p.1, § GST Input Tax Credit Policy"
+      },
+      {
+       "id": "01_policies/POL-TAX-005 GST Input Tax Credit Policy v1.2.pdf#c1",
+       "cite": "POL-TAX-005 v1.2, pp.1-2, § 5.1 The 180-day rule"
+      },
+      {
+       "id": "01_policies/POL-TAX-007 Reverse Charge Policy v1.0.pdf#c0",
+       "cite": "POL-TAX-007 v1.0, p.1, § Reverse Charge Policy"
+      },
+      {
+       "id": "03_ledgerline_manuals/LL-ERR Error Code Reference v4.0.pdf#c0",
+       "cite": "LL-ERR Error Code Reference v4.0.pdf, p.1, § Ledgerline Error Code Reference"
+      },
+      {
+       "id": "04_forms/FRM-SEC-02 Bank Account Change Request Form.docx#c0",
+       "cite": "POL-SEC-004, § FRM-SEC-02 Bank Account Change Request Form"
+      },
+      {
+       "id": "01_policies/POL-PAY-003 Payment Run and Early Payment Policy v1.4.pdf#c0",
+       "cite": "POL-PAY-003 v1.4, p.1, § Payment Run and Early Payment Policy"
+      },
+      {
+       "id": "02_procedures/PRC-PUR-01 Defective Goods Return Procedure.docx#c0",
+       "cite": "PRC-PUR-01 Defective Goods Return Procedure.docx, § PRC-PUR-01 Defective Goods Return Procedure"
+      },
+      {
+       "id": "01_policies/POL-SEC-004 Supplier Bank Account Change Policy v2.0.pdf#c0",
+       "cite": "POL-SEC-004 v2.0, p.1, § Supplier Bank Account Change Policy"
+      },
+      {
+       "id": "02_procedures/PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx#c0",
+       "cite": "PRC-TAX-03 Reverse Charge and Self-Invoice Procedure.docx, § PRC-TAX-03 Reverse Charge and Self-Invoice Procedure"
+      },
+      {
+       "id": "05_master_data/RCM Services Table.xlsx#c0",
+       "cite": "RCM Services Table.xlsx, Services rows 2-7"
+      }
+     ],
+     "withheld": false,
+     "answer": "Under POL-TAX-005, GST input tax credit on a supplier invoice may be claimed only when the following conditions are met:\n\n1. **GSTR-2B appearance and receipt**: The invoice must appear in GSTR-2B (CGST Act section 16(2)(aa)), and the goods must have been received as evidenced by the goods receipt [1].\n2. **Valid IRN**: If the supplier is required to issue e-invoices, the invoice must have a valid IRN. An invoice lacking a valid IRN receives no credit and is placed on hold [1][4].\n3. **Eligible credit**: Credit cannot be claimed if it is blocked under CGST Act section 17(5)(h) (such as goods lost, stolen, destroyed, written off, or damaged in transit) [2].\n4. **Reverse-charge services**: For bills falling under reverse charge, GST cannot be claimed until it has been paid in cash with GSTR-3B; it can then be claimed back as credit in the same return [3][9]. \n\n*(Note: Under the 180-day rule, credit claimed on any unpaid portion must be reversed with interest on day 181 after the invoice date [2].)*",
+     "cited": [
+      1,
+      4,
+      2,
+      3,
+      9
+     ],
+     "tokens_in": 3163,
+     "tokens_out": 917,
+     "llm_seconds": 8.424,
+     "cost_usd": 0.006392,
+     "fact": {
+      "ok": true,
+      "expected": "answer",
+      "missing": []
+     },
+     "judge": {
+      "ok": true,
+      "reason": "The candidate correctly states that the invoice must appear in GSTR-2B along with receipt of goods and valid IRN requirements.",
+      "tokens_in": 598,
+      "tokens_out": 193,
+      "cost_usd": 0.001289
+     },
+     "citation": {
+      "ok": true,
+      "n_cited": 5,
+      "precision": 0.4
+     },
+     "total_s": 8.5611,
+     "cost_total_usd": 0.006392
+    }
+   ],
+   "summary": {
+    "overall": {
+     "n": 12,
+     "answer_correct": 0.9167,
+     "fact_correct": 0.9167,
+     "fact_n": 12,
+     "both_correct": 0.9167,
+     "citation_correct": 1.0,
+     "citation_precision": 0.4399,
+     "retrieval_s": {
+      "n": 12,
+      "p50": 0.1353,
+      "p95": 0.1447,
+      "mean": 0.1335,
+      "max": 0.1454
+     },
+     "total_s": {
+      "n": 12,
+      "p50": 5.2178,
+      "p95": 7.5222,
+      "mean": 5.6033,
+      "max": 8.5611
+     },
+     "cost_per_q_usd": 0.00475,
+     "tokens_in_per_q": 3110.1,
+     "tokens_out_per_q": 529.4
+    },
+    "by_type": {
+     "single_lookup": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.5,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.134,
+       "p95": 0.134,
+       "mean": 0.134,
+       "max": 0.134
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 4.307,
+       "p95": 4.307,
+       "mean": 4.307,
+       "max": 4.307
+      },
+      "cost_per_q_usd": 0.003283,
+      "tokens_in_per_q": 3014.0,
+      "tokens_out_per_q": 193.0
+     },
+     "procedure": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.5,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1175,
+       "p95": 0.1175,
+       "mean": 0.1175,
+       "max": 0.1175
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 6.5755,
+       "p95": 6.5755,
+       "mean": 6.5755,
+       "max": 6.5755
+      },
+      "cost_per_q_usd": 0.006131,
+      "tokens_in_per_q": 3361.0,
+      "tokens_out_per_q": 814.0
+     },
+     "rule": {
+      "n": 2,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 2,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.45,
+      "retrieval_s": {
+       "n": 2,
+       "p50": 0.13,
+       "p95": 0.1364,
+       "mean": 0.13,
+       "max": 0.1371
+      },
+      "total_s": {
+       "n": 2,
+       "p50": 6.7835,
+       "p95": 8.3833,
+       "mean": 6.7835,
+       "max": 8.5611
+      },
+      "cost_per_q_usd": 0.005531,
+      "tokens_in_per_q": 3301.0,
+      "tokens_out_per_q": 680.5
+     },
+     "service_field": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.333,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1214,
+       "p95": 0.1214,
+       "mean": 0.1214,
+       "max": 0.1214
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 5.0514,
+       "p95": 5.0514,
+       "mean": 5.0514,
+       "max": 5.0514
+      },
+      "cost_per_q_usd": 0.004123,
+      "tokens_in_per_q": 3127.0,
+      "tokens_out_per_q": 374.0
+     },
+     "table_lookup": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.5,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1264,
+       "p95": 0.1264,
+       "mean": 0.1264,
+       "max": 0.1264
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 4.4784,
+       "p95": 4.4784,
+       "mean": 4.4784,
+       "max": 4.4784
+      },
+      "cost_per_q_usd": 0.003897,
+      "tokens_in_per_q": 2904.0,
+      "tokens_out_per_q": 364.0
+     },
+     "multi_hop": {
+      "n": 1,
+      "answer_correct": 0.0,
+      "fact_correct": 0.0,
+      "fact_n": 1,
+      "both_correct": 0.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.333,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1362,
+       "p95": 0.1362,
+       "mean": 0.1362,
+       "max": 0.1362
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 6.6722,
+       "p95": 6.6722,
+       "mean": 6.6722,
+       "max": 6.6722
+      },
+      "cost_per_q_usd": 0.00541,
+      "tokens_in_per_q": 3158.0,
+      "tokens_out_per_q": 680.0
+     },
+     "version_conflict": {
+      "n": 2,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 2,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.5,
+      "retrieval_s": {
+       "n": 2,
+       "p50": 0.1384,
+       "p95": 0.1422,
+       "mean": 0.1384,
+       "max": 0.1426
+      },
+      "total_s": {
+       "n": 2,
+       "p50": 5.1224,
+       "p95": 5.6029,
+       "mean": 5.1224,
+       "max": 5.6563
+      },
+      "cost_per_q_usd": 0.004835,
+      "tokens_in_per_q": 3195.5,
+      "tokens_out_per_q": 533.0
+     },
+     "exact_code": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": 1.0,
+      "citation_precision": 0.333,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1454,
+       "p95": 0.1454,
+       "mean": 0.1454,
+       "max": 0.1454
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 6.0354,
+       "p95": 6.0354,
+       "mean": 6.0354,
+       "max": 6.0354
+      },
+      "cost_per_q_usd": 0.005137,
+      "tokens_in_per_q": 3022.0,
+      "tokens_out_per_q": 641.0
+     },
+     "not_in_docs": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": null,
+      "citation_precision": null,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1402,
+       "p95": 0.1402,
+       "mean": 0.1402,
+       "max": 0.1402
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 5.3842,
+       "p95": 5.3842,
+       "mean": 5.3842,
+       "max": 5.3842
+      },
+      "cost_per_q_usd": 0.004141,
+      "tokens_in_per_q": 2959.0,
+      "tokens_out_per_q": 412.0
+     },
+     "permission": {
+      "n": 1,
+      "answer_correct": 1.0,
+      "fact_correct": 1.0,
+      "fact_n": 1,
+      "both_correct": 1.0,
+      "citation_correct": null,
+      "citation_precision": null,
+      "retrieval_s": {
+       "n": 1,
+       "p50": 0.1441,
+       "p95": 0.1441,
+       "mean": 0.1441,
+       "max": 0.1441
+      },
+      "total_s": {
+       "n": 1,
+       "p50": 4.9231,
+       "p95": 4.9231,
+       "mean": 4.9231,
+       "max": 4.9231
+      },
+      "cost_per_q_usd": 0.004144,
+      "tokens_in_per_q": 2783.0,
+      "tokens_out_per_q": 448.0
+     }
+    },
+    "retrieval": {
+     "overall": {
+      "n": 10,
+      "mrr": 0.82,
+      "recall@1": 0.7,
+      "coverage@1": 0.65,
+      "fact_recall@1": null,
+      "recall@3": 0.9,
+      "coverage@3": 0.85,
+      "fact_recall@3": null,
+      "recall@5": 1.0,
+      "coverage@5": 0.95,
+      "fact_recall@5": null,
+      "recall@10": 1.0,
+      "coverage@10": 0.95,
+      "fact_recall@10": null
+     },
+     "by_type": {
+      "single_lookup": {
+       "n": 1,
+       "mrr": 1.0,
+       "recall@1": 1.0,
+       "coverage@1": 1.0,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 1.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "procedure": {
+       "n": 1,
+       "mrr": 1.0,
+       "recall@1": 1.0,
+       "coverage@1": 1.0,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 1.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "rule": {
+       "n": 2,
+       "mrr": 1.0,
+       "recall@1": 1.0,
+       "coverage@1": 1.0,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 1.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "service_field": {
+       "n": 1,
+       "mrr": 0.2,
+       "recall@1": 0.0,
+       "coverage@1": 0.0,
+       "fact_recall@1": null,
+       "recall@3": 0.0,
+       "coverage@3": 0.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "table_lookup": {
+       "n": 1,
+       "mrr": 1.0,
+       "recall@1": 1.0,
+       "coverage@1": 1.0,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 1.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "multi_hop": {
+       "n": 1,
+       "mrr": 0.5,
+       "recall@1": 0.0,
+       "coverage@1": 0.0,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 0.5,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 0.5,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 0.5,
+       "fact_recall@10": null
+      },
+      "version_conflict": {
+       "n": 2,
+       "mrr": 0.75,
+       "recall@1": 0.5,
+       "coverage@1": 0.25,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 1.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "exact_code": {
+       "n": 1,
+       "mrr": 1.0,
+       "recall@1": 1.0,
+       "coverage@1": 1.0,
+       "fact_recall@1": null,
+       "recall@3": 1.0,
+       "coverage@3": 1.0,
+       "fact_recall@3": null,
+       "recall@5": 1.0,
+       "coverage@5": 1.0,
+       "fact_recall@5": null,
+       "recall@10": 1.0,
+       "coverage@10": 1.0,
+       "fact_recall@10": null
+      },
+      "not_in_docs": {
+       "n": 0
+      },
+      "permission": {
+       "n": 0
+      }
+     },
+     "latency_s": {
+      "n": 12,
+      "p50": 0.1353,
+      "p95": 0.1447,
+      "mean": 0.1335,
+      "max": 0.1454
+     },
+     "match_levels": {
+      "page": 8,
+      "file": 3,
+      "row": 1
+     }
+    },
+    "judge_vs_fact": {
+     "n": 12,
+     "agree": 1.0,
+     "kappa": 1.0,
+     "fact_only": 0,
+     "judge_only": 0
+    },
+    "judge_cost_usd": 0.0106
+   },
+   "answer_words": 250,
+   "withheld_notice": true,
+   "answer_model": "openrouter:google/gemini-3.8-flash",
+   "judge_model": "openrouter:google/gemini-3.8-flash",
+   "config": "structured-structure-400-o15|bge-small|hybrid|rr1|qr0|k10",
+   "spend": {
+    "answers": {
+     "calls": 12,
+     "live_calls": 0,
+     "replayed_calls": 12,
+     "live_usd": 0
+    },
+    "judge": {
+     "calls": 12,
+     "live_calls": 0,
+     "replayed_calls": 12,
+     "live_usd": 0
+    }
+   }
+  }
+ },
+ "versions": {
+  "superseded": {
+   "01_policies/POL-AP-001 Accounts Payable Policy v2.0.pdf": "01_policies/POL-AP-001 Accounts Payable Policy v2.1.pdf"
+  },
+  "future": [],
+  "rows": [
+   [
+    "05_master_data/RCM Services Table.xlsx",
+    {
+     "sheet": "Services",
+     "row": 8
+    },
+    "expired"
+   ]
+  ]
+ }
+}
