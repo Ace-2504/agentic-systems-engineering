@@ -1,0 +1,14 @@
+{
+ "mcpServers": {
+  "northbridge-ap": {
+   "command": "C:\\Program Files\\Python312\\python.exe",
+   "args": [
+    "<home>\\OneDrive\\Desktop\\python\\vizuara\\Enterprise_Agents\\Assignment_A4\\serve_explain_hold.py",
+    "--user",
+    "ECLARKE",
+    "--log",
+    "<home>\\OneDrive\\Desktop\\python\\vizuara\\Enterprise_Agents\\Assignment_A4\\logs\\part3_claude_calls.jsonl"
+   ]
+  }
+ }
+}

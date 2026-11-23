@@ -1,0 +1,149 @@
+
+## 1 schema  (1.9 s)
+{
+ "results_checked": 724,
+ "violations": 0,
+ "both_schemas_valid": true,
+ "examples": []
+}
+
+## 2 reliability  (4.9 s)
+{
+ "calls": 1903,
+ "outside_contract": 0,
+ "share": 0.0,
+ "kinds": {},
+ "examples": {}
+}
+
+## 4 latency  (0.2 s)
+{
+ "calls": 800,
+ "tool_own_ms": {
+  "p50": 0.095,
+  "p95": 0.209,
+  "p99": 0.24
+ },
+ "with_ledgerline_ms": {
+  "p50": 0.274,
+  "p95": 0.492,
+  "p99": 0.571
+ },
+ "limits_ms": {
+  "p50": 50,
+  "p95": 100,
+  "p99": 200
+ }
+}
+
+## 5 payload  (0.1 s)
+{
+ "largest_real_result_bytes": 854,
+ "limit_bytes": 4096,
+ "same_number_from_many_suppliers": {
+  "10": {
+   "bytes": 2198,
+   "rows": 12,
+   "says_how_many": false
+  },
+  "50": {
+   "bytes": 9238,
+   "rows": 52,
+   "says_how_many": false
+  },
+  "200": {
+   "bytes": 35639,
+   "rows": 202,
+   "says_how_many": false
+  }
+ }
+}
+
+## 7 timeouts  (0.0 s)
+{
+ "tests": 6,
+ "passed": 5,
+ "failed": [
+  {
+   "service": "usr_get",
+   "fault": "error_before",
+   "times": 3,
+   "why": "answered as if nothing failed: AP policy 4.1 is out of date: GPAWAR is no longer in Ledgerline. Ask Vikram Nair who releases these holds now."
+  }
+ ],
+ "failed_results": [
+  {
+   "ok": true,
+   "supplier": "Voltway Cells Pvt. Ltd.",
+   "ap_no": "AP/2026/03390",
+   "status": "on hold",
+   "invoice_no": "4471",
+   "amount": 28308672.0,
+   "due_date": "2026-11-16",
+   "payment": {
+    "last_run": "2026-11-13",
+    "cutoff": "2026-11-12",
+    "this_friday": "2026-10-30",
+    "payable_this_friday": false,
+    "why_not": "on hold; nothing is paid while an invoice is on hold"
+   },
+   "holds": [
+    {
+     "code": "H-QTY",
+     "what_is_wrong": "18,000 billed, 17,700 accepted",
+     "on_hold_since": "2026-10-05",
+     "may_release": [
+      {
+       "name": "Vikram Nair",
+       "role": "financial controller"
+      }
+     ]
+    },
+    {
+     "code": "H-PRC",
+     "what_is_wrong": "billed at Rs.1,332.80 each against the order's Rs.1,276.80 (+4.39%)",
+     "on_hold_since": "2026-10-05",
+     "may_release": [
+      {
+       "name": "Daniel Okafor",
+       "role": "purchase manager"
+      },
+      {
+       "name": "Vikram Nair",
+       "role": "financial controller"
+      }
+     ]
+    }
+   ],
+   "next_step": "AP policy 4.1 is out of date: GPAWAR is no longer in Ledgerline. Ask Vikram Nair who releases these holds now."
+  }
+ ]
+}
+
+## 8 regression  (0.1 s)
+{
+ "tests_passed": 2,
+ "tests_run": 3,
+ "all_pass": false,
+ "failure": "AssertionError"
+}
+
+## 9 mcp compliance  (1.0 s)
+{
+ "checks": 10,
+ "passed": 10,
+ "detail": {
+  "initialize agrees 2025-06-18": true,
+  "ping answers {}": true,
+  "tools/list: one tool with name, description, inputSchema": true,
+  "inputSchema and outputSchema are valid JSON Schema": true,
+  "a good call: isError false, structuredContent fits outputSchema": true,
+  "content text and structuredContent say the same": true,
+  "a failed call: isError true, with the error contract": true,
+  "a wrong argument type: refused, not crashed": true,
+  "an unknown method: JSON-RPC error -32601": true,
+  "an unknown tool: refused": true
+ }
+}
+
+written logs/production_before_fix.json

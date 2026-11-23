@@ -1,0 +1,422 @@
+{
+ "lint": [],
+ "cases": [
+  {
+   "label": "happy path: Voltway Cells' 4471",
+   "args": {
+    "invoice_no": "4471",
+    "supplier": "Voltway Cells"
+   },
+   "services_called": [
+    "ap_inv_list",
+    "ap_inv_get",
+    "ap_inv_list",
+    "usr_get",
+    "usr_get",
+    "usr_get",
+    "usr_get"
+   ],
+   "service_bytes": 2679,
+   "result_bytes": 854,
+   "output_schema_violations": [],
+   "result": {
+    "ok": true,
+    "supplier": "Voltway Cells Pvt. Ltd.",
+    "ap_no": "AP/2026/03390",
+    "status": "on hold",
+    "invoice_no": "4471",
+    "amount": 28308672.0,
+    "due_date": "2026-11-16",
+    "payment": {
+     "last_run": "2026-11-13",
+     "cutoff": "2026-11-12",
+     "this_friday": "2026-10-30",
+     "payable_this_friday": false,
+     "why_not": "on hold; nothing is paid while an invoice is on hold"
+    },
+    "holds": [
+     {
+      "code": "H-QTY",
+      "what_is_wrong": "18,000 billed, 17,700 accepted",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Ganesh Pawar",
+        "role": "stores"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     },
+     {
+      "code": "H-PRC",
+      "what_is_wrong": "billed at Rs.1,332.80 each against the order's Rs.1,276.80 (+4.39%)",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Daniel Okafor",
+        "role": "purchase manager"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "label": "happy path by AP number",
+   "args": {
+    "invoice_no": "AP/2026/03390"
+   },
+   "services_called": [
+    "ap_inv_get",
+    "ap_inv_list",
+    "usr_get",
+    "usr_get",
+    "usr_get",
+    "usr_get"
+   ],
+   "service_bytes": 2133,
+   "result_bytes": 854,
+   "output_schema_violations": [],
+   "result": {
+    "ok": true,
+    "supplier": "Voltway Cells Pvt. Ltd.",
+    "ap_no": "AP/2026/03390",
+    "status": "on hold",
+    "invoice_no": "4471",
+    "amount": 28308672.0,
+    "due_date": "2026-11-16",
+    "payment": {
+     "last_run": "2026-11-13",
+     "cutoff": "2026-11-12",
+     "this_friday": "2026-10-30",
+     "payable_this_friday": false,
+     "why_not": "on hold; nothing is paid while an invoice is on hold"
+    },
+    "holds": [
+     {
+      "code": "H-QTY",
+      "what_is_wrong": "18,000 billed, 17,700 accepted",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Ganesh Pawar",
+        "role": "stores"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     },
+     {
+      "code": "H-PRC",
+      "what_is_wrong": "billed at Rs.1,332.80 each against the order's Rs.1,276.80 (+4.39%)",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Daniel Okafor",
+        "role": "purchase manager"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "label": "business answer, not an error: two suppliers used 4471",
+   "args": {
+    "invoice_no": "4471"
+   },
+   "services_called": [
+    "ap_inv_list"
+   ],
+   "service_bytes": 546,
+   "result_bytes": 437,
+   "output_schema_violations": [],
+   "result": {
+    "ok": true,
+    "matches": [
+     {
+      "ap_no": "AP/2026/03409",
+      "supplier": "Voltway Paints & Coatings",
+      "invoice_date": "2026-10-20",
+      "amount": 217120.0,
+      "status": "clear to pay"
+     },
+     {
+      "ap_no": "AP/2026/03390",
+      "supplier": "Voltway Cells Pvt. Ltd.",
+      "invoice_date": "2026-10-02",
+      "amount": 28308672.0,
+      "status": "on hold"
+     }
+    ],
+    "next_step": "2 suppliers used invoice number 4471. Ask the user which: Voltway Paints & Coatings or Voltway Cells Pvt. Ltd."
+   }
+  },
+  {
+   "label": "refused at the door: wrong type",
+   "args": {
+    "invoice_no": 4471
+   },
+   "services_called": [],
+   "service_bytes": 0,
+   "result_bytes": 131,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "'invoice_no' should be string, got int.",
+    "next_step": "Pass invoice_no as string.",
+    "ledgerline_code": ""
+   }
+  },
+  {
+   "label": "refused at the door: missing argument",
+   "args": {},
+   "services_called": [],
+   "service_bytes": 0,
+   "result_bytes": 113,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "Missing invoice_no.",
+    "next_step": "Ask the user for invoice_no.",
+    "ledgerline_code": ""
+   }
+  },
+  {
+   "label": "refused by Ledgerline: unknown AP number",
+   "args": {
+    "invoice_no": "AP/2026/99999"
+   },
+   "services_called": [
+    "ap_inv_get"
+   ],
+   "service_bytes": 77,
+   "result_bytes": 150,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "No invoice AP/2026/99999 in Ledgerline.",
+    "next_step": "Check the AP number with the user.",
+    "ledgerline_code": "ERR-AP-0001"
+   }
+  },
+  {
+   "label": "refused by the tool: no invoice with that number",
+   "args": {
+    "invoice_no": "9999"
+   },
+   "services_called": [
+    "ap_inv_list"
+   ],
+   "service_bytes": 72,
+   "result_bytes": 163,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "No invoice numbered 9999 in Ledgerline.",
+    "next_step": "Check the number with the user. It may not be entered yet.",
+    "ledgerline_code": ""
+   }
+  },
+  {
+   "label": "refused by the tool: number exists, supplier does not match",
+   "args": {
+    "invoice_no": "4471",
+    "supplier": "Acme"
+   },
+   "services_called": [
+    "ap_inv_list"
+   ],
+   "service_bytes": 546,
+   "result_bytes": 215,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "No invoice 4471 from a supplier matching 'Acme'.",
+    "next_step": "Invoice 4471 exists from Voltway Paints & Coatings or Voltway Cells Pvt. Ltd. Ask the user which one.",
+    "ledgerline_code": ""
+   }
+  },
+  {
+   "label": "Ledgerline busy once: retried, then answered",
+   "args": {
+    "invoice_no": "AP/2026/03390"
+   },
+   "services_called": [
+    "ap_inv_get",
+    "ap_inv_get",
+    "ap_inv_list",
+    "usr_get",
+    "usr_get",
+    "usr_get",
+    "usr_get"
+   ],
+   "service_bytes": 2217,
+   "result_bytes": 854,
+   "output_schema_violations": [],
+   "result": {
+    "ok": true,
+    "supplier": "Voltway Cells Pvt. Ltd.",
+    "ap_no": "AP/2026/03390",
+    "status": "on hold",
+    "invoice_no": "4471",
+    "amount": 28308672.0,
+    "due_date": "2026-11-16",
+    "payment": {
+     "last_run": "2026-11-13",
+     "cutoff": "2026-11-12",
+     "this_friday": "2026-10-30",
+     "payable_this_friday": false,
+     "why_not": "on hold; nothing is paid while an invoice is on hold"
+    },
+    "holds": [
+     {
+      "code": "H-QTY",
+      "what_is_wrong": "18,000 billed, 17,700 accepted",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Ganesh Pawar",
+        "role": "stores"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     },
+     {
+      "code": "H-PRC",
+      "what_is_wrong": "billed at Rs.1,332.80 each against the order's Rs.1,276.80 (+4.39%)",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Daniel Okafor",
+        "role": "purchase manager"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "label": "Ledgerline busy three times: retries used up",
+   "args": {
+    "invoice_no": "AP/2026/03390"
+   },
+   "services_called": [
+    "ap_inv_get",
+    "ap_inv_get",
+    "ap_inv_get"
+   ],
+   "service_bytes": 252,
+   "result_bytes": 233,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "Ledgerline refused ap_inv_get: Server busy, try later (ERR-SYS-0503).",
+    "next_step": "Ledgerline is busy. The tool already retried; try again in a minute, or tell the user.",
+    "ledgerline_code": "ERR-SYS-0503"
+   }
+  },
+  {
+   "label": "Ledgerline reply lost three times: retries used up",
+   "args": {
+    "invoice_no": "AP/2026/03390"
+   },
+   "services_called": [
+    "ap_inv_get",
+    "ap_inv_get",
+    "ap_inv_get"
+   ],
+   "service_bytes": 2940,
+   "result_bytes": 267,
+   "output_schema_violations": [],
+   "result": {
+    "ok": false,
+    "error": "Ledgerline did not reply in time (ap_inv_get), even after retrying.",
+    "next_step": "This tool only reads, so it is safe to call it again in a minute. If it fails again, tell the user Ledgerline is not answering.",
+    "ledgerline_code": "TIMEOUT"
+   }
+  },
+  {
+   "label": "policy table out of date: Ganesh no longer has the stores role",
+   "args": {
+    "invoice_no": "AP/2026/03390"
+   },
+   "services_called": [
+    "ap_inv_get",
+    "ap_inv_list",
+    "usr_get",
+    "usr_get",
+    "usr_get",
+    "usr_get"
+   ],
+   "service_bytes": 2135,
+   "result_bytes": 946,
+   "output_schema_violations": [],
+   "result": {
+    "ok": true,
+    "supplier": "Voltway Cells Pvt. Ltd.",
+    "ap_no": "AP/2026/03390",
+    "status": "on hold",
+    "invoice_no": "4471",
+    "amount": 28308672.0,
+    "due_date": "2026-11-16",
+    "payment": {
+     "last_run": "2026-11-13",
+     "cutoff": "2026-11-12",
+     "this_friday": "2026-10-30",
+     "payable_this_friday": false,
+     "why_not": "on hold; nothing is paid while an invoice is on hold"
+    },
+    "holds": [
+     {
+      "code": "H-QTY",
+      "what_is_wrong": "18,000 billed, 17,700 accepted",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     },
+     {
+      "code": "H-PRC",
+      "what_is_wrong": "billed at Rs.1,332.80 each against the order's Rs.1,276.80 (+4.39%)",
+      "on_hold_since": "2026-10-05",
+      "may_release": [
+       {
+        "name": "Daniel Okafor",
+        "role": "purchase manager"
+       },
+       {
+        "name": "Vikram Nair",
+        "role": "financial controller"
+       }
+      ]
+     }
+    ],
+    "next_step": "AP policy 4.1 is out of date: Ganesh Pawar no longer has the stores role. Ask Vikram Nair who releases these holds now."
+   }
+  }
+ ]
+}

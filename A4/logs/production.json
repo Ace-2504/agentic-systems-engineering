@@ -1,0 +1,84 @@
+{
+ "criteria": {
+  "1 schema": {
+   "results_checked": 724,
+   "violations": 0,
+   "both_schemas_valid": true,
+   "examples": []
+  },
+  "2 reliability": {
+   "calls": 1903,
+   "outside_contract": 0,
+   "share": 0.0,
+   "kinds": {},
+   "examples": {}
+  },
+  "4 latency": {
+   "calls": 800,
+   "tool_own_ms": {
+    "p50": 0.096,
+    "p95": 0.202,
+    "p99": 0.235
+   },
+   "with_ledgerline_ms": {
+    "p50": 0.274,
+    "p95": 0.477,
+    "p99": 0.577
+   },
+   "limits_ms": {
+    "p50": 50,
+    "p95": 100,
+    "p99": 200
+   }
+  },
+  "5 payload": {
+   "largest_real_result_bytes": 854,
+   "limit_bytes": 4096,
+   "same_number_from_many_suppliers": {
+    "10": {
+     "bytes": 2198,
+     "rows": 12,
+     "says_how_many": false
+    },
+    "50": {
+     "bytes": 9238,
+     "rows": 52,
+     "says_how_many": false
+    },
+    "200": {
+     "bytes": 35639,
+     "rows": 202,
+     "says_how_many": false
+    }
+   }
+  },
+  "7 timeouts": {
+   "tests": 6,
+   "passed": 6,
+   "failed": [],
+   "failed_results": []
+  },
+  "8 regression": {
+   "tests_passed": 11,
+   "tests_run": 11,
+   "all_pass": true,
+   "failure": ""
+  },
+  "9 mcp compliance": {
+   "checks": 10,
+   "passed": 10,
+   "detail": {
+    "initialize agrees 2025-06-18": true,
+    "ping answers {}": true,
+    "tools/list: one tool with name, description, inputSchema": true,
+    "inputSchema and outputSchema are valid JSON Schema": true,
+    "a good call: isError false, structuredContent fits outputSchema": true,
+    "content text and structuredContent say the same": true,
+    "a failed call: isError true, with the error contract": true,
+    "a wrong argument type: refused, not crashed": true,
+    "an unknown method: JSON-RPC error -32601": true,
+    "an unknown tool: refused": true
+   }
+  }
+ }
+}

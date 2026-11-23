@@ -1,0 +1,22 @@
+-- model call 1 of 4: prompt_tokens 434 --
+   +    216  system prompt                    
+   +    195  tool definitions (1)             
+   +     23  user message                     Why is Voltway's invoice 4471 on hold, and can we pay it Friday?
+     = 434 tokens in the context (matches prompt_tokens)
+     model wrote (28 tokens): explain_hold({"supplier": "Voltway", "invoice_no": "4471"})
+-- model call 2 of 4: prompt_tokens 756 --
+   +    141  tool call                        [{"explain_hold": {"supplier": "Voltway", "invoice_no": "4471"}}]
+   +    181  tool result                      {"ok": true, "matches": [{"ap_no": "AP/2026/03409", "supplier": "Voltw
+     = 756 tokens in the context (matches prompt_tokens)
+     model wrote (92 tokens): 'Two suppliers have issued an invoice numbered 4471:\n- Voltway Paints & Coatings (invoice date 20 Oct 2026, ₹2,'
+-- model call 3 of 4: prompt_tokens 858 --
+   +    102  assistant reply (+ the user's next message) Two suppliers have issued an invoice numbered 4471: - Voltway Paints &
+   +   (with the part above)  user message                     Voltway Cells, the battery packs.
+     = 858 tokens in the context (matches prompt_tokens)
+     model wrote (41 tokens): explain_hold({"invoice_no": "AP/2026/03390", "supplier": "Voltway Cells Pvt. Ltd."})
+-- model call 4 of 4: prompt_tokens 1,335 --
+   +    114  tool call                        [{"explain_hold": {"invoice_no": "AP/2026/03390", "supplier": "Voltway
+   +    363  tool result                      {"ok": true, "supplier": "Voltway Cells Pvt. Ltd.", "ap_no": "AP/2026/
+     = 1,335 tokens in the context (matches prompt_tokens)
+     model wrote (186 tokens): 'Voltway Cells invoice 4471 (₹2,83,08,672) is on hold for two discrepancies:\n- Quantity mismatch (H-QTY): 18,00'
+Never in the context: tool.py, the Ledgerline services and their {rc, err_cd, msg, data} replies, the database, Emma's session and password, the MCP plumbing.

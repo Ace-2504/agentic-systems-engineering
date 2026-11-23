@@ -1,0 +1,239 @@
+{
+    "name": "explain_hold",
+    "title": "Explain hold",
+    "category": "Look up",
+    "description": "Why a supplier invoice is on hold: each open hold and what is wrong, who may release it, and the last Friday run that still pays it by the due date. Give the number printed on the invoice (e.g. 4471) or Ledgerline's AP number; if two suppliers match, ask which.",
+    "writes": false,
+    "services": [
+        "ap_inv_list",
+        "ap_inv_get",
+        "usr_get"
+    ],
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "invoice_no": {
+                "type": "string",
+                "description": "the number on the supplier's invoice, e.g. 4471, or Ledgerline's own number, e.g. AP/2026/03390"
+            },
+            "supplier": {
+                "type": "string",
+                "description": "part of the supplier's name, e.g. Voltway Cells; needed when two suppliers used the same number"
+            }
+        },
+        "required": [
+            "invoice_no"
+        ]
+    },
+    "example": {
+        "invoice_no": "4471",
+        "supplier": "Voltway Cells"
+    },
+    "output_schema": {
+        "type": "object",
+        "properties": {
+            "ok": {
+                "type": "boolean",
+                "description": "true when it worked; false comes with error and next_step"
+            },
+            "supplier": {
+                "type": "string",
+                "description": "the supplier's name as Ledgerline has it, e.g. Voltway Cells Pvt. Ltd."
+            },
+            "ap_no": {
+                "type": "string",
+                "description": "Ledgerline's own number for the invoice, e.g. AP/2026/03390; use it in any later call"
+            },
+            "status": {
+                "type": "string",
+                "enum": [
+                    "on hold",
+                    "waiting for approval",
+                    "clear to pay",
+                    "paid",
+                    "rejected",
+                    "cancelled"
+                ],
+                "description": "the invoice's status in Ledgerline"
+            },
+            "invoice_no": {
+                "type": "string",
+                "description": "the number printed on the supplier's invoice, e.g. 4471"
+            },
+            "amount": {
+                "type": "number",
+                "description": "rupees including GST"
+            },
+            "due_date": {
+                "type": "string",
+                "format": "date",
+                "description": "YYYY-MM-DD; Ledgerline works it out from the invoice date and the supplier's payment terms"
+            },
+            "payment": {
+                "type": [
+                    "object",
+                    "null"
+                ],
+                "description": "when the invoice can be paid; null when it is already paid, rejected or cancelled",
+                "properties": {
+                    "last_run": {
+                        "type": "string",
+                        "format": "date",
+                        "description": "the last Friday run on or before the due date (YYYY-MM-DD)"
+                    },
+                    "cutoff": {
+                        "type": "string",
+                        "format": "date",
+                        "description": "the Thursday before last_run; every hold must be released and the payment approved by then"
+                    },
+                    "this_friday": {
+                        "type": "string",
+                        "format": "date",
+                        "description": "the next Friday run (YYYY-MM-DD)"
+                    },
+                    "payable_this_friday": {
+                        "type": "boolean"
+                    },
+                    "why_not": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "the reason when payable_this_friday is false, e.g. on hold, or early and needs the financial controller"
+                    }
+                },
+                "required": [
+                    "last_run",
+                    "cutoff",
+                    "this_friday",
+                    "payable_this_friday"
+                ]
+            },
+            "holds": {
+                "type": "array",
+                "description": "every open hold on the invoice, oldest first; empty when the invoice is not on hold",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "enum": [
+                                "H-PRC",
+                                "H-QTY",
+                                "H-GRN",
+                                "H-DUP"
+                            ],
+                            "description": "H-PRC price, H-QTY quantity, H-GRN no goods receipt, H-DUP looks like a duplicate"
+                        },
+                        "what_is_wrong": {
+                            "type": "string",
+                            "description": "the gap in words, e.g. 18,000 billed, 17,700 accepted"
+                        },
+                        "on_hold_since": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "YYYY-MM-DD"
+                        },
+                        "may_release": {
+                            "type": "array",
+                            "description": "the people allowed to release this hold, from AP policy 4.1",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "role": {
+                                        "type": "string",
+                                        "description": "e.g. stores, financial controller"
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "role"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "code",
+                        "what_is_wrong",
+                        "on_hold_since",
+                        "may_release"
+                    ]
+                }
+            },
+            "matches": {
+                "type": "array",
+                "description": "only when the number matches invoices from more than one supplier; then holds and payment are left out",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "ap_no": {
+                            "type": "string"
+                        },
+                        "supplier": {
+                            "type": "string"
+                        },
+                        "invoice_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "YYYY-MM-DD"
+                        },
+                        "amount": {
+                            "type": "number",
+                            "description": "rupees including GST"
+                        },
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "on hold",
+                                "waiting for approval",
+                                "clear to pay",
+                                "paid",
+                                "rejected",
+                                "cancelled"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "ap_no",
+                        "supplier",
+                        "invoice_date",
+                        "amount",
+                        "status"
+                    ]
+                }
+            },
+            "error": {
+                "type": "string",
+                "description": "what went wrong, only when ok is false"
+            },
+            "next_step": {
+                "type": "string",
+                "description": "what to do next: ask which supplier (with matches), or how to recover (with error)"
+            },
+            "ledgerline_code": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "Ledgerline's own error code, e.g. ERR-AP-0001 or ERR-SYS-0503; empty when the tool itself refused"
+            }
+        },
+        "required": [
+            "ok"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+    },
+    "policy": {
+        "ledgerline_reply_timeout_s": 30,
+        "on_busy_or_lost_reply": "retry the read, at most 2 more times",
+        "after_retries": "ok=false, ledgerline_code ERR-SYS-0503 or TIMEOUT, with next_step"
+    }
+}
